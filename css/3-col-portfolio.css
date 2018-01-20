@@ -38,12 +38,21 @@ body {
 	background-color: #AEFFDD;
 }
 
+.project-audio {
+	background-color: #96E0FF;
+}
+
 .project-generic {
 	background-color: #ffffff;
 }
 
 .header {
 	background-color: #53006E;
+}
+
+.textbox {
+	padding: 10px 20px;
+	margin: 25px 0px;
 }
 
 body {
@@ -63,11 +72,22 @@ body {
 	padding-bottom: 15px;
 }
 
-#main-group {
+.main-group {
 	background-color: white;
 	border-radius: .3rem;
 	padding: 10px;
 	
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
+
+.profile-pic {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+}
+
+.profile-pic-container {
+	margin: 10px 50%;
 }

@@ -66,8 +66,19 @@ a:hover {
 	margin-top: 5px;
 }
 
-.project-type-link { background-color: white; }
+.project-type-link { background-color: white; z-index: 2;}
 .project-type-link:hover { background-color: #CBCBCB; }
+
+.project-link {
+	display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
 
 .header {
 	background-color: #53006E;

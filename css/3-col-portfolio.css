@@ -80,6 +80,12 @@ a:hover {
 	z-index: 1;
 }
 
+.project-link p {
+	position: absolute;
+	right: 0px;
+	bottom: -18px;
+}
+
 .header {
 	background-color: #53006E;
 }

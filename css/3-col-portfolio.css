@@ -42,7 +42,7 @@ a:hover {
 	background-color: #AEFFDD;
 }
 
-.project-audio {
+.project-audiovisual {
 	background-color: #96E0FF;
 }
 
@@ -53,7 +53,7 @@ a:hover {
 .project-gamedev-text { color: #F939FF; }
 .project-design-text { color: #FF9918; }
 .project-3d-text { color: #11E599; }
-.project-audio-text { color: #1D97FC; }
+.project-audiovisual-text { color: #1D97FC; }
 .project-generic-text { color: #000000; }
 
 .project-type {
@@ -114,3 +114,5 @@ body {
 .profile-pic-container {
 	margin: 10px 50%;
 }
+
+.icon { height: 20px; width: 20px; }

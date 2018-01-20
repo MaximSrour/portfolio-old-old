@@ -22,6 +22,10 @@ body {
   margin-bottom: 30px;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 .projectSubtext {
 	font-size: 18px;
 }
@@ -45,6 +49,25 @@ body {
 .project-generic {
 	background-color: #ffffff;
 }
+
+.project-gamedev-text { color: #F939FF; }
+.project-design-text { color: #FF9918; }
+.project-3d-text { color: #11E599; }
+.project-audio-text { color: #1D97FC; }
+.project-generic-text { color: #000000; }
+
+.project-type {
+	border: 1px solid white;
+	border-radius: 50px;
+	background-color: white;
+	height: 30px;
+	text-align: center;
+	padding: 3px 0px 0px 0px;
+	margin-top: 5px;
+}
+
+.project-type-link { background-color: white; }
+.project-type-link:hover { background-color: #CBCBCB; }
 
 .header {
 	background-color: #53006E;

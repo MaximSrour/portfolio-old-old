@@ -152,3 +152,8 @@ body {
 	border: 1px solid white;
 	border-radius: 50px;
 }
+
+.bottom-padding {
+	width: 100%;
+	height: 100px;
+}

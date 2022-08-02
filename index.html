@@ -15,6 +15,18 @@
 
     <!-- Custom styles for this template -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
+    <link href="newstyles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+    $(function(){
+      $("#workExperienceContent").load("workExperienceContent.html");
+      $("#educationContent").load("educationContent.html");
+      $("#additionalActivitiesContent").load("additionalActivitiesContent.html");
+    });
+    </script>
 
   </head>
 
@@ -64,7 +76,7 @@
 		  <div class="">
 			<h4>Current Employ</h4>
 			<h5>Department of Defence, Defence Science and Technologies (DSTG) - Virtual Environment Specialist</h5>
-			<h5>Monash University, Faculty of Information Technology - Sessional Teaching Associate</h5>
+			<h5>Monash University, Faculty of Information Technology (FIT) - Sessional Teaching Associate</h5>
 		  </div>
 		  
 		  <div class="row">
@@ -83,8 +95,8 @@
 					<ul>
 						<li>Programming</li>
 						<ul>
-							<li><img class="icon" src="assets/icons/unity.png" alt=""> C++ (Unreal)</li>
-							<li><img class="icon" src="assets/icons/unreal.png" alt=""> C# (Unity3D)</li>
+							<li><img class="icon iconUnreal"> C++ (Unreal)</li>
+							<li><img class="icon iconUnity"> C# (Unity3D)</li>
 							<li>Java</li>
 							<li>HTML/CSS</li>
 							<li>Javascript</li>
@@ -92,24 +104,39 @@
 						
 						<li>3D Modelling</li>
 						<ul>
-							<li><img class="icon" src="assets/icons/maya.jpg" alt=""> Maya</li>
-							<li><img class="icon" src="assets/icons/fusion360.jpg" alt=""> Fusion 360</li>
-							<li><img class="icon" src="assets/icons/substancedesigner.png" alt=""> Substance Designer</li>
-							<li><img class="icon" src="assets/icons/substancepainter.png" alt=""> Substance Painter</li>
+							<li><img class="icon iconMaya"> Maya</li>
+							<li><img class="icon iconFusion360"> Fusion 360</li>
+							<li><img class="icon iconSubstanceDesigner"> Substance Designer</li>
+							<li><img class="icon iconSubstancePainter"> Substance Painter</li>
 						</ul>
 						
 						<li>Adobe Suite</li>
 						<ul>
-							<li><img class="icon" src="assets/icons/photoshop.jpg" alt=""> Photoshop</li>
-							<li><img class="icon" src="assets/icons/illustrator.jpg" alt=""> Illustrator</li>
-							<li><img class="icon" src="assets/icons/premiere.jpg" alt=""> Premiere Pro</li>
-							<li><img class="icon" src="assets/icons/audition.jpg" alt=""> Audition</li>
+							<li><img class="icon iconPhotoshop"> Photoshop</li>
+							<li><img class="icon iconIllustrator"> Illustrator</li>
+							<li><img class="icon iconPremiere"> Premiere Pro</li>
+							<li><img class="icon iconAudition"> Audition</li>
 						</ul>
 					</ul>
 				</div>
 		  	</div>
 		  </div>
 	  </div>
+
+    <div id="projects" class="sectionContainer"><!-- Start of the container -->
+      <h1 class="text-white border-title" style="text-align:center;">Work Experience</h1>
+      <div id="workExperienceContent" class="row"></div>
+    </div><!-- End of the container -->
+
+    <div id="projects" class="sectionContainer"><!-- Start of the container -->
+      <h1 class="text-white border-title" style="text-align:center;">Education</h1>
+      <div id="educationContent" class="row"></div>
+    </div><!-- End of the container -->
+
+    <div id="projects" class="sectionContainer"><!-- Start of the container -->
+      <h1 class="text-white border-title" style="text-align:center;">Additional Activities</h1>
+      <div id="additionalActivitiesContent" class="row"></div>
+    </div><!-- End of the container -->
 	  
 	  <div id="projects" class="main-group">
       <h1 class="my-4 text-white border-title" style="text-align:center;">Projects</h1>

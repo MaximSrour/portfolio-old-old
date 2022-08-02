@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.icon {
+	width: 22px;
+	height: 22px;
+	display: block;
+}
+
+.icon-unity {
+	background:url("../assets/icons/unity.png");
+}
+
+.icon-unreal {
+	background:url("../assets/icons/unreal.png");
+}

@@ -1,0 +1,69 @@
+body {
+    padding-top: 0px;
+	background-color: rgb(25, 25, 25);
+}
+
+.sectionContainer {
+    background-color: rgba(255, 255, 255, 0.2);
+	border-radius: .3rem;
+	padding: 10px;
+	
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.resumeItem {
+    margin: 10pt auto;
+}
+
+.cardDetailsCentered {
+	text-align: center;
+}
+
+.itemTitle {
+    color: rgb(31, 56, 100);
+}
+
+.itemOrganisation {
+    color: rgb(20, 25, 50);
+}
+
+.itemDuration {
+	border: 1px solid white;
+	border-radius: 50px;
+	background-color: white;
+	height: 30px;
+	padding: 3px 0px 0px 0px;
+    font-size: 18px;
+    color: rgb(20, 25, 50);
+}
+
+.itemText li {
+    padding-bottom: 5pt;
+}
+
+.itemText li:last-child {
+    padding-bottom: 0pt;
+}
+
+.cardBackground {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+	background-color: #ffffff;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    margin-top: -3px;
+}
+
+.iconUnity { content: url("/assets/icons/unity.png"); }
+.iconUnreal { content: url("/assets/icons/unreal.png"); }
+.iconMaya { content: url("/assets/icons/maya.jpg"); }
+.iconFusion360 { content: url("/assets/icons/fusion360.jpg"); }
+.iconSubstanceDesigner { content: url("/assets/icons/substancedesigner.png"); }
+.iconSubstancePainter { content: url("/assets/icons/substancepainter.png"); }
+.iconPhotoshop { content: url("/assets/icons/photoshop.jpg"); }
+.iconIllustrator { content: url("/assets/icons/illustrator.jpg"); }
+.iconPremiere { content: url("/assets/icons/premiere.jpg"); }
+.iconAudition { content: url("/assets/icons/audition.jpg"); }

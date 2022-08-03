@@ -220,7 +220,7 @@ for i in data["projects"]:
 
         # <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         # <div class="carousel-item"> <img class="d-block img-fluid" src="image1.jpg"></div>
-        
+
         tempSkillString = ""
         for skill in i["skills"]:
             tempSkillString += "<li><img class=\"icon icon{}\">TEMP</li>".format(skill)

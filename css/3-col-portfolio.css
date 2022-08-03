@@ -95,24 +95,6 @@ a:hover {
 	margin: 25px 0px;
 }
 
-.border-title {
-	border: 1px solid #53006E;
-	background-color: #53006E;
-	border-radius: .25rem;
-	
-	padding-top: 10px;
-	padding-bottom: 15px;
-}
-
-.main-group {
-	background-color: white;
-	border-radius: .3rem;
-	padding: 10px;
-	
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-
 .profile-pic {
 	border-radius: 50%;
 	width: 200px;
@@ -122,27 +104,6 @@ a:hover {
 
 .profile-pic-container {
 	margin: 10px 50%;
-}
-
-.icon { height: 20px; width: 20px; margin-top: -3px; }
-
-.wip {
-	display: block;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	z-index: 1;
-	background-color: white;
-	color: black;
-	
-    text-decoration: none;
-	font-weight: bold;
-	
-	padding: 2px 5px;
-	margin: 5px;
-	
-	border: 1px solid white;
-	border-radius: 50px;
 }
 
 .bottom-padding {

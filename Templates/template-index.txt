@@ -26,7 +26,7 @@
 
       <!-- Page heading section -->
       <div class="sectionContainer">
-        <h1 class="text-white border-title" style="text-align:center;">Maxim Srour</h1>
+        <h1 class="sectionHeader" style="text-align:center;">Maxim Srour</h1>
         <div class="profile-pic-container">
           <img class="profile-pic" src="assets/Profile.jpg" alt="">
         </div>
@@ -76,7 +76,7 @@
 
       <!-- Work experience section -->
       <div id="sectionWorkExperience" class="sectionContainer">
-        <h1 class="text-white border-title" style="text-align:center;">Work Experience</h1>
+        <h1 class="sectionHeader" style="text-align:center;">Work Experience</h1>
         <div id="workExperienceContent" class="row">
           <<WORKEXPERIENCECONTENT>>
         </div>
@@ -84,7 +84,7 @@
 
       <!-- education section -->
       <div id="sectionEducation" class="sectionContainer">
-        <h1 class="text-white border-title" style="text-align:center;">Education</h1>
+        <h1 class="sectionHeader" style="text-align:center;">Education</h1>
         <div id="educationContent" class="row">
           <<EDUCATIONCONTENT>>
         </div>
@@ -92,7 +92,7 @@
 
       <!-- Additional activities section -->
       <div id="sectionAdditionalActivities" class="sectionContainer">
-        <h1 class="text-white border-title" style="text-align:center;">Additional Activities</h1>
+        <h1 class="sectionHeader" style="text-align:center;">Additional Activities</h1>
         <div id="additionalActivitiesContent" class="row">
           <<ADDITIONALACTIVITIESCONTENT>>
         </div>
@@ -100,7 +100,7 @@
 
       <!-- Projects section -->
       <div id="sectionProjects" class="sectionContainer">
-        <h1 class="text-white border-title" style="text-align:center;">Projects</h1>
+        <h1 class="sectionHeader" style="text-align:center;">Projects</h1>
         <div id="projectsContent" class="row">
           <<PROJECTSCONTENT>>
         </div>

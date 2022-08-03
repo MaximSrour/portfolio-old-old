@@ -25,18 +25,18 @@
         <div class="container">
 
             <!-- Portfolio Item Heading -->
-            <div class="main-group">
-                <h1 class="text-white border-title" style="text-align:center;"><<TITLE>></h1>
+            <div class="sectionContainer">
+                <h1 class="text-white border-title" style="text-align:center;">Project Highlight</h1>
 
                 <div class="row">
-                    <div class="col-md-8">
-                        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                    <div class="col-lg-8">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                                 <<CAROUSELBUTTONS>>
                             </ol>
                             <div class="carousel-inner" role="listbox" style="border-radius: 10px;"><!-- InstanceBeginEditable name="CarouselImages" -->
-                                <div class="carousel-item active"> <img class="d-block img-fluid" src="imageMain.jpg"></div>
+                                <div class="carousel-item active"><img class="d-block img-fluid" src="imageMain.jpg"></div>
                                 <<CAROUSELIMAGES>>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -50,23 +50,32 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
-                        <h3 class="my-3">Project Description</h3>
-                        <p><<DESCRIPTION>></p>
+                    <div class="col-lg-4">
+                        <div class="card h-100 cardBackground">
+                            <div class="card-body">
+                                <h3 class="itemTitle cardDetailsCentered"><<TITLE>></h3>
+                                <h5 class="itemOrganisation cardDetailsCentered">Project Description</h5>
+                                <p><<DESCRIPTION>></p>
 
-                        <h3 class="my-3">Software Used</h3>
-                        <ul style="list-style: none;">
-                            <<SKILLS>>
-                        </ul>
+                                <h5 class="itemOrganisation cardDetailsCentered">Software Used</h5>
+                                <ul style="list-style: none;">
+                                    <<SKILLS>>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-                    <div>
-                        <<TEXT>>
+
+                <div class="row" style="margin-top: 1.5em; ">
+                    <div class="col-lg-12">
+                        <div class="card h-100 cardBackground">
+                            <div class="card-body itemText">
+                                <<TEXT>>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </body>
 </html>

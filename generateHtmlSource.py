@@ -32,18 +32,22 @@ def escapeCharacters(stringToClean):
 
 f = open("./templates/template-work.txt")
 templateWork = f.read()
+contentWorkExperience = ""
 f.close()
 
 f = open("./templates/template-education.txt")
 templateEducation = f.read()
+contentEducation = ""
 f.close()
 
 f = open("./templates/template-additionalActivities.txt")
 templateAdditionalActivities = f.read()
+contentAdditionalActivities = ""
 f.close()
 
 f = open("./templates/template-project.txt")
 templateProject = f.read()
+contentProjects = ""
 f.close()
 
 f = open("./templates/template-project-page.txt")
@@ -54,7 +58,6 @@ jsonFile = open("C:/Users/maxim/Documents/LaTeX/Resume/items.json")
 data = json.load(jsonFile)
 jsonFile.close()
 
-texFileString = ""
 # Work
 for i in data["work"]:
     printString = templateWork
@@ -70,18 +73,15 @@ for i in data["work"]:
     printString = printString.replace("<<TEXT>>", textString)
 
     if(i["hidden"] == False):
-        texFileString += printString
-        texFileString += "\n"
+        contentWorkExperience += printString
+        contentWorkExperience += "\n"
 
-texFileString += "\n"
+contentWorkExperience += "\n"
 
 f = open("./generated/workExperienceContent.html", "w")
-f.write(texFileString)
+f.write(contentWorkExperience)
 f.close()
 
-
-
-texFileString = ""
 # Education
 for i in data["education"]:
     printString = templateEducation
@@ -92,18 +92,15 @@ for i in data["education"]:
     printString = printString.replace("<<TEXT>>", i["text"])
 
     if(i["hidden"] == False):
-        texFileString += printString
-        texFileString += "\n"
+        contentEducation += printString
+        contentEducation += "\n"
 
-texFileString += "\n"
+contentEducation += "\n"
 
 f = open("./generated/educationContent.html", "w")
-f.write(texFileString)
+f.write(contentEducation)
 f.close()
 
-
-
-texFileString = ""
 # Additional Activities
 for i in data["additionalActivities"]:
     printString = templateAdditionalActivities
@@ -112,13 +109,13 @@ for i in data["additionalActivities"]:
     printString = printString.replace("<<TEXT>>", i["text"])
 
     if(i["hidden"] == False):
-        texFileString += printString
-        texFileString += "\n"
+        contentAdditionalActivities += printString
+        contentAdditionalActivities += "\n"
 
-texFileString += "\n"
+contentAdditionalActivities += "\n"
 
 f = open("./generated/additionalActivitiesContent.html", "w")
-f.write(texFileString)
+f.write(contentAdditionalActivities)
 f.close()
 
 
@@ -128,7 +125,6 @@ jsonFile = open("./projects/projects.json")
 data = json.load(jsonFile)
 jsonFile.close()
 
-texFileString = ""
 # Projects
 for i in data["projects"]:
     filePath = i["path"]
@@ -171,16 +167,14 @@ for i in data["projects"]:
         printString = printString.replace("<<LINK>>", "")
 
     if(i["hidden"] == False):
-        texFileString += printString
-        texFileString += "\n"
+        contentProjects += printString
+        contentProjects += "\n"
 
-texFileString += "\n"
+contentProjects += "\n"
 
 f = open("./generated/projectsContent.html", "w")
-f.write(texFileString)
+f.write(contentProjects)
 f.close()
-
-
 
 
 texFileString = ""
@@ -245,3 +239,17 @@ for i in data["projects"]:
         f = open(filePath + "/projectPage.html", "w")
         f.write(printString)
         f.close()
+
+# Index
+f = open("./templates/template-index.txt")
+templateIndex = f.read()
+f.close()
+
+templateIndex = templateIndex.replace("<<WORKEXPERIENCECONTENT>>", contentWorkExperience)
+templateIndex = templateIndex.replace("<<EDUCATIONCONTENT>>", contentEducation)
+templateIndex = templateIndex.replace("<<ADDITIONALACTIVITIESCONTENT>>", contentAdditionalActivities)
+templateIndex = templateIndex.replace("<<PROJECTSCONTENT>>", contentProjects)
+
+f = open("./index.html", "w")
+f.write(templateIndex)
+f.close()

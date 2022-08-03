@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Maxim Srour &middot; Resume</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+    <link href="newstyles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page heading section -->
+      <div class="sectionContainer">
+        <h1 class="text-white border-title" style="text-align:center;">Maxim Srour</h1>
+        <div class="profile-pic-container">
+          <img class="profile-pic" src="assets/Profile.jpg" alt="">
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
+            <div class="card card-body">
+              <h4>Who I am</h4>
+              <p class="card-text">I am a software engineer by trade and an avid technology nerd that will find any excues to learn about what's new. I spend most of my time programming or designing new systems, primarily in C++ though I have begun to branch out to other languages like Python more frequently.</p>
+              <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbiest. My main focus is in games 3D modelling although I had my start using CAD for 3D printing when I was younger.</p>
+              <p class="card-text">My main focus now is on completing my Master of Data Science and finding more ways to visualise unique data sets to inform operational needs.</p>
+            </div>
+          </div>
+        
+          <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
+            <div class="card card-body">
+              <h4>My Skillset</h4>
+              <ul>
+                <li>Programming</li>
+                <ul>
+                  <li><img class="icon iconUnreal"> C++ (Unreal)</li>
+                  <li><img class="icon iconUnity"> C# (Unity3D)</li>
+                  <li>Java</li>
+                  <li>HTML/CSS</li>
+                  <li>Javascript</li>
+                </ul>
+                
+                <li>3D Modelling</li>
+                <ul>
+                  <li><img class="icon iconMaya"> Maya</li>
+                  <li><img class="icon iconFusion360"> Fusion 360</li>
+                  <li><img class="icon iconSubstancePainter"> Substance Painter</li>
+                </ul>
+                
+                <li>Adobe Suite</li>
+                <ul>
+                  <li><img class="icon iconPhotoshop"> Photoshop</li>
+                  <li><img class="icon iconIllustrator"> Illustrator</li>
+                  <li><img class="icon iconPremiere"> Premiere Pro</li>
+                  <li><img class="icon iconAudition"> Audition</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work experience section -->
+      <div id="sectionWorkExperience" class="sectionContainer">
+        <h1 class="text-white border-title" style="text-align:center;">Work Experience</h1>
+        <div id="workExperienceContent" class="row">
+          <<WORKEXPERIENCECONTENT>>
+        </div>
+      </div>
+
+      <!-- education section -->
+      <div id="sectionEducation" class="sectionContainer">
+        <h1 class="text-white border-title" style="text-align:center;">Education</h1>
+        <div id="educationContent" class="row">
+          <<EDUCATIONCONTENT>>
+        </div>
+      </div>
+
+      <!-- Additional activities section -->
+      <div id="sectionAdditionalActivities" class="sectionContainer">
+        <h1 class="text-white border-title" style="text-align:center;">Additional Activities</h1>
+        <div id="additionalActivitiesContent" class="row">
+          <<ADDITIONALACTIVITIESCONTENT>>
+        </div>
+      </div>
+
+      <!-- Projects section -->
+      <div id="sectionProjects" class="sectionContainer">
+        <h1 class="text-white border-title" style="text-align:center;">Projects</h1>
+        <div id="projectsContent" class="row">
+          <<PROJECTSCONTENT>>
+        </div>
+      </div>
+
+	  </div>
+  </body>
+</html>

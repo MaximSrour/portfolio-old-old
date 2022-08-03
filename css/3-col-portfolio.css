@@ -30,29 +30,28 @@ a:hover {
 	/*background-color: #F4B7FA;*/
 	background-color: #b57edc;
 }
+.project-gamedev .project-type { color: #F939FF; }
 
 .project-design {
 	/*background-color: #FFD0B5;*/
 	background-color: #eaa221;
 }
+.project-design .project-type { color: #FF9918; }
 
 .project-3d {
 	background-color: #AEFFDD;
 }
+.project-3d .project-type { color: #11E599; }
 
 .project-audiovisual {
 	background-color: #96E0FF;
 }
+.project-audiovisual .project-type { color: #1D97FC; }
 
 .project-generic {
 	background-color: #ffffff;
 }
-
-.project-gamedev-text { color: #F939FF; }
-.project-design-text { color: #FF9918; }
-.project-3d-text { color: #11E599; }
-.project-audiovisual-text { color: #1D97FC; }
-.project-generic-text { color: #000000; }
+.project-generic .project-type { color: #000000; }
 
 .project-type {
 	border: 1px solid white;
@@ -91,15 +90,6 @@ a:hover {
 .textbox {
 	padding: 10px 20px;
 	margin: 25px 0px;
-}
-
-body {
-	background-color: rgb(25, 25, 25);
-	background-image: url(../assets/Background_Main.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 .border-title {

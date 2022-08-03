@@ -1,0 +1,14 @@
+<div class="col-lg-4 col-sm-6 portfolio-item">
+  <div class="card h-100 project-<<TYPESTYLE>>">
+    <img class="card-img-top" src="<<IMAGESMALL>>" alt="">
+    <div class="card-body">
+      <h4 class="card-title">
+        <p><<TITLE>></p>
+        <a class="project-type-link" href="gamedev1.html"><p class="projectSubtext project-type"><<TYPE>> (<<SKILLS>>)</p></a>
+      </h4>
+      <p class="card-text"><<DESCRIPTION>></p>
+    </div>
+    <<LINK>>
+    <<WIP>>
+  </div>
+</div>

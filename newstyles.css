@@ -1,6 +1,11 @@
 body {
     padding-top: 0px;
 	background-color: rgb(25, 25, 25);
+	background-image: url(../assets/background/background1_Master.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .sectionContainer {
@@ -10,6 +15,8 @@ body {
 	
 	margin-top: 50px;
 	margin-bottom: 50px;
+
+    backdrop-filter: blur(10px);
 }
 
 .resumeItem {
@@ -36,14 +43,23 @@ body {
 	padding: 3px 0px 0px 0px;
     font-size: 18px;
     color: rgb(20, 25, 50);
+    font-weight: 600;
+}
+
+p.itemText {
+    margin-bottom: 0pt;
 }
 
 .itemText li {
-    padding-bottom: 5pt;
+    margin-bottom: 5pt;
+}
+
+.itemText li:first-child {
+    margin-top: 10pt;
 }
 
 .itemText li:last-child {
-    padding-bottom: 0pt;
+    margin-bottom: 0pt;
 }
 
 .cardBackground {
@@ -67,3 +83,4 @@ body {
 .iconIllustrator { content: url("/assets/icons/illustrator.jpg"); }
 .iconPremiere { content: url("/assets/icons/premiere.jpg"); }
 .iconAudition { content: url("/assets/icons/audition.jpg"); }
+.iconVS { content: url("/assets/icons/visualstudio.png"); }

@@ -50,6 +50,10 @@ p.itemText {
     margin-bottom: 0pt;
 }
 
+ul.itemText {
+    margin-bottom: 0pt;
+}
+
 .itemText li {
     margin-bottom: 5pt;
 }

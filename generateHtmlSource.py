@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 import os  
+import re
 
 # Converts a date in string format to a date object
 def stringToDate(dateString):
@@ -29,20 +30,24 @@ def escapeCharacters(stringToClean):
     
     return tempString
 
-f = open("./Templates/template-work.txt")
+f = open("./templates/template-work.txt")
 templateWork = f.read()
 f.close()
 
-f = open("./Templates/template-education.txt")
+f = open("./templates/template-education.txt")
 templateEducation = f.read()
 f.close()
 
-f = open("./Templates/template-additionalActivities.txt")
+f = open("./templates/template-additionalActivities.txt")
 templateAdditionalActivities = f.read()
 f.close()
 
-f = open("./Templates/template-project.txt")
+f = open("./templates/template-project.txt")
 templateProject = f.read()
+f.close()
+
+f = open("./templates/template-project-page.txt")
+templateProjectPage = f.read()
 f.close()
 
 jsonFile = open("C:/Users/maxim/Documents/LaTeX/Resume/items.json")
@@ -70,7 +75,7 @@ for i in data["work"]:
 
 texFileString += "\n"
 
-f = open("./workExperienceContent.html", "w")
+f = open("./generated/workExperienceContent.html", "w")
 f.write(texFileString)
 f.close()
 
@@ -92,7 +97,7 @@ for i in data["education"]:
 
 texFileString += "\n"
 
-f = open("./educationContent.html", "w")
+f = open("./generated/educationContent.html", "w")
 f.write(texFileString)
 f.close()
 
@@ -112,7 +117,7 @@ for i in data["additionalActivities"]:
 
 texFileString += "\n"
 
-f = open("./additionalActivitiesContent.html", "w")
+f = open("./generated/additionalActivitiesContent.html", "w")
 f.write(texFileString)
 f.close()
 
@@ -161,7 +166,7 @@ for i in data["projects"]:
         printString = printString.replace("<<WIP>>", "")
         
     if(i["clickable"] == True):
-        printString = printString.replace("<<LINK>>", "<a class=\"project-link\" href=\"index.html\"><p>(click for more)</p></a>")
+        printString = printString.replace("<<LINK>>", "<a class=\"project-link\" href=\"" + filePath + "/projectPage.html\"><p>(click for more)</p></a>")
     else:
         printString = printString.replace("<<LINK>>", "")
 
@@ -171,6 +176,72 @@ for i in data["projects"]:
 
 texFileString += "\n"
 
-f = open("./projectsContent.html", "w")
+f = open("./generated/projectsContent.html", "w")
 f.write(texFileString)
 f.close()
+
+
+
+
+texFileString = ""
+# Projects Pages
+for i in data["projects"]:
+    if(i["clickable"] == True):
+        filePath = i["path"]
+        projectType = i["type"]
+
+        printString = templateProjectPage
+        printString = printString.replace("<<TITLE>>", i["title"])
+        printString = printString.replace("<<DESCRIPTION>>", i["description"])
+
+        if(projectType == "Game"):
+            printString = printString.replace("<<TYPE>>", "Game Development")
+            printString = printString.replace("<<TYPESTYLE>>", "gamedev")
+        elif(projectType == "3D"):
+            printString = printString.replace("<<TYPE>>", "3D")
+            printString = printString.replace("<<TYPESTYLE>>", "3d")
+        elif(projectType == "Design"):
+            printString = printString.replace("<<TYPE>>", "Design")
+            printString = printString.replace("<<TYPESTYLE>>", "design")
+        elif(projectType == "AV"):
+            printString = printString.replace("<<TYPE>>", "Audio-Visual")
+            printString = printString.replace("<<TYPESTYLE>>", "audiovisual")
+        else:
+            printString = printString.replace("<<TYPE>>", "General")
+            printString = printString.replace("<<TYPESTYLE>>", "generic")
+        
+        tempImageString = ""
+        tempCarouselString = ""
+        count = 0
+        files = os.listdir(filePath)
+        for file in files:
+            regexSearch = re.search("^image[0-9]+.*$", file)
+            if(regexSearch != None):
+                count += 1
+                tempImageString += "<div class=\"carousel-item\"> <img class=\"d-block img-fluid\" src=\"{}\"></div>".format(file)
+                tempCarouselString += "<li data-target=\"#carouselExampleIndicators\" data-slide-to=\"{}\"></li>".format(count)
+    
+        printString = printString.replace("<<CAROUSELIMAGES>>", tempImageString)
+        printString = printString.replace("<<CAROUSELBUTTONS>>", tempCarouselString)
+
+        # <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        # <div class="carousel-item"> <img class="d-block img-fluid" src="image1.jpg"></div>
+        
+        tempSkillString = ""
+        for skill in i["skills"]:
+            tempSkillString += "<li><img class=\"icon icon{}\">TEMP</li>".format(skill)
+        printString = printString.replace("<<SKILLS>>", tempSkillString)
+        
+        tempTextString = ""
+        for text in i["text"]:
+            tempTextString += "<p>{}</p>".format(text)
+        printString = printString.replace("<<TEXT>>", tempTextString)
+
+        if(i["wip"] == True):
+            printString = printString.replace("<<WIP>>", "<h4 class=\"wip\">WIP</h4>")
+        else:
+            printString = printString.replace("<<WIP>>", "")
+
+        f = open(filePath + "/projectPage.html", "w")
+        f.write(printString)
+        f.close()

@@ -27,29 +27,32 @@ a:hover {
 }
 
 .project-gamedev {
-	/*background-color: #F4B7FA;*/
 	background-color: #b57edc;
+	background: linear-gradient(40deg, #b57edc 0%, #b853ff 100%);
 }
 .project-gamedev .project-type { color: #F939FF; }
 
 .project-design {
-	/*background-color: #FFD0B5;*/
 	background-color: #eaa221;
+	background: linear-gradient(40deg, #ffc864 0%, #eaa221 100%);
 }
 .project-design .project-type { color: #FF9918; }
 
 .project-3d {
-	background-color: #AEFFDD;
+	background-color: #aeffdd;
+	background: linear-gradient(40deg, #aeffdd 0%, #48cb94 100%);
 }
 .project-3d .project-type { color: #11E599; }
 
 .project-audiovisual {
-	background-color: #96E0FF;
+	background-color: #96e0ff;
+	background: linear-gradient(40deg, #96e0ff 0%, #4fb9f0 100%);
 }
 .project-audiovisual .project-type { color: #1D97FC; }
 
 .project-generic {
 	background-color: #ffffff;
+	background: linear-gradient(40deg, #ffffff 0%, #bbbbbb 100%);
 }
 .project-generic .project-type { color: #000000; }
 

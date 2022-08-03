@@ -3,7 +3,15 @@
 		{
 			"title": "Forlorn Colonists",
             "type": "Game",
-            "text": "TEMP",
+            "text": [
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP"
+			],
             "description": "Forlorn Colonists is a 1 to 4 player couch co-op with top-down, twin stick shooter mechanics, set in a far future sci-fi world. Currently in the prototyping stage are are actively polishing game mechanics and creating additional art assets in preparation for crowd-funding.",
 			"skills": [
 				"Unreal"
@@ -16,7 +24,15 @@
 		{
 			"title": "The Nightwatch",
             "type": "Game",
-            "text": "TEMP",
+            "text": [
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP",
+				"TEMP"
+			],
             "description": "In a world where humans hold a totalitarian rule, you play as a cat in a skilled group of street animals trying to rescue your crew to take down this human authority. Using turn-based tactical RPG style combat, you must strategically use special abilities unique to each animal to succeed!",
 			"skills": [
 				"Unreal"
@@ -29,7 +45,12 @@
 		{
 			"title": "Afro Disco",
             "type": "Game",
-            "text": "TEMP",
+            "text": [
+				"The gameplay of Afro Disco is unlike what you might see in a strategy game or in a 'dance' game. It revolves around setting your dancers up in specific permutiations to perform dance moves (hence the Bejeweled analogy) that shove your opponents from the dance board. Some dance moves require you to use your lead dancer to 'take lead' and therefore require more setup to perform with a greater reward. Some moves push, move moves pull, some moves shuffle and some moves throw dancers, and the whole goal of the game is to eliminate either 3 out of 5 dancers or shove your opponents lead dancer off the dance floor.",
+				"Afro Disco started as a University project among friends for one of our game design classes. Given the whole semester to make a game, we began work immediately creating this disco dance game. The idea for the name comes from the fact that two of our members have afros and as a result of game design classes prior.",
+				"My role in the group is as the project manager and the lead artist. All of the art assets were created by me except for the character models as that is one of my weaknesses in modeling.",
+				"The game is currently set for release on the 15th of February 2018, though after that date we will likely continue to keep working on the game throughout the year providing free updates and dlc. Currently the game is set to only make a debut on Android but perhaps we will aim to get dev rights on iOS and even release on steam some day."
+			],
             "description": "Afro Disco! The game where you dance your friends into submission. From University project to passion endeavour, Afro Disco is a fully fledge game in which chess meets bejeweled. Line up your dancers to outperform your friends!",
 			"skills": [
 				"Unity",
@@ -41,103 +62,78 @@
 			"hidden": false
 		},
 		{
-			"title": "3DS Model",
-            "type": "3D",
-            "text": "TEMP",
-            "description": "My first creation in Maya, the 3DS was my way of experimenting with creating objects in Maya and working with textures and lighting techniques.",
-			"skills": [
-				"Maya"
+			"title": "Afro Disco Trailer",
+            "type": "AV",
+            "text": [
+				"Creating a trailer for Afro Disco was born out of the desire to actually use my videoediting knowledge/skill to actually make something that will be seen by the world. Also because it was required for grades... But regardless, I really wanted to make this trailer in my own time. This is one of my first attempts at making something that would potentially be seen by friends, family, and even future employers so I spent a lot of time going through all the steps in the creative process to get to the final product, including a lot of storyboarding.",
+				"This is by no means the final version of the trailer. For now I am leaving it as it is, despite the progress on the game, as I think it would be useless to record so much in game footage only to have to redo the entire thing. As such, I will be waiting until the final few days of the development cycle to add new footage and hopefully make a fantastic display for our game."
 			],
-			"clickable": false,
-            "path": "projects/3ds",
+            "description": "For the Afro Disco game I am making, I decided to have a go at making a trailer for the game. This is one of my first public works, whereas most of my other vidios have been small school projects or other personal projects.",
+			"skills": [
+				"Premiere"
+			],
+			"clickable": true,
+            "path": "projects/adTrailer",
             "wip": false,
-			"hidden": true
+			"hidden": false
 		},
 		{
 			"title": "Bank Environment",
             "type": "3D",
-            "text": "TEMP",
+            "text": [
+				"This was my second attempt at working on an environment. I wanted to make the building the main focus of the scene and thus spent most of my time creating creating a very convincing and life like building. I also spent a bunch of time experimenting with perticle effcts to make a lovely fountain in the middle of the courtyard.",
+				"Because I was limiting myself to a lower polygon count (roughly below 60,0000 tris), I couldn't waste too much on the trees and vegitation and thus settled on the lower quality versions that ended up making the scene. I also sourced all of my textures myself, except for the trees, which cut into the time I had available to create this project."
+			],
             "description": "After learning how to work with normal/displacement/height maps, I was tasked with creating an environment that was heavily optimised to run at high fps. This features a marble bank and fountain courtyard.",
 			"skills": [
 				"Unity",
 				"Maya"
 			],
-			"clickable": false,
+			"clickable": true,
             "path": "projects/3dBank",
             "wip": false,
-			"hidden": true
+			"hidden": false
 		},
 		{
 			"title": "Taipei 101 Environment",
             "type": "3D",
-            "text": "TEMP",
+            "text": [
+				"As an avid fan of architecture and civil engineering, the Taipei 101 is one of my favourite buildings, alongside the Burj Khalifa in Dubai and Petronas Towers Kuala Lumpur, hence why I chose to model it for one of my 3D modelling assignments at university. I wanted to test how abilities by creating an architectural model in Maya as opposed to software that might be more suited to it, such as Fusion 360 or other CADs.",
+				"The inpirations for the environment was primarily the Taipei 101 building, George Orwell's '1998', and 'Half-Life 2'. I wanted to give the feeling of a dystopian area or even an abandoned one, so I littered the streets with large, wrought iron barricades (similar to those you would find in Half-Life) and put tall, looming buildings with few features on them to give an unsettling feeling.",
+				"As one of my first environments in Maya, I ended up spending a lot of time trying to create the supplimentary buildings which ended up not looking as well as I hoped, leaving me with less time to focus on set dressing and other small details before the deadline came up."
+			],
             "description": "This was one of my first 3D environments that I made. Using more advanced texturing and UV mapping, I made the models in Maya and transfered everything into Unity to have a explorable environment.",
 			"skills": [
 				"Unity",
 				"Maya"
 			],
-			"clickable": false,
+			"clickable": true,
             "path": "projects/3dTaipei",
             "wip": false,
-			"hidden": true
-		},
-		{
-			"title": "Wyvern",
-            "type": "3D",
-            "text": "TEMP",
-            "description": "A creature character I made.",
-			"skills": [
-				"Maya",
-				"Photoshop"
-			],
-			"clickable": false,
-            "path": "projects/3dWyvern",
-            "wip": false,
-			"hidden": true
-		},
-		{
-			"title": "Afro Disco Trailer",
-            "type": "AV",
-            "text": "TEMP",
-            "description": "For the Afro Disco game I am making, I decided to have a go at making a trailer for the game. This is one of my first public works, whereas most of my other vidios have been small school projects or other personal projects.",
-			"skills": [
-				"Premiere"
-			],
-			"clickable": false,
-            "path": "projects/adTrailer",
-            "wip": false,
-			"hidden": true
-		},
-		{
-			"title": "Bookcover Redesigns",
-            "type": "Design",
-            "text": "TEMP",
-            "description": "Tasked with redeseigning some bookcovers, I took two concepts and developed these based off them. These were done solely in Photoshop with much of the time spent reiterating on each design.",
-			"skills": [
-				"Photoshop"
-			],
-			"clickable": false,
-            "path": "projects/bookcovers",
-            "wip": false,
-			"hidden": true
+			"hidden": false
 		},
 		{
 			"title": "Custom C++ Engine",
             "type": "Game",
-            "text": "TEMP",
+            "text": [
+				"Using the basic DirectX template in Visual Studio, the aim of this project was to gather an understanding of the underlying qualities of a game engine such as Unity or Unreal. The goal was to create a simple game (Super Hot) completely from scratch, including the creation of shaders and class structures.",
+				"The main concern starting out was that the engine would not be expandable enough going down teh line, so I ended up spending a lot of time creating the basic features that would later on allow me to create more advanced materials and game logic. I also wanted to play around with multiplayer to some extent, though I eventually stumbled into issue after issue making it nearly impossible to implement, though I still managed to implement a simple in-game chat that I later repurposed to a cheat-code tool, allowing players to play around with limited constraints. I even made the frameworks for a 'cheatcode engine' that would allow people to embed their own cheats into the game"
+			],
             "description": "Using Direct X rendering and the Windows API, this C++ game engine was built from scratch and used to create a clone of 'Super Hot'. A lot of time was also spent with Pixel Shaders and other graphics elements.",
 			"skills": [
 				"VS"
 			],
-			"clickable": false,
+			"clickable": true,
             "path": "projects/cppEngine",
             "wip": false,
-			"hidden": true
+			"hidden": false
 		},
 		{
 			"title": "Eureka Animation",
             "type": "3D",
-            "text": "TEMP",
+            "text": [
+				"TEMP"
+			],
             "description": "A character animation I made.",
 			"skills": [
 				"Unity",
@@ -149,9 +145,58 @@
 			"hidden": true
 		},
 		{
+			"title": "Wyvern",
+            "type": "3D",
+            "text": [
+				"TEMP"
+			],
+            "description": "A creature character I made.",
+			"skills": [
+				"Maya",
+				"Photoshop"
+			],
+			"clickable": false,
+            "path": "projects/3dWyvern",
+            "wip": false,
+			"hidden": false
+		},
+		{
+			"title": "3DS Model",
+            "type": "3D",
+            "text": [
+				"As my first attempt in 3D modelling in Maya, I was challenged by the modelling process because of how different it is so how it might be done in Fusion360 or in other CAD software (which is where all of my experience came from prior). Because this was a part of an assignment in one of my university classes, I spent a lot of time and attention on the finer detail, trying to really make it seem as though this could pass as promotional material for the offical 3DS.",
+				"One of my major focuses was on the lights and specifically trying to make them seem as though they are legitimate lights in the renders. It took a lot of trial and error and plenty of time just trying to figure out how to get these things working in a new program, but eventually I think I got it looking quite good. One of my primary struggles though were with text and other surface elements because at the time I had not yet learned how to UV map and propoerly texture, and therefore that entire segment was done quite crudely with small 3D meshes. If I were to redo this project, I would make sure to put time into making the UVs as well as possible so that there isn't any shearing on the textures."
+			],
+            "description": "My first creation in Maya, the 3DS was my way of experimenting with creating objects in Maya and working with textures and lighting techniques.",
+			"skills": [
+				"Maya"
+			],
+			"clickable": true,
+            "path": "projects/3ds",
+            "wip": false,
+			"hidden": false
+		},
+		{
+			"title": "Bookcover Redesigns",
+            "type": "Design",
+            "text": [
+				"TEMP"
+			],
+            "description": "Tasked with redeseigning some bookcovers, I took two concepts and developed these based off them. These were done solely in Photoshop with much of the time spent reiterating on each design.",
+			"skills": [
+				"Photoshop"
+			],
+			"clickable": false,
+            "path": "projects/bookcovers",
+            "wip": false,
+			"hidden": true
+		},
+		{
 			"title": "Photoshop Test Pieces",
             "type": "Design",
-            "text": "TEMP",
+            "text": [
+				"TEMP"
+			],
             "description": "Various compositions I have made in Adobe Photoshop to test my skills and develop new ones.",
 			"skills": [
 				"Photoshop"
@@ -159,20 +204,23 @@
 			"clickable": false,
             "path": "projects/lozKey",
             "wip": false,
-			"hidden": true
+			"hidden": false
 		},
 		{
 			"title": "Sokolov's Elixer 3D Print",
             "type": "3D",
-            "text": "TEMP",
+            "text": [
+				"After doing plenty of work in 3D modelling and 3D printing before in Google Sketchup, I finally decided to make the switch to Fusion 360 and to learn how to use more professional grade software to create 3D models. Sokolov's Elixer from Dishonored was a perfect object to start with due to its straight sides and symetrical shape, meaning it was quite easy to make and made learning Fusion 360 extremely easy.",
+				"This piece was commissioned by a user of the 3D printing website/storefront, <a href=\"https://www.shapeways.com\">Shapeways.com</a>, after which I had created this for her over the course of a day. It printed flawlessly and was perfectly accepted a 150x25mm test tube that would hold the red liquid and imitate the in-game object."
+			],
             "description": "This was one of my first successful 3D printed objects that I made early on. The model is from the game, Dishonored, which I took a liking to immediatedly.",
 			"skills": [
 				"Fusion360"
 			],
-			"clickable": false,
+			"clickable": true,
             "path": "projects/sokolovs",
             "wip": false,
-			"hidden": true
+			"hidden": false
 		}
 	]
 }

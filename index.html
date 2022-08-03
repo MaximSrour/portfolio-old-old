@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -12,28 +10,32 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
     <link href="newstyles.css" rel="stylesheet">
-
+    
+    <!-- Dynamic loader -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script> 
     $(function(){
-      $("#workExperienceContent").load("workExperienceContent.html");
-      $("#educationContent").load("educationContent.html");
-      $("#additionalActivitiesContent").load("additionalActivitiesContent.html");
-      $("#projectsContent").load("projectsContent.html");
+      $("#workExperienceContent").load("generated/workExperienceContent.html");
+      $("#educationContent").load("generated/educationContent.html");
+      $("#additionalActivitiesContent").load("generated/additionalActivitiesContent.html");
+      $("#projectsContent").load("generated/projectsContent.html");
     });
     </script>
-
   </head>
 
   <body>
     <!-- Page Content -->
     <div class="container">
 
-      <!-- Page Heading -->
+      <!-- Page heading section -->
       <div class="sectionContainer">
         <h1 class="text-white border-title" style="text-align:center;">Maxim Srour</h1>
         <div class="profile-pic-container">
@@ -83,40 +85,30 @@
         </div>
       </div>
 
-      <div id="projects" class="sectionContainer"><!-- Start of the container -->
+      <!-- Work experience section -->
+      <div id="sectionWorkExperience" class="sectionContainer">
         <h1 class="text-white border-title" style="text-align:center;">Work Experience</h1>
         <div id="workExperienceContent" class="row"></div>
-      </div><!-- End of the container -->
+      </div>
 
-      <div id="projects" class="sectionContainer"><!-- Start of the container -->
+      <!-- education section -->
+      <div id="sectionEducation" class="sectionContainer">
         <h1 class="text-white border-title" style="text-align:center;">Education</h1>
         <div id="educationContent" class="row"></div>
-      </div><!-- End of the container -->
+      </div>
 
-      <div id="projects" class="sectionContainer"><!-- Start of the container -->
+      <!-- Additional activities section -->
+      <div id="sectionAdditionalActivities" class="sectionContainer">
         <h1 class="text-white border-title" style="text-align:center;">Additional Activities</h1>
         <div id="additionalActivitiesContent" class="row"></div>
-      </div><!-- End of the container -->
+      </div>
 
-      <div id="projects" class="sectionContainer"><!-- Start of the container -->
+      <!-- Projects section -->
+      <div id="sectionProjects" class="sectionContainer">
         <h1 class="text-white border-title" style="text-align:center;">Projects</h1>
         <div id="projectsContent" class="row"></div>
-      </div><!-- End of the container -->
+      </div>
 
 	  </div>
-
-    <!-- Footer -->
-    <footer class="py-5 header">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Maxim Srour &middot; A Portfolio</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   </body>
-
 </html>

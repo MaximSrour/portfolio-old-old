@@ -38,6 +38,40 @@ body {
 	text-align: center;
 }
 
+.accordian {
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+    display:auto;
+}
+
+.detailArrow {
+    margin: auto;
+}
+.detailArrowUp {
+    transform: rotate(180deg);
+}
+.detailArrowDown {
+    transform: rotate(0);
+}
+
+summary::marker {
+    content: "";
+}
+
+summary:before {
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+
 .itemTitle {
     color: rgb(31, 56, 100);
 }
@@ -55,6 +89,7 @@ body {
     font-size: 18px;
     color: rgb(20, 25, 50);
     font-weight: 600;
+    margin-bottom: 0px;
 }
 
 p.itemText {
@@ -66,6 +101,7 @@ p.itemText {
 }
 
 ul.itemText {
+    padding-left: 1em;
     margin-bottom: 0pt;
 }
 

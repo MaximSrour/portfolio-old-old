@@ -223,7 +223,7 @@ for i in data["projects"]:
 
         tempSkillString = ""
         for skill in i["skills"]:
-            tempSkillString += "<li><img class=\"icon icon{}\">TEMP</li>".format(skill)
+            tempSkillString += "<li><span class=\"iconFull\"><img class=\"icon icon{}\"></span></li>".format(skill)
         printString = printString.replace("<<SKILLS>>", tempSkillString)
         
         tempTextString = ""

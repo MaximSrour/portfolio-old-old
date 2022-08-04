@@ -20,7 +20,8 @@
     <link href="newstyles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
 
-    <script src="scripts.js"></script>
+    <script src="js/accordian.js"></script>
+    <script src="js/icons.js"></script>
   </head>
 
   <body>
@@ -50,8 +51,8 @@
               <ul>
                 <li>Programming</li>
                 <ul>
-                  <li><img class="icon iconUnreal"> C++ (Unreal)</li>
-                  <li><img class="icon iconUnity"> C# (Unity3D)</li>
+                  <li><span class="iconFull"><img class="icon iconUnreal"></span></li>
+                  <li><span class="iconFull"><img class="icon iconUnity"></span></li>
                   <li>Java</li>
                   <li>HTML/CSS</li>
                   <li>Javascript</li>
@@ -59,17 +60,17 @@
                 
                 <li>3D Modelling</li>
                 <ul>
-                  <li><img class="icon iconMaya"> Maya</li>
-                  <li><img class="icon iconFusion360"> Fusion 360</li>
-                  <li><img class="icon iconSubstancePainter"> Substance Painter</li>
+                  <li><span class="iconFull"><img class="icon iconMaya"></span></li>
+                  <li><span class="iconFull"><img class="icon iconFusion360"></span></li>
+                  <li><span class="iconFull"><img class="icon iconSubstancePainter"></span></li>
                 </ul>
                 
                 <li>Adobe Suite</li>
                 <ul>
-                  <li><img class="icon iconPhotoshop"> Photoshop</li>
-                  <li><img class="icon iconIllustrator"> Illustrator</li>
-                  <li><img class="icon iconPremiere"> Premiere Pro</li>
-                  <li><img class="icon iconAudition"> Audition</li>
+                  <li><span class="iconFull"><img class="icon iconPhotoshop"></span></li>
+                  <li><span class="iconFull"><img class="icon iconIllustrator"></span></li>
+                  <li><span class="iconFull"><img class="icon iconPremiere"></span></li>
+                  <li><span class="iconFull"><img class="icon iconAudition"></span></li>
                 </ul>
               </ul>
             </div>

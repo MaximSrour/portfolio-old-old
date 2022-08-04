@@ -144,4 +144,3 @@ window.onload = function() {
         new Accordion(el);
     });
 }
-

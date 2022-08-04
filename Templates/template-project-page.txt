@@ -18,6 +18,8 @@
         <!-- Custom styles for this template -->
         <link href="../../css/3-col-portfolio.css" rel="stylesheet">
         <link href="../../newstyles.css" rel="stylesheet">
+        
+        <script src="../../js/icons.js"></script>
     </head>
 
     <body>

@@ -49,13 +49,23 @@
             <div class="card card-body">
               <h4>My Skillset</h4>
               <ul>
+                <li>Games Development</li>
+                <ul>
+                  <li><span class="iconFull"><img class="icon iconUE4"></span></li>
+                  <li><span class="iconFull"><img class="icon iconUE5"></span></li>
+                  <li><span class="iconFull"><img class="icon iconUnity"></span></li>
+                </ul>
+
                 <li>Programming</li>
                 <ul>
-                  <li><span class="iconFull"><img class="icon iconUnreal"></span></li>
-                  <li><span class="iconFull"><img class="icon iconUnity"></span></li>
+                  <li>C/C++/C#</li>
+                  <li>Python</li>
+                  <li>R</li>
                   <li>Java</li>
                   <li>HTML/CSS</li>
                   <li>Javascript</li>
+                  <li>VBA</li>
+                  <li>LaTeX</li>
                 </ul>
                 
                 <li>3D Modelling</li>

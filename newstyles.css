@@ -138,19 +138,20 @@ ul.itemText {
 .icon {
     height: 20px;
     width: 20px;
-    margin-top: -3px;
+    margin: -3px 1pt 0pt 1pt;
 }
 
 .iconUnity { content: url("/assets/icons/unity.png"); --iconText: "Unity3D"; }
-.iconUnreal { content: url("/assets/icons/unreal.png"); --iconText: "Unreal Engine 4"; }
-.iconMaya { content: url("/assets/icons/maya.jpg"); --iconText: "Autodesk Maya"; }
-.iconFusion360 { content: url("/assets/icons/fusion360.jpg"); --iconText: "Autodesk Fusion 360"; }
+.iconUE4 { content: url("/assets/icons/ue4.png"); --iconText: "Unreal Engine 4"; }
+.iconUE5 { content: url("/assets/icons/ue5.png"); --iconText: "Unreal Engine 5"; }
+.iconMaya { content: url("/assets/icons/maya.png"); --iconText: "Autodesk Maya"; }
+.iconFusion360 { content: url("/assets/icons/fusion360.png"); --iconText: "Autodesk Fusion 360"; }
 .iconSubstanceDesigner { content: url("/assets/icons/substancedesigner.png"); --iconText: "Substance Designer"; }
 .iconSubstancePainter { content: url("/assets/icons/substancepainter.png"); --iconText: "Substance Painter"; }
-.iconPhotoshop { content: url("/assets/icons/photoshop.jpg"); --iconText: "Adobe Photoshop"; }
-.iconIllustrator { content: url("/assets/icons/illustrator.jpg"); --iconText: "Adobe Illustrator"; }
-.iconPremiere { content: url("/assets/icons/premiere.jpg"); --iconText: "Adobe Premiere"; }
-.iconAudition { content: url("/assets/icons/audition.jpg"); --iconText: "Adobe Audition"; }
+.iconPhotoshop { content: url("/assets/icons/photoshop.png"); --iconText: "Adobe Photoshop"; }
+.iconIllustrator { content: url("/assets/icons/illustrator.png"); --iconText: "Adobe Illustrator"; }
+.iconPremiere { content: url("/assets/icons/premiere.png"); --iconText: "Adobe Premiere"; }
+.iconAudition { content: url("/assets/icons/audition.png"); --iconText: "Adobe Audition"; }
 .iconVS { content: url("/assets/icons/visualstudio.png"); --iconText: "Visual Studio"; }
 
 .wip {

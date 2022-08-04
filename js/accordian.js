@@ -139,7 +139,7 @@ class Accordion {
     }
 }
 
-window.onload = function() {
+function LoadAccordians() {
     document.querySelectorAll('.accordian').forEach((el) => {
         new Accordion(el);
     });

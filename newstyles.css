@@ -138,7 +138,7 @@ ul.itemText {
 .icon {
     height: 20px;
     width: 20px;
-    margin: -3px 1pt 0pt 1pt;
+    margin: -1pt 1pt 0pt 1pt;
 }
 
 .iconUnity { content: url("/assets/icons/unity.png"); --iconText: "Unity3D"; }

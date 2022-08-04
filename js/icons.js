@@ -1,4 +1,4 @@
-window.onload = function() {
+function LoadIcons() {
     document.querySelectorAll('.iconFull').forEach((el) => {
         let img = el.querySelector('img');
         let text = getComputedStyle(img).getPropertyValue("--iconText");

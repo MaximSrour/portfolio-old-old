@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+from dateutil import relativedelta
 import os  
 import re
 
@@ -60,11 +61,38 @@ jsonFile.close()
 
 # Work
 for i in data["work"]:
+    startDate = i["start"]
+    endDate = i["end"]
+    durationString = ""
+
+    startDateObject = datetime.strptime(startDate, '%d/%m/%Y')
+    if(endDate == "Current"):
+        endDateObject = datetime.today()
+    else:
+        endDateObject = datetime.strptime(endDate, '%d/%m/%Y')
+    
+    durationObject = relativedelta.relativedelta(endDateObject, startDateObject)
+
+    if(durationObject.years == 1):
+        durationString = "{} year".format(durationObject.years)
+    elif(durationObject.years > 1):
+        durationString = "{} years".format(durationObject.years)
+        
+    if(durationObject.months == 1):
+        if(durationString !=""):
+            durationString += " "
+        durationString += "{} month".format(durationObject.months)
+    elif(durationObject.months > 1):
+        if(durationString !=""):
+            durationString += " "
+        durationString += "{} months".format(durationObject.months)
+
     printString = templateWork
     printString = printString.replace("<<TITLE>>", i["title"])
     printString = printString.replace("<<ORGANISATION>>", i["organisation"])
-    printString = printString.replace("<<START>>", i["start"])
-    printString = printString.replace("<<END>>", i["end"])
+    printString = printString.replace("<<START>>", startDate)
+    printString = printString.replace("<<END>>", endDate)
+    printString = printString.replace("<<DURATION>>", durationString)
 
     textString = ""
     for item in i["text"]:

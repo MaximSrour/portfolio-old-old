@@ -154,6 +154,18 @@ ul.itemText {
 .iconAudition { content: url("/assets/icons/audition.png"); --iconText: "Adobe Audition"; }
 .iconVS { content: url("/assets/icons/visualstudio.png"); --iconText: "Visual Studio"; }
 
+.iconC { content: url("/assets/icons/c.png"); --iconText: "C"; }
+.iconCPP { content: url("/assets/icons/cpp.png"); --iconText: "C++"; }
+.iconCSharp { content: url("/assets/icons/csharp.png"); --iconText: "C#"; }
+.iconPython { content: url("/assets/icons/python.png"); --iconText: "Python"; }
+.iconR { content: url("/assets/icons/r.png"); --iconText: "R"; }
+.iconJava { content: url("/assets/icons/java.png"); --iconText: "Java"; }
+.iconHTML5 { content: url("/assets/icons/html5.png"); --iconText: "HTML5"; }
+.iconCSS3 { content: url("/assets/icons/css3.png"); --iconText: "CSS3"; }
+.iconJS { content: url("/assets/icons/js.png"); --iconText: "Javascript"; }
+.iconVBA { content: url("/assets/icons/vba.png"); --iconText: "VBA"; }
+.iconLatex { content: url("/assets/icons/latex.png"); --iconText: "LaTeX"; }
+
 .wip {
 	display: block;
 	position: absolute;

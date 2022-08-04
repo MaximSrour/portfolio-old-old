@@ -64,14 +64,17 @@
 
                 <li>Programming</li>
                 <ul>
-                  <li>C/C++/C#</li>
-                  <li>Python</li>
-                  <li>R</li>
-                  <li>Java</li>
-                  <li>HTML/CSS</li>
-                  <li>Javascript</li>
-                  <li>VBA</li>
-                  <li>LaTeX</li>
+                  <li><span class="iconFull"><img class="icon iconC"></span></li>
+                  <li><span class="iconFull"><img class="icon iconCPP"></span></li>
+                  <li><span class="iconFull"><img class="icon iconCSharp"></span></li>
+                  <li><span class="iconFull"><img class="icon iconPython"></span></li>
+                  <li><span class="iconFull"><img class="icon iconR"></span></li>
+                  <li><span class="iconFull"><img class="icon iconJava"></span></li>
+                  <li><span class="iconFull"><img class="icon iconHTML5"></span></li>
+                  <li><span class="iconFull"><img class="icon iconCSS3"></span></li>
+                  <li><span class="iconFull"><img class="icon iconJS"></span></li>
+                  <li><span class="iconFull"><img class="icon iconVBA"></span></li>
+                  <li><span class="iconFull"><img class="icon iconLatex"></span></li>
                 </ul>
                 
                 <li>3D Modelling</li>
@@ -96,7 +99,7 @@
 
       <!-- Work experience section -->
       <div id="sectionWorkExperience" class="sectionContainer">
-        <h1 class="sectionHeader" style="text-align:center;">Work Experience</h1>
+        <h1 class="sectionHeader" style="text-align:center;">Work History</h1>
         <div id="workExperienceContent" class="row">
           <<WORKEXPERIENCECONTENT>>
         </div>

@@ -19,6 +19,8 @@
     <!-- Custom styles for this template -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
     <link href="newstyles.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+    <link href="css/accordian.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
 
     <script src="js/accordian.js"></script>
@@ -28,6 +30,7 @@
       window.onload = function() {
         LoadAccordians();
         LoadIcons();
+        InitLogin();
       }
     </script>
   </head>

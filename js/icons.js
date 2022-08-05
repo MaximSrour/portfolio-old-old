@@ -2,7 +2,16 @@ function LoadIcons() {
     document.querySelectorAll('.iconFull').forEach((el) => {
         let img = el.querySelector('img');
         let text = getComputedStyle(img).getPropertyValue("--iconText");
-        text = text.substring(2, text.length-1)
+        textArray = text.split("\"");
+
+        if(textArray.length > 3) {
+            textArray.splice(textArray.length-1, 1);
+            textArray.splice(0, 1);
+
+            text = textArray.join();
+        } else {
+            text = textArray[1];
+        }
 
         el.innerHTML += text;
     });

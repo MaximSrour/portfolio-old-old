@@ -4,7 +4,7 @@
     <div class="card-body">
       <h4 class="card-title">
         <p><<TITLE>></p>
-        <a class="project-type-link" href="gamedev1.html"><p class="projectSubtext project-type"><<TYPE>> (<<SKILLS>>)</p></a>
+        <span class="project-type-link"><p class="projectSubtext project-type"><<TYPE>> (<<SKILLS>>)</p></span>
       </h4>
       <p class="card-text"><<DESCRIPTION>></p>
     </div>

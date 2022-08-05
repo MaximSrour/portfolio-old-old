@@ -92,7 +92,7 @@ for i in data["work"]:
     printString = printString.replace("<<ORGANISATION>>", i["organisation"])
     printString = printString.replace("<<START>>", startDate)
     printString = printString.replace("<<END>>", endDate)
-    printString = printString.replace("<<DURATION>>", durationString)
+    #printString = printString.replace("<<DURATION>>", durationString)
 
     textString = ""
     for item in i["text"]:

@@ -74,7 +74,7 @@
             "path": "projects/adTrailer",
 			"clickable": true,
             "wip": false,
-			"hidden": false
+			"hidden": true
 		},
 		{
 			"title": "Bank Environment",
@@ -111,7 +111,7 @@
             "path": "projects/3dTaipei",
 			"clickable": true,
             "wip": false,
-			"hidden": false
+			"hidden": true
 		},
 		{
 			"title": "Custom C++ Engine",
@@ -128,7 +128,7 @@
             "path": "projects/cppEngine",
 			"clickable": true,
             "wip": false,
-			"hidden": false
+			"hidden": true
 		},
 		{
 			"title": "Eureka Animation",
@@ -161,7 +161,7 @@
             "path": "projects/3dWyvern",
 			"clickable": false,
             "wip": false,
-			"hidden": false
+			"hidden": true
 		},
 		{
 			"title": "3DS Model",
@@ -208,7 +208,7 @@
             "path": "projects/lozKey",
 			"clickable": false,
             "wip": false,
-			"hidden": false
+			"hidden": true
 		},
 		{
 			"title": "Sokolov's Elixer 3D Print",
@@ -224,7 +224,7 @@
             "path": "projects/sokolovs",
 			"clickable": true,
             "wip": false,
-			"hidden": false
+			"hidden": true
 		}
 	]
 }

@@ -4,7 +4,7 @@
       <summary>
         <h3 class="itemTitle cardDetailsCentered"><<TITLE>></h3>
         <h5 class="itemOrganisation cardDetailsCentered"><<ORGANISATION>></h5>
-        <p class="itemDuration cardDetailsCentered"><<START>> - <<END>> (<<DURATION>>)</p>
+        <p class="itemDuration cardDetailsCentered"><<START>> - <<END>></p>
       </summary>
       <div id="workExperienceContent" class="row content">
         <div class="col-lg-10 offset-md-1 col-sm-6">

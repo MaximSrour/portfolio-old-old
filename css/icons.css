@@ -1,16 +1,38 @@
 @charset "utf-8";
 /* CSS Document */
 
+.iconFull .icon {
+    margin-right: 5pt;
+}
+
 .icon {
-	width: 22px;
-	height: 22px;
-	display: block;
+    height: 20px;
+    width: 20px;
+    margin: -1pt 1pt 0pt 1pt;
 }
 
-.icon-unity {
-	background:url("../assets/icons/unity.png");
-}
+/* Icons from https://www.pngegg.com/ */
+.iconUnity { content: url("/assets/icons/unity.png"); --iconText: "Unity3D"; }
+.iconUE4 { content: url("/assets/icons/ue4.png"); --iconText: "Unreal Engine 4"; }
+.iconUE5 { content: url("/assets/icons/ue5.png"); --iconText: "Unreal Engine 5"; }
+.iconMaya { content: url("/assets/icons/maya.png"); --iconText: "Autodesk Maya"; }
+.iconFusion360 { content: url("/assets/icons/fusion360.png"); --iconText: "Autodesk Fusion 360"; }
+.iconSubstanceDesigner { content: url("/assets/icons/substancedesigner.png"); --iconText: "Substance Designer"; }
+.iconSubstancePainter { content: url("/assets/icons/substancepainter.png"); --iconText: "Substance Painter"; }
+.iconPhotoshop { content: url("/assets/icons/photoshop.png"); --iconText: "Adobe Photoshop"; }
+.iconIllustrator { content: url("/assets/icons/illustrator.png"); --iconText: "Adobe Illustrator"; }
+.iconPremiere { content: url("/assets/icons/premiere.png"); --iconText: "Adobe Premiere"; }
+.iconAudition { content: url("/assets/icons/audition.png"); --iconText: "Adobe Audition"; }
+.iconVS { content: url("/assets/icons/visualstudio.png"); --iconText: "Visual Studio"; }
 
-.icon-unreal {
-	background:url("../assets/icons/unreal.png");
-}
+.iconC { content: url("/assets/icons/c.png"); --iconText: "C"; }
+.iconCPP { content: url("/assets/icons/cpp.png"); --iconText: "C++"; }
+.iconCSharp { content: url("/assets/icons/csharp.png"); --iconText: "C#"; }
+.iconPython { content: url("/assets/icons/python.png"); --iconText: "Python"; }
+.iconR { content: url("/assets/icons/r.png"); --iconText: "R"; }
+.iconJava { content: url("/assets/icons/java.png"); --iconText: "Java"; }
+.iconHTML5 { content: url("/assets/icons/html5.png"); --iconText: "HTML5"; }
+.iconCSS3 { content: url("/assets/icons/css3.png"); --iconText: "CSS3"; }
+.iconJS { content: url("/assets/icons/js.png"); --iconText: "Javascript"; }
+.iconVBA { content: url("/assets/icons/vba.png"); --iconText: "VBA"; }
+.iconLatex { content: url("/assets/icons/latex.png"); --iconText: "LaTeX"; }

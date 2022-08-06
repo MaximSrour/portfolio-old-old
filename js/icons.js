@@ -4,7 +4,7 @@ function LoadIcons() {
         let text = getComputedStyle(img).getPropertyValue("--iconText");
         textArray = text.split("\"");
 
-        if(textArray.length > 3) {
+        if(textArray.length > 1) {
             textArray.splice(textArray.length-1, 1);
             textArray.splice(0, 1);
 

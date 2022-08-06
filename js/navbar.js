@@ -1,9 +1,7 @@
 let sections;
-let navButtons;
 
 function InitNavbar() {
     sections = document.querySelectorAll("section[id]");
-    navButtons = document.querySelector(".navbarButtons");
     window.addEventListener("scroll", NavbarHighlight);
 
     NavbarHighlight()
@@ -32,8 +30,7 @@ function NavbarHighlight() {
         const parentNodePadding = parseInt(window.getComputedStyle(current.parentNode).paddingTop, 10);
         sectionId = current.getAttribute("id");
 
-        let queryString = `a[href*=${sectionId}Link]`;
-        let element = document.querySelector(queryString);
+        let element = document.querySelector(`a[href*=${sectionId}Link]`);
         
         if(element != null) {
             if(scrollY > sectionTop - parentNodePadding - 1 && scrollY <= sectionTop + sectionHeight) {

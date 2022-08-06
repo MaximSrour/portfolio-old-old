@@ -88,6 +88,7 @@ for i in data["work"]:
         durationString += "{} months".format(durationObject.months)
 
     printString = templateWork
+    printString = printString.replace("<<ID>>", "workExperience-" + i["id"])
     printString = printString.replace("<<TITLE>>", i["title"])
     printString = printString.replace("<<ORGANISATION>>", i["organisation"])
     printString = printString.replace("<<START>>", startDate)
@@ -105,6 +106,7 @@ for i in data["work"]:
         contentWorkExperience += "\n"
 
 contentWorkExperience += "\n"
+contentWorkExperience = contentWorkExperience.replace("\n", "\n\t\t\t\t\t")
 
 f = open("./generated/workExperienceContent.html", "w")
 f.write(contentWorkExperience)
@@ -113,6 +115,7 @@ f.close()
 # Education
 for i in data["education"]:
     printString = templateEducation
+    printString = printString.replace("<<ID>>", "education-" + i["id"])
     printString = printString.replace("<<TITLE>>", i["title"])
     printString = printString.replace("<<ORGANISATION>>", i["organisation"])
     printString = printString.replace("<<START>>", i["start"])
@@ -124,6 +127,7 @@ for i in data["education"]:
         contentEducation += "\n"
 
 contentEducation += "\n"
+contentEducation = contentEducation.replace("\n", "\n\t\t\t\t\t")
 
 f = open("./generated/educationContent.html", "w")
 f.write(contentEducation)
@@ -132,6 +136,7 @@ f.close()
 # Additional Activities
 for i in data["additionalActivities"]:
     printString = templateAdditionalActivities
+    printString = printString.replace("<<ID>>", "additionalActivities-" + i["id"])
     printString = printString.replace("<<TITLE>>", i["title"])
     printString = printString.replace("<<ORGANISATION>>", i["organisation"])
     printString = printString.replace("<<TEXT>>", i["text"])
@@ -141,6 +146,7 @@ for i in data["additionalActivities"]:
         contentAdditionalActivities += "\n"
 
 contentAdditionalActivities += "\n"
+contentAdditionalActivities = contentAdditionalActivities.replace("\n", "\n\t\t\t\t\t")
 
 f = open("./generated/additionalActivitiesContent.html", "w")
 f.write(contentAdditionalActivities)
@@ -155,10 +161,11 @@ jsonFile.close()
 
 # Projects
 for i in data["projects"]:
-    filePath = i["path"]
+    filePath = "projects/" + i["id"]
     projectType = i["type"]
 
     printString = templateProject
+    printString = printString.replace("<<ID>>", "project-" + i["id"])
     printString = printString.replace("<<TITLE>>", i["title"])
     printString = printString.replace("<<DESCRIPTION>>", i["description"])
     printString = printString.replace("<<IMAGESMALL>>", filePath + "/imageMainSmall.jpg")
@@ -199,6 +206,7 @@ for i in data["projects"]:
         contentProjects += "\n"
 
 contentProjects += "\n"
+contentProjects = contentProjects.replace("\n", "\n\t\t\t\t\t")
 
 f = open("./generated/projectsContent.html", "w")
 f.write(contentProjects)
@@ -209,7 +217,7 @@ texFileString = ""
 # Projects Pages
 for i in data["projects"]:
     if(i["clickable"] == True):
-        filePath = i["path"]
+        filePath = "projects/" + i["id"]
         projectType = i["type"]
 
         printString = templateProjectPage

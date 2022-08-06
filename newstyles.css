@@ -13,6 +13,11 @@ body {
     user-select: none; /* Standard */
 }
 
+.container {
+    margin-top: 0pt;
+    padding-top: 50px;
+}
+
 .sectionContainer {
     background-color: rgba(255, 255, 255, 0.2);
 	border-radius: .3rem;
@@ -36,7 +41,30 @@ body {
 	padding-bottom: 15px;
 }
 
+.sectionLink {
+    position: relative;
+    top: -100px;
+}
+
+.topOfPageLink {
+    position: absolute;
+    top: -1000px;
+}
+
+.itemLink {
+    position: relative;
+    top: -70px;
+    left: 0px;
+}
+
+.itemLinkEnd {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
 .resumeItem {
+    position: relative;
     margin: 10pt auto;
 }
 

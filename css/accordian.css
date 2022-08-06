@@ -3,35 +3,43 @@
 
 .accordian {
     cursor: pointer;
-  }
-  
-  .detailArrow {
-      margin: auto;
-      margin-top: -15pt;
-      font-size: 20pt;
-  }
+}
 
-  .detailArrowUp {
-      transform: rotate(180deg);
-  }
+.detailArrow {
+    margin: auto;
+    margin-top: -15pt;
+    font-size: 20pt;
+}
 
-  .detailArrowDown {
-      transform: rotate(0);
-  }
+.detailArrowUp {
+    transform: rotate(180deg);
+}
 
-  details summary::marker,
-  details summary::-webkit-details-marker {
-      content: "";
-  }
-  
-  summary:before {
-      border-width: .4rem;
-      border-style: solid;
-      border-color: transparent transparent transparent #fff;
-      position: absolute;
-      top: 1.3rem;
-      left: 1rem;
-      transform: rotate(0);
-      transform-origin: .2rem 50%;
-      transition: .25s transform ease;
-  }
+.detailArrowDown {
+    transform: rotate(0);
+}
+
+details summary::marker,
+details summary::-webkit-details-marker {
+    content: "";
+}
+
+summary:before {
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+
+.accordianScrollingBounds {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}

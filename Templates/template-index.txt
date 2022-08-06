@@ -16,62 +16,65 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom styles for this template -->
+    <!-- Styles -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
     <link href="newstyles.css" rel="stylesheet">
     <link href="css/icons.css" rel="stylesheet">
     <link href="css/accordian.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
 
+    <!-- Scripts -->
     <script src="js/accordian.js"></script>
     <script src="js/icons.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/navbar.js"></script>
     <script>
       window.onload = function() {
         LoadAccordians();
         LoadIcons();
-        InitLogin();
+        //InitLogin();
+        InitNavbar();
       }
     </script>
   </head>
 
   <body>
-    <!--
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Maxim Srour &middot; Software Engineer | 3D Modeller | Game Designer</a>
-		
+      <div class="container" style="padding-top: 0px;">
+        <a class="navbar-brand" href="index.html">Maxim Srour &middot; Portfolio</a>
+      
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="#sectionIntroductionLink">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sectionWorkExperience">Work History</a>
+              <a class="nav-link" href="#sectionWorkExperienceLink">Work History</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sectionEducation">Education</a>
+              <a class="nav-link" href="#sectionEducationLink">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sectionAdditionalActivities">Additional Activities</a>
+              <a class="nav-link" href="#sectionAdditionalActivitiesLink">Additional Activities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sectionProjects">Projects</a>
+              <a class="nav-link" href="#sectionProjectsLink">Projects</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    -->
 
     <!-- Page Content -->
     <div class="container">
 
       <!-- Page heading section -->
-      <div id="sectionIntroduction" class="sectionContainer">
+      <section id="sectionIntroduction" class="sectionContainer">
+        <span id="sectionIntroductionLink" class="sectionLink"></span>
+
         <h1 class="sectionHeader" style="text-align:center;">Maxim Srour</h1>
         <div class="profile-pic-container">
           <img class="profile-pic" src="assets/Profile.jpg" alt="">
@@ -131,39 +134,47 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Work experience section -->
-      <div id="sectionWorkExperience" class="sectionContainer">
+      <section id="sectionWorkExperience" class="sectionContainer">
+        <span id="sectionWorkExperienceLink" class="sectionLink"></span>
+
         <h1 class="sectionHeader" style="text-align:center;">Work History</h1>
         <div id="workExperienceContent" class="row">
           <<WORKEXPERIENCECONTENT>>
         </div>
-      </div>
+      </section>
 
-      <!-- education section -->
-      <div id="sectionEducation" class="sectionContainer">
+      <!-- Education section -->
+      <section id="sectionEducation" class="sectionContainer">
+        <span id="sectionEducationLink" class="sectionLink"></span>
+
         <h1 class="sectionHeader" style="text-align:center;">Education</h1>
         <div id="educationContent" class="row">
           <<EDUCATIONCONTENT>>
         </div>
-      </div>
+      </section>
 
       <!-- Additional activities section -->
-      <div id="sectionAdditionalActivities" class="sectionContainer">
+      <section id="sectionAdditionalActivities" class="sectionContainer">
+        <span id="sectionAdditionalActivitiesLink" class="sectionLink"></span>
+
         <h1 class="sectionHeader" style="text-align:center;">Additional Activities</h1>
         <div id="additionalActivitiesContent" class="row">
           <<ADDITIONALACTIVITIESCONTENT>>
         </div>
-      </div>
+      </section>
 
       <!-- Projects section -->
-      <div id="sectionProjects" class="sectionContainer">
+      <section id="sectionProjects" class="sectionContainer">
+        <span id="sectionProjectsLink" class="sectionLink"></span>
+
         <h1 class="sectionHeader" style="text-align:center;">Projects</h1>
         <div id="projectsContent" class="row">
           <<PROJECTSCONTENT>>
         </div>
-      </div>
+      </section>
 
 	  </div>
   </body>

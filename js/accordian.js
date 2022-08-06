@@ -1,15 +1,19 @@
 class Accordion {
     constructor(el) {
-        this.container = el;
+        this.accordionContainer = el;
         // Store the <details> element
-        this.el = this.container.querySelector('details');
+        this.el = this.accordionContainer.querySelector('details');
         // Store the <summary> element
         this.summary = this.el.querySelector('summary');
         // Store the <div class="content"> element
         this.content = this.el.querySelector('.content');
 
-        this.arrow = this.container.querySelector('.detailArrow');
+        this.arrow = this.accordionContainer.querySelector('.detailArrow');
         this.arrowAnimation = null;
+
+        this.linkTo = this.accordionContainer.parentNode.querySelector('.itemLink');
+        this.linkToEnd = this.accordionContainer.parentNode.querySelector('.itemLinkEnd');
+        this.scrollingBounds = this.accordionContainer.parentNode.querySelector('.accordianScrollingBounds');
 
         // Store the animation object (so we can cancel it if needed)
         this.animation = null;
@@ -18,7 +22,7 @@ class Accordion {
         // Store if the element is expanding
         this.isExpanding = false;
         // Detect user clicks on the summary element
-        this.container.addEventListener('click', (e) => this.onClick(e));
+        this.accordionContainer.addEventListener('click', (e) => this.onClick(e));
 
         this.animationTiming = {
             duration: 400,
@@ -26,6 +30,18 @@ class Accordion {
         }
 
         this.paddingHeight = 40;
+    }
+
+    ComputeSizeOfLink(height) {
+        const heightOfElement = parseInt(height,10);
+        const topPadding = parseInt(getComputedStyle(this.linkTo).getPropertyValue("top"), 10);
+        const bottomPadding = 50;
+        const computedHeight = heightOfElement - topPadding + bottomPadding;
+
+        this.scrollingBounds.style.top = `${topPadding}px`;
+        this.scrollingBounds.style.height = `${computedHeight}px`;
+        
+        this.scrollingBounds.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
     onClick(e) {
@@ -78,6 +94,8 @@ class Accordion {
             this.arrowAnimation.cancel();
         }
         this.arrowAnimation = this.arrow.animate(arrowAnimationKeyframes, this.animationTiming);
+
+        this.ComputeSizeOfLink(endHeight);
     }
 
     open() {
@@ -123,6 +141,8 @@ class Accordion {
             this.arrowAnimation.cancel();
         }
         this.arrowAnimation = this.arrow.animate(arrowAnimationKeyframes, this.animationTiming);
+
+        this.ComputeSizeOfLink(endHeight);
     }
 
     onAnimationFinish(open) {

@@ -31,6 +31,11 @@ def escapeCharacters(stringToClean):
     
     return tempString
 
+
+f = open("./templates/google-analytics-scripts.txt")
+templateGoogleAnalytics = f.read()
+f.close()
+
 f = open("./templates/template-work.txt")
 templateWork = f.read()
 contentWorkExperience = ""
@@ -221,6 +226,7 @@ for i in data["projects"]:
         projectType = i["type"]
 
         printString = templateProjectPage
+        printString = printString.replace("<<GOOGLEANALYTICS>>", templateGoogleAnalytics)
         printString = printString.replace("<<TITLE>>", i["title"])
         printString = printString.replace("<<DESCRIPTION>>", i["description"])
 
@@ -285,6 +291,7 @@ templateIndex = templateIndex.replace("<<WORKEXPERIENCECONTENT>>", contentWorkEx
 templateIndex = templateIndex.replace("<<EDUCATIONCONTENT>>", contentEducation)
 templateIndex = templateIndex.replace("<<ADDITIONALACTIVITIESCONTENT>>", contentAdditionalActivities)
 templateIndex = templateIndex.replace("<<PROJECTSCONTENT>>", contentProjects)
+templateIndex = templateIndex.replace("<<GOOGLEANALYTICS>>", templateGoogleAnalytics)
 
 f = open("./index.html", "w")
 f.write(templateIndex)

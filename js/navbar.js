@@ -19,6 +19,10 @@ function InitNavbar() {
     });
 }
 
+function NavbarLinkSelected() {
+    $('.collapse').collapse("hide")
+}
+
 function NavbarHighlight() {
     let scrollY = window.pageYOffset;
 

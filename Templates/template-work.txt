@@ -1,24 +1,24 @@
 
 <!-- <<ID>> START -->
 <div class="col-lg-10 offset-md-1 col-sm-6 resumeItem">
-  <span id="<<ID>>-start" class="itemLink"></span>
-  <span id="<<ID>>-scrollingBounds" class="accordianScrollingBounds"></span>
-  <div class="card h-100 cardBackground accordian">
-    <details class="card-body">
-      <summary>
-        <h3 class="itemTitle cardDetailsCentered"><<TITLE>></h3>
-        <h5 class="itemOrganisation cardDetailsCentered"><<ORGANISATION>></h5>
-        <p class="itemDuration cardDetailsCentered"><<START>> - <<END>></p>
-      </summary>
-      <div id="workExperienceContent" class="row content">
-        <div class="col-lg-10 offset-md-1 col-sm-6">
-          <ul class="itemText">
-            <<TEXT>>
-          </ul>
-        </div>
-      </div>
-    </details>
-    <span class="detailArrow mdi mdi-chevron-down"></span>
-  </div>
+    <span id="<<ID>>-start" class="itemLink"></span>
+    <span id="<<ID>>-scrollingBounds" class="accordianScrollingBounds"></span>
+    <div class="card h-100 cardBackground accordian">
+        <details class="card-body">
+            <summary>
+                <h3 class="itemTitle cardDetailsCentered"><<TITLE>></h3>
+                <h5 class="itemOrganisation cardDetailsCentered"><<ORGANISATION>></h5>
+                <p class="itemDuration cardDetailsCentered"><<START>> - <<END>></p>
+            </summary>
+            <div id="workExperienceContent" class="row content">
+                <div class="col-lg-10 offset-md-1 col-sm-6">
+                    <ul class="itemText">
+                        <<TEXT>>
+                    </ul>
+                </div>
+            </div>
+        </details>
+        <span class="detailArrow mdi mdi-chevron-down"></span>
+    </div>
 </div>
 <!-- <<ID>> END -->

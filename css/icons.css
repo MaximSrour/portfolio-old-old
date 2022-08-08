@@ -1,8 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
-.iconFull .icon {
+.iconLong .icon {
     margin-right: 5pt;
+}
+
+.iconShort .icon {
+    margin-right: 0pt;
 }
 
 .icon {

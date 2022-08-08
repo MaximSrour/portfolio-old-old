@@ -1,183 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Maxim Srour &middot; Resume</title>
-    <link rel="icon" href="./assets/ProfileSmall.jpg">
+        <title>Maxim Srour &middot; Resume</title>
+        <link rel="icon" href="./assets/ProfileSmall.jpg">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Styles -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
-    <link href="newstyles.css" rel="stylesheet">
-    <link href="css/icons.css" rel="stylesheet">
-    <link href="css/accordian.css" rel="stylesheet">
-    <script src="css/navbar.css"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
-
-    <!-- Scripts -->
-    <script src="js/accordian.js"></script>
-    <script src="js/icons.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/navbar.js"></script>
-    <script>
-      window.onload = function() {
-        LoadAccordians();
-        LoadIcons();
-        //InitLogin();
-        InitNavbar();
-      }
-    </script>
-  </head>
-  <<GOOGLEANALYTICS>>
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
-      <div class="container" style="padding-top: 0px;">
-        <a class="navbar-brand" href="index.html">Maxim Srour &middot; Portfolio</a>
-      
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionIntroductionLink">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionWorkExperienceLink">Work History</a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionEducationLink">Education</a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionAdditionalActivitiesLink">Additional Activities</a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionProjectsLink">Projects</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <!-- Page heading section -->
-      <section id="sectionIntroduction" class="sectionContainer">
-        <span id="sectionIntroductionLink" class="sectionLink"></span>
-
-        <h1 class="sectionHeader" style="text-align:center;">Maxim Srour</h1>
-        <div class="profile-pic-container">
-          <img class="profile-pic" src="assets/Profile.jpg" alt="">
-        </div>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         
-        <div class="row">
-          <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
-            <div class="card card-body">
-              <h4>Who I am</h4>
-              <p class="card-text">I am a software engineer by trade and an avid technology nerd that will find any excues to learn about what's new. I spend most of my time programming or designing new systems, primarily in C++ though I have begun to branch out to other languages like Python more frequently.</p>
-              <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbiest. My main focus is in games 3D modelling although I had my start using CAD for 3D printing when I was younger.</p>
-              <p class="card-text">My main focus now is on completing my Master of Data Science and finding more ways to visualise unique data sets to inform operational needs.</p>
-            </div>
-          </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Styles -->
+        <link href="css/3-col-portfolio.css" rel="stylesheet">
+        <link href="newstyles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
         
-          <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
-            <div class="card card-body">
-              <h4>My Skillset</h4>
-              <ul>
-                <li>Games Development</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconUE4"></span></li>
-                  <li><span class="iconFull"><img class="icon iconUE5"></span></li>
-                  <li><span class="iconFull"><img class="icon iconUnity"></span></li>
-                </ul>
+        <script>
+            window.onload = function() {
+                LoadAccordians();
+                LoadIcons();
+                //InitLogin();
+                InitNavbar();
+            }
+        </script>
 
-                <li>Programming</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconC"></span></li>
-                  <li><span class="iconFull"><img class="icon iconCPP"></span></li>
-                  <li><span class="iconFull"><img class="icon iconCSharp"></span></li>
-                  <li><span class="iconFull"><img class="icon iconPython"></span></li>
-                  <li><span class="iconFull"><img class="icon iconR"></span></li>
-                  <li><span class="iconFull"><img class="icon iconJava"></span></li>
-                  <li><span class="iconFull"><img class="icon iconHTML5"></span></li>
-                  <li><span class="iconFull"><img class="icon iconCSS3"></span></li>
-                  <li><span class="iconFull"><img class="icon iconJS"></span></li>
-                  <li><span class="iconFull"><img class="icon iconVBA"></span></li>
-                  <li><span class="iconFull"><img class="icon iconLatex"></span></li>
-                </ul>
-                
-                <li>3D Modelling</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconMaya"></span></li>
-                  <li><span class="iconFull"><img class="icon iconFusion360"></span></li>
-                  <li><span class="iconFull"><img class="icon iconSubstancePainter"></span></li>
-                </ul>
-                
-                <li>Adobe Suite</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconPhotoshop"></span></li>
-                  <li><span class="iconFull"><img class="icon iconIllustrator"></span></li>
-                  <li><span class="iconFull"><img class="icon iconPremiere"></span></li>
-                  <li><span class="iconFull"><img class="icon iconAudition"></span></li>
-                </ul>
-              </ul>
+        <<INCLUDE>>
+    </head>
+    <<GOOGLEANALYTICS>>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
+            <div class="container" style="padding-top: 0px;">
+                <a class="navbar-brand" href="index.html">Maxim Srour &middot; Portfolio</a>
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionIntroductionLink">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionWorkExperienceLink">Work History</a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionEducationLink">Education</a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionAdditionalActivitiesLink">Additional Activities</a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionProjectsLink">Projects</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page heading section -->
+            <section id="sectionIntroduction" class="sectionContainer">
+                <span id="sectionIntroductionLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Maxim Srour</h1>
+                <div class="profile-pic-container">
+                    <img class="profile-pic" src="assets/Profile.jpg" alt="">
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
+                        <div class="card card-body">
+                            <h4>Who I am</h4>
+                            <p class="card-text">I am a software engineer by trade and an avid technology nerd that will find any excues to learn about what's new. I spend most of my time programming or designing new systems, primarily in C++ though I have begun to branch out to other languages like Python more frequently.</p>
+                            <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbiest. My main focus is in games 3D modelling although I had my start using CAD for 3D printing when I was younger.</p>
+                            <p class="card-text">My main focus now is on completing my Master of Data Science and finding more ways to visualise unique data sets to inform operational needs.</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
+                        <div class="card card-body">
+                            <h4>My Skillset</h4>
+                            <ul>
+                                <li>Games Development</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="UE4"></li>
+                                    <li><span class="iconLong" data-icon="UE5"></li>
+                                    <li><span class="iconLong" data-icon="Unity"></li>
+                                </ul>
+
+                                <li>Programming</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="C"></li>
+                                    <li><span class="iconLong" data-icon="CPP"></li>
+                                    <li><span class="iconLong" data-icon="CSharp"></li>
+                                    <li><span class="iconLong" data-icon="Python"></li>
+                                    <li><span class="iconLong" data-icon="R"></li>
+                                    <li><span class="iconLong" data-icon="Java"></li>
+                                    <li><span class="iconLong" data-icon="HTML5"></li>
+                                    <li><span class="iconLong" data-icon="CSS3"></li>
+                                    <li><span class="iconLong" data-icon="JS"></li>
+                                    <li><span class="iconLong" data-icon="VBA"></li>
+                                    <li><span class="iconLong" data-icon="Latex"></li>
+                                </ul>
+                                
+                                <li>3D Modelling</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="Maya"></li>
+                                    <li><span class="iconLong" data-icon="Fusion360"></li>
+                                    <li><span class="iconLong" data-icon="SubstancePainter"></li>
+                                </ul>
+                                
+                                <li>Adobe Suite</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="Photoshop"></li>
+                                    <li><span class="iconLong" data-icon="Illustrator"></li>
+                                    <li><span class="iconLong" data-icon="Premiere"></li>
+                                    <li><span class="iconLong" data-icon="Audition"></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work experience section -->
+            <section id="sectionWorkExperience" class="sectionContainer">
+                <span id="sectionWorkExperienceLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Work History</h1>
+                <div id="workExperienceContent" class="row">
+                    <<WORKEXPERIENCECONTENT>>
+                </div>
+            </section>
+
+            <!-- Education section -->
+            <section id="sectionEducation" class="sectionContainer">
+                <span id="sectionEducationLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Education</h1>
+                <div id="educationContent" class="row">
+                    <<EDUCATIONCONTENT>>
+                </div>
+            </section>
+
+            <!-- Additional activities section -->
+            <section id="sectionAdditionalActivities" class="sectionContainer">
+                <span id="sectionAdditionalActivitiesLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Additional Activities</h1>
+                <div id="additionalActivitiesContent" class="row">
+                    <<ADDITIONALACTIVITIESCONTENT>>
+                </div>
+            </section>
+
+            <!-- Projects section -->
+            <section id="sectionProjects" class="sectionContainer">
+                <span id="sectionProjectsLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Projects</h1>
+                <div id="projectsContent" class="row">
+                    <<PROJECTSCONTENT>>
+                </div>
+            </section>
+
         </div>
-      </section>
-
-      <!-- Work experience section -->
-      <section id="sectionWorkExperience" class="sectionContainer">
-        <span id="sectionWorkExperienceLink" class="sectionLink"></span>
-
-        <h1 class="sectionHeader" style="text-align:center;">Work History</h1>
-        <div id="workExperienceContent" class="row">
-          <<WORKEXPERIENCECONTENT>>
-        </div>
-      </section>
-
-      <!-- Education section -->
-      <section id="sectionEducation" class="sectionContainer">
-        <span id="sectionEducationLink" class="sectionLink"></span>
-
-        <h1 class="sectionHeader" style="text-align:center;">Education</h1>
-        <div id="educationContent" class="row">
-          <<EDUCATIONCONTENT>>
-        </div>
-      </section>
-
-      <!-- Additional activities section -->
-      <section id="sectionAdditionalActivities" class="sectionContainer">
-        <span id="sectionAdditionalActivitiesLink" class="sectionLink"></span>
-
-        <h1 class="sectionHeader" style="text-align:center;">Additional Activities</h1>
-        <div id="additionalActivitiesContent" class="row">
-          <<ADDITIONALACTIVITIESCONTENT>>
-        </div>
-      </section>
-
-      <!-- Projects section -->
-      <section id="sectionProjects" class="sectionContainer">
-        <span id="sectionProjectsLink" class="sectionLink"></span>
-
-        <h1 class="sectionHeader" style="text-align:center;">Projects</h1>
-        <div id="projectsContent" class="row">
-          <<PROJECTSCONTENT>>
-        </div>
-      </section>
-
-    </div>
-  </body>
+    </body>
 </html>

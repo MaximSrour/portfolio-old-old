@@ -1,450 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Maxim Srour &middot; Resume</title>
-    <link rel="icon" href="./assets/ProfileSmall.jpg">
+        <title>Maxim Srour &middot; Resume</title>
+        <link rel="icon" href="./assets/ProfileSmall.jpg">
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Styles -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
-    <link href="newstyles.css" rel="stylesheet">
-    <link href="css/icons.css" rel="stylesheet">
-    <link href="css/accordian.css" rel="stylesheet">
-    <script src="css/navbar.css"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
+        <!-- Styles -->
+        <link href="css/3-col-portfolio.css" rel="stylesheet">
+        <link href="newstyles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
+        
+        <script>
+            window.onload = function() {
+                LoadAccordians();
+                LoadIcons();
+                //InitLogin();
+                InitNavbar();
+            }
+        </script>
 
-    <!-- Scripts -->
-    <script src="js/accordian.js"></script>
-    <script src="js/icons.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/navbar.js"></script>
+        
+		<!-- {} library inclusion -->
+		<link href="css/icons.css" rel="stylesheet">
+		<script src="js/icons.js"></script>
+		<!-- {} library inclusion -->
+		<link href="css/accordian.css" rel="stylesheet">
+		<script src="js/accordian.js"></script>
+		<!-- {} library inclusion -->
+		<link href="css/navbar.css" rel="stylesheet">
+		<script src="js/navbar.js"></script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PBR5EN8VR"></script>
     <script>
-      window.onload = function() {
-        LoadAccordians();
-        LoadIcons();
-        //InitLogin();
-        InitNavbar();
-      }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-4PBR5EN8VR');
     </script>
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PBR5EN8VR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4PBR5EN8VR');
-</script>
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
-      <div class="container" style="padding-top: 0px;">
-        <a class="navbar-brand" href="index.html">Maxim Srour &middot; Portfolio</a>
-      
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionIntroductionLink">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionWorkExperienceLink">Work History</a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionEducationLink">Education</a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionAdditionalActivitiesLink">Additional Activities</a>
-            </li>
-            <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
-              <a class="nav-link" href="#sectionProjectsLink">Projects</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <!-- Page heading section -->
-      <section id="sectionIntroduction" class="sectionContainer">
-        <span id="sectionIntroductionLink" class="sectionLink"></span>
-
-        <h1 class="sectionHeader" style="text-align:center;">Maxim Srour</h1>
-        <div class="profile-pic-container">
-          <img class="profile-pic" src="assets/Profile.jpg" alt="">
-        </div>
-        
-        <div class="row">
-          <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
-            <div class="card card-body">
-              <h4>Who I am</h4>
-              <p class="card-text">I am a software engineer by trade and an avid technology nerd that will find any excues to learn about what's new. I spend most of my time programming or designing new systems, primarily in C++ though I have begun to branch out to other languages like Python more frequently.</p>
-              <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbiest. My main focus is in games 3D modelling although I had my start using CAD for 3D printing when I was younger.</p>
-              <p class="card-text">My main focus now is on completing my Master of Data Science and finding more ways to visualise unique data sets to inform operational needs.</p>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top header">
+            <div class="container" style="padding-top: 0px;">
+                <a class="navbar-brand" href="index.html">Maxim Srour &middot; Portfolio</a>
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionIntroductionLink">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionWorkExperienceLink">Work History</a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionEducationLink">Education</a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionAdditionalActivitiesLink">Additional Activities</a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionProjectsLink">Projects</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        
-          <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
-            <div class="card card-body">
-              <h4>My Skillset</h4>
-              <ul>
-                <li>Games Development</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconUE4"></span></li>
-                  <li><span class="iconFull"><img class="icon iconUE5"></span></li>
-                  <li><span class="iconFull"><img class="icon iconUnity"></span></li>
-                </ul>
+        </nav>
 
-                <li>Programming</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconC"></span></li>
-                  <li><span class="iconFull"><img class="icon iconCPP"></span></li>
-                  <li><span class="iconFull"><img class="icon iconCSharp"></span></li>
-                  <li><span class="iconFull"><img class="icon iconPython"></span></li>
-                  <li><span class="iconFull"><img class="icon iconR"></span></li>
-                  <li><span class="iconFull"><img class="icon iconJava"></span></li>
-                  <li><span class="iconFull"><img class="icon iconHTML5"></span></li>
-                  <li><span class="iconFull"><img class="icon iconCSS3"></span></li>
-                  <li><span class="iconFull"><img class="icon iconJS"></span></li>
-                  <li><span class="iconFull"><img class="icon iconVBA"></span></li>
-                  <li><span class="iconFull"><img class="icon iconLatex"></span></li>
-                </ul>
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page heading section -->
+            <section id="sectionIntroduction" class="sectionContainer">
+                <span id="sectionIntroductionLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Maxim Srour</h1>
+                <div class="profile-pic-container">
+                    <img class="profile-pic" src="assets/Profile.jpg" alt="">
+                </div>
                 
-                <li>3D Modelling</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconMaya"></span></li>
-                  <li><span class="iconFull"><img class="icon iconFusion360"></span></li>
-                  <li><span class="iconFull"><img class="icon iconSubstancePainter"></span></li>
-                </ul>
+                <div class="row">
+                    <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
+                        <div class="card card-body">
+                            <h4>Who I am</h4>
+                            <p class="card-text">I am a software engineer by trade and an avid technology nerd that will find any excues to learn about what's new. I spend most of my time programming or designing new systems, primarily in C++ though I have begun to branch out to other languages like Python more frequently.</p>
+                            <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbiest. My main focus is in games 3D modelling although I had my start using CAD for 3D printing when I was younger.</p>
+                            <p class="card-text">My main focus now is on completing my Master of Data Science and finding more ways to visualise unique data sets to inform operational needs.</p>
+                        </div>
+                    </div>
                 
-                <li>Adobe Suite</li>
-                <ul>
-                  <li><span class="iconFull"><img class="icon iconPhotoshop"></span></li>
-                  <li><span class="iconFull"><img class="icon iconIllustrator"></span></li>
-                  <li><span class="iconFull"><img class="icon iconPremiere"></span></li>
-                  <li><span class="iconFull"><img class="icon iconAudition"></span></li>
-                </ul>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+                    <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
+                        <div class="card card-body">
+                            <h4>My Skillset</h4>
+                            <ul>
+                                <li>Games Development</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="UE4"></li>
+                                    <li><span class="iconLong" data-icon="UE5"></li>
+                                    <li><span class="iconLong" data-icon="Unity"></li>
+                                </ul>
 
-      <!-- Work experience section -->
-      <section id="sectionWorkExperience" class="sectionContainer">
-        <span id="sectionWorkExperienceLink" class="sectionLink"></span>
+                                <li>Programming</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="C"></li>
+                                    <li><span class="iconLong" data-icon="CPP"></li>
+                                    <li><span class="iconLong" data-icon="CSharp"></li>
+                                    <li><span class="iconLong" data-icon="Python"></li>
+                                    <li><span class="iconLong" data-icon="R"></li>
+                                    <li><span class="iconLong" data-icon="Java"></li>
+                                    <li><span class="iconLong" data-icon="HTML5"></li>
+                                    <li><span class="iconLong" data-icon="CSS3"></li>
+                                    <li><span class="iconLong" data-icon="JS"></li>
+                                    <li><span class="iconLong" data-icon="VBA"></li>
+                                    <li><span class="iconLong" data-icon="Latex"></li>
+                                </ul>
+                                
+                                <li>3D Modelling</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="Maya"></li>
+                                    <li><span class="iconLong" data-icon="Fusion360"></li>
+                                    <li><span class="iconLong" data-icon="SubstancePainter"></li>
+                                </ul>
+                                
+                                <li>Adobe Suite</li>
+                                <ul>
+                                    <li><span class="iconLong" data-icon="Photoshop"></li>
+                                    <li><span class="iconLong" data-icon="Illustrator"></li>
+                                    <li><span class="iconLong" data-icon="Premiere"></li>
+                                    <li><span class="iconLong" data-icon="Audition"></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <h1 class="sectionHeader" style="text-align:center;">Work History</h1>
-        <div id="workExperienceContent" class="row">
-          
+            <!-- Work experience section -->
+            <section id="sectionWorkExperience" class="sectionContainer">
+                <span id="sectionWorkExperienceLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Work History</h1>
+                <div id="workExperienceContent" class="row">
+                    
 					<!-- workExperience-defenceHF START -->
 					<div class="col-lg-10 offset-md-1 col-sm-6 resumeItem">
-					  <span id="workExperience-defenceHF-start" class="itemLink"></span>
-					  <span id="workExperience-defenceHF-scrollingBounds" class="accordianScrollingBounds"></span>
-					  <div class="card h-100 cardBackground accordian">
-					    <details class="card-body">
-					      <summary>
-					        <h3 class="itemTitle cardDetailsCentered">Technical Consultant</h3>
-					        <h5 class="itemOrganisation cardDetailsCentered">Defence Science and Technology (DSTG), Human-Factors (HF)</h5>
-					        <p class="itemDuration cardDetailsCentered">31/01/2022 - Current</p>
-					      </summary>
-					      <div id="workExperienceContent" class="row content">
-					        <div class="col-lg-10 offset-md-1 col-sm-6">
-					          <ul class="itemText">
-					            <li>The internal IT technical consultant for my organisational unit.</li><li>Strategise on applicability of certain technologies to the project portfolio at hand.</li><li>Support HF research scientists in the formulation of the direction and requirements of their software projects.</li><li>Applied my data science knowledge to visualise complex combat scenarios in LVC simulations bringing together data from various systems and platforms.</li><li>Consulted, designed, and developed internal systems for use within the HF group.</li><li>Co-authored and published research papers.</li><li>A continuing participant in DSTG Science, Technology and Research Shots (STaR) Shots working on a variety of projects.</li>
-					          </ul>
-					        </div>
-					      </div>
-					    </details>
-					    <span class="detailArrow mdi mdi-chevron-down"></span>
-					  </div>
+					    <span id="workExperience-defenceHF-start" class="itemLink"></span>
+					    <span id="workExperience-defenceHF-scrollingBounds" class="accordianScrollingBounds"></span>
+					    <div class="card h-100 cardBackground accordian">
+					        <details class="card-body">
+					            <summary>
+					                <h3 class="itemTitle cardDetailsCentered">Technical Consultant</h3>
+					                <h5 class="itemOrganisation cardDetailsCentered">Defence Science and Technology (DSTG), Human-Factors (HF)</h5>
+					                <p class="itemDuration cardDetailsCentered">31/01/2022 - Current</p>
+					            </summary>
+					            <div id="workExperienceContent" class="row content">
+					                <div class="col-lg-10 offset-md-1 col-sm-6">
+					                    <ul class="itemText">
+					                        <li>The internal IT technical consultant for my organisational unit.</li><li>Strategise on applicability of certain technologies to the project portfolio at hand.</li><li>Support HF research scientists in the formulation of the direction and requirements of their software projects.</li><li>Applied my data science knowledge to visualise complex combat scenarios in LVC simulations bringing together data from various systems and platforms.</li><li>Consulted, designed, and developed internal systems for use within the HF group.</li><li>Co-authored and published research papers.</li><li>A continuing participant in DSTG Science, Technology and Research Shots (STaR) Shots working on a variety of projects.</li>
+					                    </ul>
+					                </div>
+					            </div>
+					        </details>
+					        <span class="detailArrow mdi mdi-chevron-down"></span>
+					    </div>
 					</div>
 					<!-- workExperience-defenceHF END -->
 					
 					<!-- workExperience-defenceAOSC START -->
 					<div class="col-lg-10 offset-md-1 col-sm-6 resumeItem">
-					  <span id="workExperience-defenceAOSC-start" class="itemLink"></span>
-					  <span id="workExperience-defenceAOSC-scrollingBounds" class="accordianScrollingBounds"></span>
-					  <div class="card h-100 cardBackground accordian">
-					    <details class="card-body">
-					      <summary>
-					        <h3 class="itemTitle cardDetailsCentered">Virtual Environments Software Engineer</h3>
-					        <h5 class="itemOrganisation cardDetailsCentered">Defence Science and Technology (DSTG), Aerospace Operations Simulation (AOS)</h5>
-					        <p class="itemDuration cardDetailsCentered">13/07/2020 - 28/01/2022</p>
-					      </summary>
-					      <div id="workExperienceContent" class="row content">
-					        <div class="col-lg-10 offset-md-1 col-sm-6">
-					          <ul class="itemText">
-					            <li>Developed UE4/5 applications for data visualisation and Virtual Reality simulation.</li><li>Maintained bespoke C++ rendering engine to support organisational capabilities.</li><li>A participant in DSTG STaR Shots.</li><li>Control system development, commissioning, deployment, and maintenance.</li><li>3D asset development and integration with geographic terrain.</li>
-					          </ul>
-					        </div>
-					      </div>
-					    </details>
-					    <span class="detailArrow mdi mdi-chevron-down"></span>
-					  </div>
+					    <span id="workExperience-defenceAOSC-start" class="itemLink"></span>
+					    <span id="workExperience-defenceAOSC-scrollingBounds" class="accordianScrollingBounds"></span>
+					    <div class="card h-100 cardBackground accordian">
+					        <details class="card-body">
+					            <summary>
+					                <h3 class="itemTitle cardDetailsCentered">Virtual Environments Software Engineer</h3>
+					                <h5 class="itemOrganisation cardDetailsCentered">Defence Science and Technology (DSTG), Aerospace Operations Simulation (AOS)</h5>
+					                <p class="itemDuration cardDetailsCentered">13/07/2020 - 28/01/2022</p>
+					            </summary>
+					            <div id="workExperienceContent" class="row content">
+					                <div class="col-lg-10 offset-md-1 col-sm-6">
+					                    <ul class="itemText">
+					                        <li>Developed UE4/5 applications for data visualisation and Virtual Reality simulation.</li><li>Maintained bespoke C++ rendering engine to support organisational capabilities.</li><li>A participant in DSTG STaR Shots.</li><li>Control system development, commissioning, deployment, and maintenance.</li><li>3D asset development and integration with geographic terrain.</li>
+					                    </ul>
+					                </div>
+					            </div>
+					        </details>
+					        <span class="detailArrow mdi mdi-chevron-down"></span>
+					    </div>
 					</div>
 					<!-- workExperience-defenceAOSC END -->
 					
 					<!-- workExperience-engie START -->
 					<div class="col-lg-10 offset-md-1 col-sm-6 resumeItem">
-					  <span id="workExperience-engie-start" class="itemLink"></span>
-					  <span id="workExperience-engie-scrollingBounds" class="accordianScrollingBounds"></span>
-					  <div class="card h-100 cardBackground accordian">
-					    <details class="card-body">
-					      <summary>
-					        <h3 class="itemTitle cardDetailsCentered">Junior Control Systems Programmer</h3>
-					        <h5 class="itemOrganisation cardDetailsCentered">Engie AV Technologies</h5>
-					        <p class="itemDuration cardDetailsCentered">28/01/2019 - 10/07/2020</p>
-					      </summary>
-					      <div id="workExperienceContent" class="row content">
-					        <div class="col-lg-10 offset-md-1 col-sm-6">
-					          <ul class="itemText">
-					            <li>Consulted with customers to ensure their requirements were met.</li><li>Developed AV control systems using Crestron and Extron control.</li><li>Developed bespoke UX to maximise customer satisfaction.</li><li>Commissioned and deployed control systems in mid-sized projects.</li><li>Performed audio commissioning of lecture theatres and conference rooms.</li>
-					          </ul>
-					        </div>
-					      </div>
-					    </details>
-					    <span class="detailArrow mdi mdi-chevron-down"></span>
-					  </div>
+					    <span id="workExperience-engie-start" class="itemLink"></span>
+					    <span id="workExperience-engie-scrollingBounds" class="accordianScrollingBounds"></span>
+					    <div class="card h-100 cardBackground accordian">
+					        <details class="card-body">
+					            <summary>
+					                <h3 class="itemTitle cardDetailsCentered">Junior Control Systems Programmer</h3>
+					                <h5 class="itemOrganisation cardDetailsCentered">Engie AV Technologies</h5>
+					                <p class="itemDuration cardDetailsCentered">28/01/2019 - 10/07/2020</p>
+					            </summary>
+					            <div id="workExperienceContent" class="row content">
+					                <div class="col-lg-10 offset-md-1 col-sm-6">
+					                    <ul class="itemText">
+					                        <li>Consulted with customers to ensure their requirements were met.</li><li>Developed AV control systems using Crestron and Extron control.</li><li>Developed bespoke UX to maximise customer satisfaction.</li><li>Commissioned and deployed control systems in mid-sized projects.</li><li>Performed audio commissioning of lecture theatres and conference rooms.</li>
+					                    </ul>
+					                </div>
+					            </div>
+					        </details>
+					        <span class="detailArrow mdi mdi-chevron-down"></span>
+					    </div>
 					</div>
 					<!-- workExperience-engie END -->
 					
 					<!-- workExperience-sol3 START -->
 					<div class="col-lg-10 offset-md-1 col-sm-6 resumeItem">
-					  <span id="workExperience-sol3-start" class="itemLink"></span>
-					  <span id="workExperience-sol3-scrollingBounds" class="accordianScrollingBounds"></span>
-					  <div class="card h-100 cardBackground accordian">
-					    <details class="card-body">
-					      <summary>
-					        <h3 class="itemTitle cardDetailsCentered">Software Implementation Officer</h3>
-					        <h5 class="itemOrganisation cardDetailsCentered">SolutionThree</h5>
-					        <p class="itemDuration cardDetailsCentered">19/03/2018 - 07/09/2018</p>
-					      </summary>
-					      <div id="workExperienceContent" class="row content">
-					        <div class="col-lg-10 offset-md-1 col-sm-6">
-					          <ul class="itemText">
-					            <li>Consulted with external partner organisations to support business decisions.</li><li>Developed BI and data analytic reports.</li><li>Oversaw the implementation of an ERP for the purposes of managing residential and commercial construction projects.</li><li>Exposed to databases and supported upgrades to existing solutions to raise efficiency and effectiveness.</li>
-					          </ul>
-					        </div>
-					      </div>
-					    </details>
-					    <span class="detailArrow mdi mdi-chevron-down"></span>
-					  </div>
+					    <span id="workExperience-sol3-start" class="itemLink"></span>
+					    <span id="workExperience-sol3-scrollingBounds" class="accordianScrollingBounds"></span>
+					    <div class="card h-100 cardBackground accordian">
+					        <details class="card-body">
+					            <summary>
+					                <h3 class="itemTitle cardDetailsCentered">Software Implementation Officer</h3>
+					                <h5 class="itemOrganisation cardDetailsCentered">SolutionThree</h5>
+					                <p class="itemDuration cardDetailsCentered">19/03/2018 - 07/09/2018</p>
+					            </summary>
+					            <div id="workExperienceContent" class="row content">
+					                <div class="col-lg-10 offset-md-1 col-sm-6">
+					                    <ul class="itemText">
+					                        <li>Consulted with external partner organisations to support business decisions.</li><li>Developed BI and data analytic reports.</li><li>Oversaw the implementation of an ERP for the purposes of managing residential and commercial construction projects.</li><li>Exposed to databases and supported upgrades to existing solutions to raise efficiency and effectiveness.</li>
+					                    </ul>
+					                </div>
+					            </div>
+					        </details>
+					        <span class="detailArrow mdi mdi-chevron-down"></span>
+					    </div>
 					</div>
 					<!-- workExperience-sol3 END -->
 					
 					
-        </div>
-      </section>
+                </div>
+            </section>
 
-      <!-- Education section -->
-      <section id="sectionEducation" class="sectionContainer">
-        <span id="sectionEducationLink" class="sectionLink"></span>
+            <!-- Education section -->
+            <section id="sectionEducation" class="sectionContainer">
+                <span id="sectionEducationLink" class="sectionLink"></span>
 
-        <h1 class="sectionHeader" style="text-align:center;">Education</h1>
-        <div id="educationContent" class="row">
-          
+                <h1 class="sectionHeader" style="text-align:center;">Education</h1>
+                <div id="educationContent" class="row">
+                    
 					<!-- education-masters START -->
 					<div class="col-lg-6 col-sm-6 resumeItem">
-					  <div class="card h-100 cardBackground">
-					    <div class="card-body">
-					      <h3 class="itemTitle cardDetailsCentered">Master of Data Science</h3>
-					      <h5 class="itemOrganisation cardDetailsCentered">Monash University</h5>
-					      <p class="itemDuration cardDetailsCentered">2021 - Current</p>
-					      <p class="itemText">Focusing on Data Visualisation and Machine Learning. This will be completed by the research stream and thesis.</p>
+					    <div class="card h-100 cardBackground">
+					        <div class="card-body">
+					            <h3 class="itemTitle cardDetailsCentered">Master of Data Science</h3>
+					            <h5 class="itemOrganisation cardDetailsCentered">Monash University</h5>
+					            <p class="itemDuration cardDetailsCentered">2021 - Current</p>
+					            <p class="itemText">Focusing on Data Visualisation and Machine Learning. This will be completed by the research stream and thesis.</p>
+					        </div>
 					    </div>
-					  </div>
 					</div>
 					<!-- education-masters END -->
 					
 					<!-- education-bachelors START -->
 					<div class="col-lg-6 col-sm-6 resumeItem">
-					  <div class="card h-100 cardBackground">
-					    <div class="card-body">
-					      <h3 class="itemTitle cardDetailsCentered">Bachelor of Information Technology</h3>
-					      <h5 class="itemOrganisation cardDetailsCentered">Monash University</h5>
-					      <p class="itemDuration cardDetailsCentered">2016 - 2021</p>
-					      <p class="itemText">Majored in Game Development and minored in Software Development and Interactive Media Development. My degree focused on the rapid creation process of various mediums.</p>
+					    <div class="card h-100 cardBackground">
+					        <div class="card-body">
+					            <h3 class="itemTitle cardDetailsCentered">Bachelor of Information Technology</h3>
+					            <h5 class="itemOrganisation cardDetailsCentered">Monash University</h5>
+					            <p class="itemDuration cardDetailsCentered">2016 - 2021</p>
+					            <p class="itemText">Majored in Game Development and minored in Software Development and Interactive Media Development. My degree focused on the rapid creation process of various mediums.</p>
+					        </div>
 					    </div>
-					  </div>
 					</div>
 					<!-- education-bachelors END -->
 					
 					
-        </div>
-      </section>
+                </div>
+            </section>
 
-      <!-- Additional activities section -->
-      <section id="sectionAdditionalActivities" class="sectionContainer">
-        <span id="sectionAdditionalActivitiesLink" class="sectionLink"></span>
+            <!-- Additional activities section -->
+            <section id="sectionAdditionalActivities" class="sectionContainer">
+                <span id="sectionAdditionalActivitiesLink" class="sectionLink"></span>
 
-        <h1 class="sectionHeader" style="text-align:center;">Additional Activities</h1>
-        <div id="additionalActivitiesContent" class="row">
-          
+                <h1 class="sectionHeader" style="text-align:center;">Additional Activities</h1>
+                <div id="additionalActivitiesContent" class="row">
+                    
 					<!-- additionalActivities-forlorn START -->
 					<div class="col-lg-6 col-sm-6 resumeItem">
-					  <div class="card h-100 cardBackground">
-					    <div class="card-body">
-					      <h3 class="itemTitle cardDetailsCentered">Lead Programmer</h3>
-					      <h5 class="itemOrganisation cardDetailsCentered">Ironbark Games</h5>
-					      <p class="itemText">Following the completion of my under-graduate degree, I have taken up development of a game in a small team to create an innovative game that we plan to commercialise.</p>
+					    <div class="card h-100 cardBackground">
+					        <div class="card-body">
+					            <h3 class="itemTitle cardDetailsCentered">Lead Programmer</h3>
+					            <h5 class="itemOrganisation cardDetailsCentered">Ironbark Games</h5>
+					            <p class="itemText">Following the completion of my under-graduate degree, I have taken up development of a game in a small team to create an innovative game that we plan to commercialise.</p>
+					        </div>
 					    </div>
-					  </div>
 					</div>
 					<!-- additionalActivities-forlorn END -->
 					
 					<!-- additionalActivities-monashTA START -->
 					<div class="col-lg-6 col-sm-6 resumeItem">
-					  <div class="card h-100 cardBackground">
-					    <div class="card-body">
-					      <h3 class="itemTitle cardDetailsCentered">Senior Teaching Associate</h3>
-					      <h5 class="itemOrganisation cardDetailsCentered">Monash University, Faculty of IT</h5>
-					      <p class="itemText">I have taught coursework from software development to game development - including programming, 3D modelling, and game design. I have also developed and delivered coursework at the post-graduate level. Rated in the top 5% of teaching staff in 2022.</p>
+					    <div class="card h-100 cardBackground">
+					        <div class="card-body">
+					            <h3 class="itemTitle cardDetailsCentered">Senior Teaching Associate</h3>
+					            <h5 class="itemOrganisation cardDetailsCentered">Monash University, Faculty of IT</h5>
+					            <p class="itemText">I have taught coursework from software development to game development - including programming, 3D modelling, and game design. I have also developed and delivered coursework at the post-graduate level. Rated in the top 5% of teaching staff in 2022.</p>
+					        </div>
 					    </div>
-					  </div>
 					</div>
 					<!-- additionalActivities-monashTA END -->
 					
 					<!-- additionalActivities-monashResearch START -->
 					<div class="col-lg-6 col-sm-6 resumeItem">
-					  <div class="card h-100 cardBackground">
-					    <div class="card-body">
-					      <h3 class="itemTitle cardDetailsCentered">Research Officer</h3>
-					      <h5 class="itemOrganisation cardDetailsCentered">Monash University, Human-Centred Computing</h5>
-					      <p class="itemText">I participated in active research projects conducted academics and PhD students. I supported the team in developing AR software developed primarily in C# and Unity.</p>
+					    <div class="card h-100 cardBackground">
+					        <div class="card-body">
+					            <h3 class="itemTitle cardDetailsCentered">Research Officer</h3>
+					            <h5 class="itemOrganisation cardDetailsCentered">Monash University, Human-Centred Computing</h5>
+					            <p class="itemText">I participated in active research projects conducted academics and PhD students. I supported the team in developing AR software developed primarily in C# and Unity.</p>
+					        </div>
 					    </div>
-					  </div>
 					</div>
 					<!-- additionalActivities-monashResearch END -->
 					
 					<!-- additionalActivities-catEmblem START -->
 					<div class="col-lg-6 col-sm-6 resumeItem">
-					  <div class="card h-100 cardBackground">
-					    <div class="card-body">
-					      <h3 class="itemTitle cardDetailsCentered">Lead Programmer, Project Manager</h3>
-					      <h5 class="itemOrganisation cardDetailsCentered">Monash University</h5>
-					      <p class="itemText">As a part of my under-graduate degree I completed a year-long capstone project in which I developed a game with a skilled team of artists and designers. As the lead programmer I developed all core systems and managed the direction of the team to ensure that we met our deadlines successfully.</p>
+					    <div class="card h-100 cardBackground">
+					        <div class="card-body">
+					            <h3 class="itemTitle cardDetailsCentered">Lead Programmer, Project Manager</h3>
+					            <h5 class="itemOrganisation cardDetailsCentered">Monash University</h5>
+					            <p class="itemText">As a part of my under-graduate degree I completed a year-long capstone project in which I developed a game with a skilled team of artists and designers. As the lead programmer I developed all core systems and managed the direction of the team to ensure that we met our deadlines successfully.</p>
+					        </div>
 					    </div>
-					  </div>
 					</div>
 					<!-- additionalActivities-catEmblem END -->
 					
 					
-        </div>
-      </section>
+                </div>
+            </section>
 
-      <!-- Projects section -->
-      <section id="sectionProjects" class="sectionContainer">
-        <span id="sectionProjectsLink" class="sectionLink"></span>
+            <!-- Projects section -->
+            <section id="sectionProjects" class="sectionContainer">
+                <span id="sectionProjectsLink" class="sectionLink"></span>
 
-        <h1 class="sectionHeader" style="text-align:center;">Projects</h1>
-        <div id="projectsContent" class="row">
-          
+                <h1 class="sectionHeader" style="text-align:center;">Projects</h1>
+                <div id="projectsContent" class="row">
+                    
 					<!-- project-forlorn START -->
 					<div class="col-lg-4 col-sm-6 portfolio-item">
-					  <div class="card h-100 project-gamedev">
-					    <img class="card-img-top" src="projects/forlorn/imageMainSmall.jpg" alt="">
-					    <div class="card-body">
-					      <h4 class="card-title">
-					        <p>Forlorn Colonists</p>
-					        <span class="project-type-link"><p class="projectSubtext project-type">Game Development (<img class="icon iconUE5"><img class="icon iconCPP">)</p></span>
-					      </h4>
-					      <p class="card-text">Forlorn Colonists is a 1 to 4 player couch co-op with top-down, twin stick shooter mechanics, set in a far future sci-fi world. Currently in the prototyping stage are are actively polishing game mechanics and creating additional art assets in preparation for crowd-funding.</p>
+					    <div class="card h-100 project-gamedev">
+					        <img class="card-img-top" src="projects/forlorn/imageMainSmall.jpg" alt="">
+					        <div class="card-body">
+					            <h4 class="card-title">
+					                <p>Forlorn Colonists</p>
+					                <span class="project-type-link"><p class="projectSubtext project-type">Game Development (<span class="iconShort" data-icon="UE5"></span><span class="iconShort" data-icon="CPP"></span>)</p></span>
+					            </h4>
+					            <p class="card-text">Forlorn Colonists is a 1 to 4 player couch co-op with top-down, twin stick shooter mechanics, set in a far future sci-fi world. Currently in the prototyping stage are are actively polishing game mechanics and creating additional art assets in preparation for crowd-funding.</p>
+					        </div>
+					        
+					        <h4 class="wip">WIP</h4>
 					    </div>
-					    
-					    <h4 class="wip">WIP</h4>
-					  </div>
 					</div>
 					<!-- project-forlorn End -->
 					
 					<!-- project-nightwatch START -->
 					<div class="col-lg-4 col-sm-6 portfolio-item">
-					  <div class="card h-100 project-gamedev">
-					    <img class="card-img-top" src="projects/nightwatch/imageMainSmall.jpg" alt="">
-					    <div class="card-body">
-					      <h4 class="card-title">
-					        <p>The Nightwatch</p>
-					        <span class="project-type-link"><p class="projectSubtext project-type">Game Development (<img class="icon iconUE4"><img class="icon iconCPP">)</p></span>
-					      </h4>
-					      <p class="card-text">In a world where humans hold a totalitarian rule, you play as a cat in a skilled group of street animals trying to rescue your crew to take down this human authority. Using turn-based tactical RPG style combat, you must strategically use special abilities unique to each animal to succeed!</p>
+					    <div class="card h-100 project-gamedev">
+					        <img class="card-img-top" src="projects/nightwatch/imageMainSmall.jpg" alt="">
+					        <div class="card-body">
+					            <h4 class="card-title">
+					                <p>The Nightwatch</p>
+					                <span class="project-type-link"><p class="projectSubtext project-type">Game Development (<span class="iconShort" data-icon="UE4"></span><span class="iconShort" data-icon="CPP"></span>)</p></span>
+					            </h4>
+					            <p class="card-text">In a world where humans hold a totalitarian rule, you play as a cat in a skilled group of street animals trying to rescue your crew to take down this human authority. Using turn-based tactical RPG style combat, you must strategically use special abilities unique to each animal to succeed!</p>
+					        </div>
+					        <a class="project-link" href="projects/nightwatch/projectPage.html"><p>(click for more)</p></a>
+					        
 					    </div>
-					    <a class="project-link" href="projects/nightwatch/projectPage.html"><p>(click for more)</p></a>
-					    
-					  </div>
 					</div>
 					<!-- project-nightwatch End -->
 					
 					<!-- project-afroDisco START -->
 					<div class="col-lg-4 col-sm-6 portfolio-item">
-					  <div class="card h-100 project-gamedev">
-					    <img class="card-img-top" src="projects/afroDisco/imageMainSmall.jpg" alt="">
-					    <div class="card-body">
-					      <h4 class="card-title">
-					        <p>Afro Disco</p>
-					        <span class="project-type-link"><p class="projectSubtext project-type">Game Development (<img class="icon iconUnity"><img class="icon iconCSharp"><img class="icon iconMaya"><img class="icon iconPhotoshop">)</p></span>
-					      </h4>
-					      <p class="card-text">Afro Disco! The game where you dance your friends into submission. From University project to passion endeavour, Afro Disco is a fully fledge game in which chess meets bejeweled. Line up your dancers to outperform your friends!</p>
+					    <div class="card h-100 project-gamedev">
+					        <img class="card-img-top" src="projects/afroDisco/imageMainSmall.jpg" alt="">
+					        <div class="card-body">
+					            <h4 class="card-title">
+					                <p>Afro Disco</p>
+					                <span class="project-type-link"><p class="projectSubtext project-type">Game Development (<span class="iconShort" data-icon="Unity"></span><span class="iconShort" data-icon="CSharp"></span><span class="iconShort" data-icon="Maya"></span><span class="iconShort" data-icon="Photoshop"></span>)</p></span>
+					            </h4>
+					            <p class="card-text">Afro Disco! The game where you dance your friends into submission. From University project to passion endeavour, Afro Disco is a fully fledge game in which chess meets bejeweled. Line up your dancers to outperform your friends!</p>
+					        </div>
+					        <a class="project-link" href="projects/afroDisco/projectPage.html"><p>(click for more)</p></a>
+					        
 					    </div>
-					    <a class="project-link" href="projects/afroDisco/projectPage.html"><p>(click for more)</p></a>
-					    
-					  </div>
 					</div>
 					<!-- project-afroDisco End -->
 					
 					<!-- project-3dBank START -->
 					<div class="col-lg-4 col-sm-6 portfolio-item">
-					  <div class="card h-100 project-3d">
-					    <img class="card-img-top" src="projects/3dBank/imageMainSmall.jpg" alt="">
-					    <div class="card-body">
-					      <h4 class="card-title">
-					        <p>Bank Environment</p>
-					        <span class="project-type-link"><p class="projectSubtext project-type">3D (<img class="icon iconUnity"><img class="icon iconMaya"><img class="icon iconPhotoshop">)</p></span>
-					      </h4>
-					      <p class="card-text">After learning how to work with normal/displacement/height maps, I was tasked with creating an environment that was heavily optimised to run at high fps. This features a marble bank and fountain courtyard.</p>
+					    <div class="card h-100 project-3d">
+					        <img class="card-img-top" src="projects/3dBank/imageMainSmall.jpg" alt="">
+					        <div class="card-body">
+					            <h4 class="card-title">
+					                <p>Bank Environment</p>
+					                <span class="project-type-link"><p class="projectSubtext project-type">3D (<span class="iconShort" data-icon="Unity"></span><span class="iconShort" data-icon="Maya"></span><span class="iconShort" data-icon="Photoshop"></span>)</p></span>
+					            </h4>
+					            <p class="card-text">After learning how to work with normal/displacement/height maps, I was tasked with creating an environment that was heavily optimised to run at high fps. This features a marble bank and fountain courtyard.</p>
+					        </div>
+					        <a class="project-link" href="projects/3dBank/projectPage.html"><p>(click for more)</p></a>
+					        
 					    </div>
-					    <a class="project-link" href="projects/3dBank/projectPage.html"><p>(click for more)</p></a>
-					    
-					  </div>
 					</div>
 					<!-- project-3dBank End -->
 					
 					<!-- project-3ds START -->
 					<div class="col-lg-4 col-sm-6 portfolio-item">
-					  <div class="card h-100 project-3d">
-					    <img class="card-img-top" src="projects/3ds/imageMainSmall.jpg" alt="">
-					    <div class="card-body">
-					      <h4 class="card-title">
-					        <p>3DS Model</p>
-					        <span class="project-type-link"><p class="projectSubtext project-type">3D (<img class="icon iconMaya">)</p></span>
-					      </h4>
-					      <p class="card-text">My first creation in Maya, the 3DS was my way of experimenting with creating objects in Maya and working with textures and lighting techniques.</p>
+					    <div class="card h-100 project-3d">
+					        <img class="card-img-top" src="projects/3ds/imageMainSmall.jpg" alt="">
+					        <div class="card-body">
+					            <h4 class="card-title">
+					                <p>3DS Model</p>
+					                <span class="project-type-link"><p class="projectSubtext project-type">3D (<span class="iconShort" data-icon="Maya"></span>)</p></span>
+					            </h4>
+					            <p class="card-text">My first creation in Maya, the 3DS was my way of experimenting with creating objects in Maya and working with textures and lighting techniques.</p>
+					        </div>
+					        <a class="project-link" href="projects/3ds/projectPage.html"><p>(click for more)</p></a>
+					        
 					    </div>
-					    <a class="project-link" href="projects/3ds/projectPage.html"><p>(click for more)</p></a>
-					    
-					  </div>
 					</div>
 					<!-- project-3ds End -->
 					
 					
-        </div>
-      </section>
+                </div>
+            </section>
 
-    </div>
-  </body>
+        </div>
+    </body>
 </html>

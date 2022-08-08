@@ -31,6 +31,22 @@ def escapeCharacters(stringToClean):
     
     return tempString
 
+def includeLib(lib, relativePath):
+    outString = "\n\t\t<!-- {} library inclusion -->"
+    outString += "\n\t\t<link href=\"{}css/{}.css\" rel=\"stylesheet\">".format(relativePath, lib)
+    outString += "\n\t\t<script src=\"{}js/{}.js\"></script>".format(relativePath, lib)
+
+    return outString
+
+def includeAllLibs(libdir):
+    outString = ""
+
+    outString += includeLib("icons", libdir)
+    outString += includeLib("accordian", libdir)
+    outString += includeLib("navbar", libdir)
+    #outString += includeLib("login", libdir)
+
+    return outString
 
 f = open("./templates/google-analytics-scripts.txt")
 templateGoogleAnalytics = f.read()
@@ -193,7 +209,7 @@ for i in data["projects"]:
     
     tempSkillString = ""
     for skill in i["skills"]:
-        tempSkillString += "<img class=\"icon icon{}\">".format(skill)
+        tempSkillString += "<span class=\"iconShort\" data-icon=\"{}\"></span>".format(skill)
     printString = printString.replace("<<SKILLS>>", tempSkillString)
 
     if(i["wip"] == True):
@@ -226,6 +242,7 @@ for i in data["projects"]:
         projectType = i["type"]
 
         printString = templateProjectPage
+        printString = printString.replace("<<INCLUDE>>", includeAllLibs("../../"))
         printString = printString.replace("<<GOOGLEANALYTICS>>", templateGoogleAnalytics)
         printString = printString.replace("<<TITLE>>", i["title"])
         printString = printString.replace("<<DESCRIPTION>>", i["description"])
@@ -265,7 +282,7 @@ for i in data["projects"]:
 
         tempSkillString = ""
         for skill in i["skills"]:
-            tempSkillString += "<li><span class=\"iconFull\"><img class=\"icon icon{}\"></span></li>".format(skill)
+            tempSkillString += "<li><span class=\"iconLong\" data-icon=\"{}\"></li>".format(skill)
         printString = printString.replace("<<SKILLS>>", tempSkillString)
         
         tempTextString = ""
@@ -287,11 +304,12 @@ f = open("./templates/template-index.txt")
 templateIndex = f.read()
 f.close()
 
+templateIndex = templateIndex.replace("<<INCLUDE>>", includeAllLibs(""))
+templateIndex = templateIndex.replace("<<GOOGLEANALYTICS>>", templateGoogleAnalytics)
 templateIndex = templateIndex.replace("<<WORKEXPERIENCECONTENT>>", contentWorkExperience)
 templateIndex = templateIndex.replace("<<EDUCATIONCONTENT>>", contentEducation)
 templateIndex = templateIndex.replace("<<ADDITIONALACTIVITIESCONTENT>>", contentAdditionalActivities)
 templateIndex = templateIndex.replace("<<PROJECTSCONTENT>>", contentProjects)
-templateIndex = templateIndex.replace("<<GOOGLEANALYTICS>>", templateGoogleAnalytics)
 
 f = open("./index.html", "w")
 f.write(templateIndex)

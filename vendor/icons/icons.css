@@ -27,9 +27,9 @@
 .iconIllustrator { content: url("/assets/icons/illustrator.png"); --iconText: "Adobe Illustrator"; }
 .iconPremiere { content: url("/assets/icons/premiere.png"); --iconText: "Adobe Premiere"; }
 .iconAudition { content: url("/assets/icons/audition.png"); --iconText: "Adobe Audition"; }
-.iconPhotoshop { content: url("/assets/icons/aftereffects.png"); --iconText: "Adobe After Effects"; }
-.iconPhotoshop { content: url("/assets/icons/dreamweaver.png"); --iconText: "Adobe Dreamweaver"; }
-.iconPhotoshop { content: url("/assets/icons/excel.png"); --iconText: "Microsoft Excel"; }
+.iconAfterEffects { content: url("/assets/icons/aftereffects.png"); --iconText: "Adobe After Effects"; }
+.iconDreamweaver { content: url("/assets/icons/dreamweaver.png"); --iconText: "Adobe Dreamweaver"; }
+.iconExcel { content: url("/assets/icons/excel.png"); --iconText: "Microsoft Excel"; }
 .iconVS { content: url("/assets/icons/visualstudio.png"); --iconText: "Visual Studio"; }
 
 .iconC { content: url("/assets/icons/c.png"); --iconText: "C"; }

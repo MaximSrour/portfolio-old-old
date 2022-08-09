@@ -33,8 +33,8 @@ def escapeCharacters(stringToClean):
 
 def includeLib(lib, relativePath):
     outString = "\n\t\t<!-- {} library inclusion -->"
-    outString += "\n\t\t<link href=\"{}css/{}.css\" rel=\"stylesheet\">".format(relativePath, lib)
-    outString += "\n\t\t<script src=\"{}js/{}.js\"></script>".format(relativePath, lib)
+    outString += f"\n\t\t<link href=\"{relativePath}vendor/{lib}/{lib}.css\" rel=\"stylesheet\">"
+    outString += f"\n\t\t<script src=\"{relativePath}vendor/{lib}/{lib}.js\"></script>"
 
     return outString
 
@@ -42,37 +42,40 @@ def includeAllLibs(libdir):
     outString = ""
 
     outString += includeLib("icons", libdir)
-    outString += includeLib("accordian", libdir)
+    outString += includeLib("accordion", libdir)
     outString += includeLib("navbar", libdir)
     #outString += includeLib("login", libdir)
 
     return outString
 
-f = open("./templates/google-analytics-scripts.txt")
+templatePath = "./templates/"
+generatedPath = "./generated/"
+
+f = open(f"{templatePath}google-analytics-scripts.txt")
 templateGoogleAnalytics = f.read()
 f.close()
 
-f = open("./templates/template-work.txt")
+f = open(f"{templatePath}template-work.txt")
 templateWork = f.read()
 contentWorkExperience = ""
 f.close()
 
-f = open("./templates/template-education.txt")
+f = open(f"{templatePath}template-education.txt")
 templateEducation = f.read()
 contentEducation = ""
 f.close()
 
-f = open("./templates/template-additionalActivities.txt")
+f = open(f"{templatePath}template-additionalActivities.txt")
 templateAdditionalActivities = f.read()
 contentAdditionalActivities = ""
 f.close()
 
-f = open("./templates/template-project.txt")
+f = open(f"{templatePath}template-project.txt")
 templateProject = f.read()
 contentProjects = ""
 f.close()
 
-f = open("./templates/template-project-page.txt")
+f = open(f"{templatePath}template-project-page.txt")
 templateProjectPage = f.read()
 f.close()
 
@@ -129,7 +132,7 @@ for i in data["work"]:
 contentWorkExperience += "\n"
 contentWorkExperience = contentWorkExperience.replace("\n", "\n\t\t\t\t\t")
 
-f = open("./generated/workExperienceContent.html", "w")
+f = open(f"{generatedPath}workExperienceContent.html", "w")
 f.write(contentWorkExperience)
 f.close()
 
@@ -150,7 +153,7 @@ for i in data["education"]:
 contentEducation += "\n"
 contentEducation = contentEducation.replace("\n", "\n\t\t\t\t\t")
 
-f = open("./generated/educationContent.html", "w")
+f = open(f"{generatedPath}educationContent.html", "w")
 f.write(contentEducation)
 f.close()
 
@@ -169,7 +172,7 @@ for i in data["additionalActivities"]:
 contentAdditionalActivities += "\n"
 contentAdditionalActivities = contentAdditionalActivities.replace("\n", "\n\t\t\t\t\t")
 
-f = open("./generated/additionalActivitiesContent.html", "w")
+f = open(f"{generatedPath}additionalActivitiesContent.html", "w")
 f.write(contentAdditionalActivities)
 f.close()
 
@@ -229,7 +232,7 @@ for i in data["projects"]:
 contentProjects += "\n"
 contentProjects = contentProjects.replace("\n", "\n\t\t\t\t\t")
 
-f = open("./generated/projectsContent.html", "w")
+f = open(f"{generatedPath}projectsContent.html", "w")
 f.write(contentProjects)
 f.close()
 
@@ -300,7 +303,7 @@ for i in data["projects"]:
         f.close()
 
 # Index
-f = open("./templates/template-index.txt")
+f = open(f"{templatePath}template-index.txt")
 templateIndex = f.read()
 f.close()
 

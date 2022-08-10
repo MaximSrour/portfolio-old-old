@@ -1,0 +1,26 @@
+:root {
+	--themeMain: #280192;
+	--themeMainAccent: #3e06d6;
+	--themeMainText: #ffffff;
+	--themeMainTextAccent: #bbbbbb;
+
+	--themeGameDev: #b57edc;
+	--themeGameDevAccent: #b853ff;
+	--themeGameDevText: #f939ff;
+
+	--themeDesign: #eaa221;
+	--themeDesignAccent: #ffc864;
+	--themeDesignText: #FF9918;
+
+	--theme3D: #aeffdd;
+	--theme3DAccent: #48cb94;
+	--theme3DText: #48cb94;
+
+	--themeAV: #96e0ff;
+	--themeAVAccent: #4fb9f0;
+	--themeAVText: #1D97FC;
+
+	--themeGeneric: #ffffff;
+	--themeGenericAccent: #bbbbbb;
+	--themeGenericText: #000000;
+}

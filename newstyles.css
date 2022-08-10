@@ -147,3 +147,45 @@ ul.itemText {
 	border: 1px solid white;
 	border-radius: 50px;
 }
+
+/** Theme encoding */
+.header {
+	background-color: var(--themeMainText);
+	background: linear-gradient(40deg, var(--themeMain) 0%, var(--themeMainAccent) 100%);
+}
+
+.sectionHeader {
+    color: var(--themeMainText);
+	background-color: var(--themeMainAccent);
+	background: linear-gradient(40deg, var(--themeMainAccent) 0%, var(--themeMain) 100%);
+}
+
+.project-gamedev {
+	background-color: var(--themeGameDev);
+	background: linear-gradient(40deg, var(--themeGameDev) 0%, var(--themeGameDevAccent) 100%);
+}
+.project-gamedev .project-type { color: var(--themeGameDevText); }
+
+.project-design {
+	background-color: var(--themeDesign);
+	background: linear-gradient(40deg, var(--themeDesign) 0%, var(--themeDesignAccent) 100%);
+}
+.project-design .project-type { color: var(--themeDesignText); }
+
+.project-3d {
+	background-color: var(--theme3D);
+	background: linear-gradient(40deg, var(--theme3D) 0%, var(--theme3DAccent) 100%);
+}
+.project-3d .project-type { color: var(--theme3DText); }
+
+.project-audiovisual {
+	background-color: var(--themeAV);
+	background: linear-gradient(40deg, var(--themeAV) 0%, var(--themeAVAccent) 100%);
+}
+.project-audiovisual .project-type { color: var(--themeAVText); }
+
+.project-generic {
+	background-color: var(--themeGeneric);
+	background: linear-gradient(40deg, var(--themeGeneric) 0%, var(--themeGenericAccent) 100%);
+}
+.project-generic .project-type { color: var(--themeGenericText); }

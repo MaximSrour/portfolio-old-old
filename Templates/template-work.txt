@@ -1,9 +1,8 @@
 
 <!-- <<ID>> START -->
 <div class="col-lg-10 offset-md-1 col-sm-6 resumeItem">
-    <span id="<<ID>>-start" class="itemLink"></span>
-    <span id="<<ID>>-scrollingBounds" class="accordianScrollingBounds"></span>
-    <div class="card h-100 cardBackground accordian">
+    <span id="<<ID>>-start" class="itemLink accordian"></span>
+    <div class="card h-100 cardBackground">
         <details class="card-body">
             <summary>
                 <h3 class="itemTitle cardDetailsCentered"><<TITLE>></h3>
@@ -18,7 +17,6 @@
                 </div>
             </div>
         </details>
-        <span class="detailArrow mdi mdi-chevron-down"></span>
     </div>
 </div>
 <!-- <<ID>> END -->

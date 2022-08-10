@@ -1,29 +1,33 @@
 class Accordion {
     constructor(el) {
-        this.accordionContainer = el;
-        // Store the <details> element
-        this.el = this.accordionContainer.querySelector('details');
-        // Store the <summary> element
-        this.summary = this.el.querySelector('summary');
-        // Store the <div class="content"> element
-        this.content = this.el.querySelector('.content');
+        //Create links to all elements
+        this.linkTo = el;
+        this.accordionContainer = this.linkTo.parentNode.querySelector('div');
+        this.accordion = this.accordionContainer.querySelector('details');
+        this.summary = this.accordion.querySelector('summary');
+        this.content = this.accordion.querySelector('.content');
+        
+        //Generate scrolling bounds container
+        this.scrollingBounds = document.createElement("span");
+        this.scrollingBounds.id = this.linkTo.id + "-scrollingBounds";
+        this.scrollingBounds.classList.add("accordianScrollingBounds");
+        this.linkTo.parentNode.insertBefore(this.scrollingBounds, this.linkTo);
 
-        this.arrow = this.accordionContainer.querySelector('.detailArrow');
-        this.arrowAnimation = null;
+        //Generate arrow
+        this.arrow = document.createElement("span");
+        this.arrow.classList.add("detailArrow", "mdi", "mdi-chevron-down");
+        this.accordionContainer.appendChild(this.arrow);
 
-        this.linkTo = this.accordionContainer.parentNode.querySelector('.itemLink');
-        this.linkToEnd = this.accordionContainer.parentNode.querySelector('.itemLinkEnd');
-        this.scrollingBounds = this.accordionContainer.parentNode.querySelector('.accordianScrollingBounds');
-
-        // Store the animation object (so we can cancel it if needed)
+        //Animation
         this.animation = null;
-        // Store if the element is closing
+        this.arrowAnimation = null;
         this.isClosing = false;
-        // Store if the element is expanding
         this.isExpanding = false;
-        // Detect user clicks on the summary element
-        this.accordionContainer.addEventListener('click', (e) => this.onClick(e));
 
+        //Add event listener
+        this.accordionContainer.addEventListener('click', (e) => this.OnClick(e));
+
+        //Animation params
         this.animationTiming = {
             duration: 400,
             easing: 'ease-in-out'
@@ -31,8 +35,8 @@ class Accordion {
 
         this.paddingHeight = 40;
     }
-
-    ComputeSizeOfLink(height) {
+    
+    ComputeScrollingBounds(height) {
         const heightOfElement = parseInt(height,10);
         const topPadding = parseInt(getComputedStyle(this.linkTo).getPropertyValue("top"), 10);
         const bottomPadding = 50;
@@ -44,43 +48,43 @@ class Accordion {
         this.scrollingBounds.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
 
-    onClick(e) {
-        // Stop default behaviour from the browser
-        e.preventDefault();
-        // Add an overflow on the <details> to avoid content overflowing
-        this.el.style.overflow = 'hidden';
-        // Check if the element is being closed or is already closed
-        if (this.isClosing || !this.el.open) {
-            this.open();
-        // Check if the element is being openned or is already open
-        } else if (this.isExpanding || this.el.open) {
-            this.shrink();
+    HaltAnimation() {
+        if (this.animation) {
+            this.animation.cancel();
+        }
+
+        if(this.arrowAnimation) {
+            this.arrowAnimation.cancel();
         }
     }
 
-    shrink() {
-        // Set the element as "being closed"
+    OnClick(e) {
+        e.preventDefault();
+        this.accordion.style.overflow = 'hidden';
+        
+        if (this.isClosing || !this.accordion.open) {
+            this.Open();
+        } else if (this.isExpanding || this.accordion.open) {
+            this.Shrink();
+        }
+    }
+
+    Shrink() {
         this.isClosing = true;
         
-        // Store the current height of the element
-        const startHeight = `${this.el.offsetHeight + this.paddingHeight*0}px`;
-        // Calculate the height of the summary
+        //Compute the height end stops
+        const startHeight = `${this.accordion.offsetHeight + this.paddingHeight*0}px`;
         const endHeight = `${this.summary.offsetHeight + this.paddingHeight}px`;
-        
-        // If there is already an animation running
-        if (this.animation) {
-            // Cancel the current animation
-            this.animation.cancel();
-        }
+
+        this.HaltAnimation()
         
         // Start a WAAPI animation
-        this.animation = this.el.animate({
+        this.animation = this.accordion.animate({
             // Set the keyframes from the startHeight to endHeight
             height: [startHeight, endHeight]
         }, this.animationTiming);
         
-        // When the animation is complete, call onAnimationFinish()
-        this.animation.onfinish = () => this.onAnimationFinish(false);
+        this.animation.onfinish = () => this.OnAnimationFinish(false);
         // If the animation is cancelled, isClosing variable is set to false
         this.animation.oncancel = () => this.isClosing = false;
 
@@ -90,19 +94,16 @@ class Accordion {
             { transform: 'rotate(0deg)' }
         ];
 
-        if(this.arrowAnimation) {
-            this.arrowAnimation.cancel();
-        }
         this.arrowAnimation = this.arrow.animate(arrowAnimationKeyframes, this.animationTiming);
 
-        this.ComputeSizeOfLink(endHeight);
+        this.ComputeScrollingBounds(endHeight);
     }
 
-    open() {
+    Open() {
         // Apply a fixed height on the element
-        this.el.style.height = `${this.el.offsetHeight}px`;
+        this.accordion.style.height = `${this.accordion.offsetHeight}px`;
         // Force the [open] attribute on the details element
-        this.el.open = true;
+        this.accordion.open = true;
         // Wait for the next frame to call the expand function
         window.requestAnimationFrame(() => this.expand());
     }
@@ -111,23 +112,19 @@ class Accordion {
         // Set the element as "being expanding"
         this.isExpanding = true;
         // Get the current fixed height of the element
-        const startHeight = `${this.el.offsetHeight}px`;
+        const startHeight = `${this.accordion.offsetHeight}px`;
         // Calculate the open height of the element (summary height + content height)
         const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight + this.paddingHeight}px`;
         
-        // If there is already an animation running
-        if (this.animation) {
-            // Cancel the current animation
-            this.animation.cancel();
-        }
+        this.HaltAnimation()
         
         // Start a WAAPI animation
-        this.animation = this.el.animate({
+        this.animation = this.accordion.animate({
             // Set the keyframes from the startHeight to endHeight
             height: [startHeight, endHeight]
         }, this.animationTiming);
-        // When the animation is complete, call onAnimationFinish()
-        this.animation.onfinish = () => this.onAnimationFinish(true);
+
+        this.animation.onfinish = () => this.OnAnimationFinish(true);
         // If the animation is cancelled, isExpanding variable is set to false
         this.animation.oncancel = () => this.isExpanding = false;
 
@@ -137,17 +134,14 @@ class Accordion {
             { transform: 'rotate(180deg)' }
         ];
 
-        if(this.arrowAnimation) {
-            this.arrowAnimation.cancel();
-        }
         this.arrowAnimation = this.arrow.animate(arrowAnimationKeyframes, this.animationTiming);
 
-        this.ComputeSizeOfLink(endHeight);
+        this.ComputeScrollingBounds(endHeight);
     }
 
-    onAnimationFinish(open) {
+    OnAnimationFinish(open) {
         // Set the open attribute based on the parameter
-        this.el.open = open;
+        this.accordion.open = open;
         // Clear the stored animation
         this.animation = null;
         this.arrowAnimation = null;
@@ -155,7 +149,7 @@ class Accordion {
         this.isClosing = false;
         this.isExpanding = false;
         // Remove the overflow hidden and the fixed height
-        this.el.style.height = this.el.style.overflow = '';
+        this.accordion.style.height = this.accordion.style.overflow = '';
     }
 }
 

@@ -16,37 +16,17 @@ body {
     user-select: none; /* Standard */
 }
 
+/* General */
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
 .container {
     margin-top: 0pt;
     padding-top: 50px;
-}
-
-.sectionContainer {
-    background-color: rgba(255, 255, 255, 0.2);
-	border-radius: .3rem;
-	padding: 10px;
-	
-	margin-top: 50px;
-	margin-bottom: 50px;
-
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
-
-.sectionHeader {
-    color: #ffffff!important;
-
-    border: 1px solid #53006E;
-	background-color: #53006E;
-	border-radius: .25rem;
-	
-	padding-top: 10px;
-	padding-bottom: 15px;
-}
-
-.sectionLink {
-    position: relative;
-    top: -100px;
 }
 
 .topOfPageLink {
@@ -58,41 +38,6 @@ body {
     position: relative;
     top: -70px;
     left: 0px;
-}
-
-.itemLinkEnd {
-    position: relative;
-    top: 0px;
-    left: 0px;
-}
-
-.resumeItem {
-    position: relative;
-    margin: 10pt auto;
-}
-
-.cardDetailsCentered {
-	text-align: center;
-}
-
-.itemTitle {
-    color: rgb(31, 56, 100);
-}
-
-.itemOrganisation {
-    color: rgb(20, 25, 50);
-}
-
-.itemDuration {
-	border: 1px solid white;
-	border-radius: 50px;
-	background-color: white;
-	height: 30px;
-	padding: 3px 0px 0px 0px;
-    font-size: 18px;
-    color: rgb(20, 25, 50);
-    font-weight: 600;
-    margin-bottom: 0px;
 }
 
 p.itemText {
@@ -120,14 +65,130 @@ ul.itemText {
     margin-bottom: 0pt;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
+.profilePic {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+}
+
+.profilePicContainer {
+	margin: 10px 50%;
+}
+
+/* Cards */
+.cardBody {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.cardDetailsCentered {
+	text-align: center;
+}
+
 .cardBackground {
     border: 1px solid rgba(0, 0, 0, 0.125);
 	background-color: #ffffff;
 }
 
-.carousel-item img {
-    width: 100%;
+/* Sections */
+.sectionContainer {
+    background-color: rgba(255, 255, 255, 0.2);
+	border-radius: .3rem;
+	padding: 10px;
+	
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
+
+.sectionHeader {
+    color: #ffffff!important;
+
+    border: 0px solid var(--themeMain);
+	background-color: var(--themeMain);
+	border-radius: .25rem;
+	
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.sectionLink {
+    position: relative;
+    top: -100px;
+}
+
+/* Resume */
+.resumeItem {
+    position: relative;
+    margin: 10pt auto;
+}
+
+.itemTitle {
+    color: rgb(31, 56, 100);
+}
+
+.itemOrganisation {
+    color: rgb(20, 25, 50);
+}
+
+.itemDuration {
+	border: 1px solid white;
+	border-radius: 50px;
+	background-color: white;
+	height: 30px;
+	padding: 3px 0px 0px 0px;
+    font-size: 18px;
+    color: rgb(20, 25, 50);
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+/** Project Cards */
+.projectItem {
+  margin-bottom: 30px;
+}
+
+.projectSubtext {
+	font-size: 18px;
+}
+
+.projectType {
+	border: 1px solid white;
+	border-radius: 50px;
+	background-color: white;
+	height: 30px;
+	text-align: center;
+	padding: 3px 0px 0px 0px;
+	margin-top: 5px;
+}
+
+.projectLink {
+	display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+.projectLink p {
+	position: absolute;
+	right: 0px;
+	bottom: -18px;
+}
+
+.projectTypeLink { background-color: white; z-index: 2;}
+.projectTypeLink:hover { background-color: #CBCBCB; }
 
 .wip {
 	display: block;
@@ -148,6 +209,11 @@ ul.itemText {
 	border-radius: 50px;
 }
 
+/** Project Pages */
+.carousel-item img {
+    width: 100%;
+}
+
 /** Theme encoding */
 .header {
 	background-color: var(--themeMainText);
@@ -164,28 +230,28 @@ ul.itemText {
 	background-color: var(--themeGameDev);
 	background: linear-gradient(40deg, var(--themeGameDev) 0%, var(--themeGameDevAccent) 100%);
 }
-.project-gamedev .project-type { color: var(--themeGameDevText); }
+.project-gamedev .projectType { color: var(--themeGameDevText); }
 
 .project-design {
 	background-color: var(--themeDesign);
 	background: linear-gradient(40deg, var(--themeDesign) 0%, var(--themeDesignAccent) 100%);
 }
-.project-design .project-type { color: var(--themeDesignText); }
+.project-design .projectType { color: var(--themeDesignText); }
 
 .project-3d {
 	background-color: var(--theme3D);
 	background: linear-gradient(40deg, var(--theme3D) 0%, var(--theme3DAccent) 100%);
 }
-.project-3d .project-type { color: var(--theme3DText); }
+.project-3d .projectType { color: var(--theme3DText); }
 
-.project-audiovisual {
+.project-av {
 	background-color: var(--themeAV);
 	background: linear-gradient(40deg, var(--themeAV) 0%, var(--themeAVAccent) 100%);
 }
-.project-audiovisual .project-type { color: var(--themeAVText); }
+.project-av .projectType { color: var(--themeAVText); }
 
 .project-generic {
 	background-color: var(--themeGeneric);
 	background: linear-gradient(40deg, var(--themeGeneric) 0%, var(--themeGenericAccent) 100%);
 }
-.project-generic .project-type { color: var(--themeGenericText); }
+.project-generic .projectType { color: var(--themeGenericText); }

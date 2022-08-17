@@ -2,7 +2,7 @@
 <!-- <<ID>> START -->
 <div class="col-lg-6 col-sm-6 resumeItem">
     <div class="card h-100 cardBackground">
-        <div class="card-body">
+        <div class="cardBody">
             <h3 class="itemTitle cardDetailsCentered"><<TITLE>></h3>
             <h5 class="itemOrganisation cardDetailsCentered"><<ORGANISATION>></h5>
             <p class="itemDuration cardDetailsCentered"><<START>> - <<END>></p>

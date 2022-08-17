@@ -18,8 +18,7 @@
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Styles -->
-        <link href="css/3-col-portfolio.css" rel="stylesheet">
-        <link href="newstyles.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
         <link href="themes/theme-main.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
         
@@ -73,8 +72,8 @@
                 <span id="sectionIntroductionLink" class="sectionLink"></span>
 
                 <h1 class="sectionHeader" style="text-align:center;">Maxim Srour</h1>
-                <div class="profile-pic-container">
-                    <img class="profile-pic" src="assets/Profile.jpg" alt="">
+                <div class="profilePicContainer">
+                    <img class="profilePic" src="assets/Profile.jpg" alt="">
                 </div>
                 
                 <div class="row">

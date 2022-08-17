@@ -17,8 +17,8 @@
         <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Custom styles for this template -->
-        <link href="../../css/3-col-portfolio.css" rel="stylesheet">
-        <link href="../../newstyles.css" rel="stylesheet">
+        <link href="../../styles.css" rel="stylesheet">
+        <link href="../../themes/theme-main.css" rel="stylesheet">
         <script>
         window.onload = function() {
             LoadIcons();
@@ -62,7 +62,7 @@
 
                     <div class="col-lg-4 resumeItem">
                         <div class="card h-100 cardBackground">
-                            <div class="card-body">
+                            <div class="cardBody">
                                 <h3 class="itemTitle cardDetailsCentered"><<TITLE>></h3>
                                 <h5 class="itemOrganisation cardDetailsCentered">Project Description</h5>
                                 <p><<DESCRIPTION>></p>
@@ -79,7 +79,7 @@
                 <div class="row">
                     <div class="col-lg-12 resumeItem">
                         <div class="card h-100 cardBackground">
-                            <div class="card-body itemText">
+                            <div class="cardBody itemText">
                                 <<TEXT>>
                             </div>
                         </div>

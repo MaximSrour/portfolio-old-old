@@ -205,7 +205,7 @@ for i in data["projects"]:
         printString = printString.replace("<<TYPESTYLE>>", "design")
     elif(projectType == "AV"):
         printString = printString.replace("<<TYPE>>", "Audio-Visual")
-        printString = printString.replace("<<TYPESTYLE>>", "audiovisual")
+        printString = printString.replace("<<TYPESTYLE>>", "av")
     else:
         printString = printString.replace("<<TYPE>>", "General")
         printString = printString.replace("<<TYPESTYLE>>", "generic")
@@ -221,7 +221,7 @@ for i in data["projects"]:
         printString = printString.replace("<<WIP>>", "")
         
     if(i["clickable"] == True):
-        printString = printString.replace("<<LINK>>", "<a class=\"project-link\" href=\"" + filePath + "/projectPage.html\"><p>(click for more)</p></a>")
+        printString = printString.replace("<<LINK>>", "<a class=\"projectLink\" href=\"" + filePath + "/projectPage.html\"><p>(click for more)</p></a>")
     else:
         printString = printString.replace("<<LINK>>", "")
 

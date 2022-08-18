@@ -191,8 +191,8 @@ a:hover {
 	bottom: -18px;
 }
 
-.projectLink { background-color: white; z-index: 2; opacity: 0;}
-.projectLink:hover { background-color: #CBCBCB; opacity: 0.2;}
+.projectLink { background-color: rgba(255, 255, 255, 0); z-index: 2; opacity: 0;}
+.projectLink:hover { background-color: rgba(255, 255, 255, 0.2); opacity: 1}
 
 .wip {
 	display: block;

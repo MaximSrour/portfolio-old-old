@@ -81,6 +81,10 @@ a:hover {
 }
 
 /* Cards */
+.card {
+    border: 0px;
+}
+
 .cardBody {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -187,8 +191,8 @@ a:hover {
 	bottom: -18px;
 }
 
-.projectTypeLink { background-color: white; z-index: 2;}
-.projectTypeLink:hover { background-color: #CBCBCB; }
+.projectLink { background-color: white; z-index: 2; opacity: 0;}
+.projectLink:hover { background-color: #CBCBCB; opacity: 0.2;}
 
 .wip {
 	display: block;

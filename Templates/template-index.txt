@@ -57,6 +57,9 @@
                             <a class="nav-link" href="#sectionAdditionalActivitiesLink">Additional Activities</a>
                         </li>
                         <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
+                            <a class="nav-link" href="#sectionCertificationsLink">Certifications</a>
+                        </li>
+                        <li class="nav-item" onclick="NavbarLinkSelected()" data-target="#navbarResponsive" aria-controls="navbarResponsive">
                             <a class="nav-link" href="#sectionProjectsLink">Projects</a>
                         </li>
                     </ul>

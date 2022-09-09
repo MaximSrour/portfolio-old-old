@@ -70,6 +70,11 @@ templateAdditionalActivities = f.read()
 contentAdditionalActivities = ""
 f.close()
 
+f = open(f"{templatePath}template-certifications.txt")
+templateCertifications = f.read()
+contentCertifications = ""
+f.close()
+
 f = open(f"{templatePath}template-project.txt")
 templateProject = f.read()
 contentProjects = ""
@@ -176,7 +181,26 @@ f = open(f"{generatedPath}additionalActivitiesContent.html", "w")
 f.write(contentAdditionalActivities)
 f.close()
 
+# Certifications
+for i in data["certifications"]:
+    printString = templateCertifications
+    printString = printString.replace("<<ID>>", "certifications-" + i["id"])
+    printString = printString.replace("<<IMAGE>>", i["image"])
+    printString = printString.replace("<<TITLE>>", i["title"])
+    printString = printString.replace("<<ORGANISATION>>", i["organisation"])
+    printString = printString.replace("<<START>>", i["start"])
+    printString = printString.replace("<<END>>", i["end"])
 
+    if(i["hidden"] == False):
+        contentCertifications += printString
+        contentCertifications += "\n"
+
+contentCertifications += "\n"
+contentCertifications = contentCertifications.replace("\n", "\n\t\t\t\t\t")
+
+f = open(f"{generatedPath}certificationsContent.html", "w")
+f.write(contentCertifications)
+f.close()
 
 
 jsonFile = open("./projects/projects.json")
@@ -206,6 +230,9 @@ for i in data["projects"]:
     elif(projectType == "AV"):
         printString = printString.replace("<<TYPE>>", "Audio-Visual")
         printString = printString.replace("<<TYPESTYLE>>", "av")
+    elif(projectType == "Web"):
+        printString = printString.replace("<<TYPE>>", "Web")
+        printString = printString.replace("<<TYPESTYLE>>", "web")
     else:
         printString = printString.replace("<<TYPE>>", "General")
         printString = printString.replace("<<TYPESTYLE>>", "generic")
@@ -262,6 +289,9 @@ for i in data["projects"]:
         elif(projectType == "AV"):
             printString = printString.replace("<<TYPE>>", "Audio-Visual")
             printString = printString.replace("<<TYPESTYLE>>", "audiovisual")
+        elif(projectType == "Web"):
+            printString = printString.replace("<<TYPE>>", "Web")
+            printString = printString.replace("<<TYPESTYLE>>", "web")
         else:
             printString = printString.replace("<<TYPE>>", "General")
             printString = printString.replace("<<TYPESTYLE>>", "generic")
@@ -312,6 +342,7 @@ templateIndex = templateIndex.replace("<<GOOGLEANALYTICS>>", templateGoogleAnaly
 templateIndex = templateIndex.replace("<<WORKEXPERIENCECONTENT>>", contentWorkExperience)
 templateIndex = templateIndex.replace("<<EDUCATIONCONTENT>>", contentEducation)
 templateIndex = templateIndex.replace("<<ADDITIONALACTIVITIESCONTENT>>", contentAdditionalActivities)
+templateIndex = templateIndex.replace("<<CERTIFICATIONSCONTENT>>", contentCertifications)
 templateIndex = templateIndex.replace("<<PROJECTSCONTENT>>", contentProjects)
 
 f = open("./index.html", "w")

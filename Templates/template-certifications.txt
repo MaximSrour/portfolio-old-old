@@ -1,0 +1,8 @@
+
+<!-- <<ID>> START -->
+<div class="col-lg-3 col-sm-3 resumeItem">
+    <div class="card h-100" style="background-color: #00000000">
+        <img src="./assets/certs/<<IMAGE>>" class="certificationImage">
+    </div>
+</div>
+<!-- <<ID>> END -->

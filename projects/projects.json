@@ -1,6 +1,32 @@
 {
 	"projects": [
 		{
+			"id": "nobschef",
+			"title": "nobschef.com",
+            "type": "Web",
+            "description": "No BS Chef is a recipe website that is only about sharing recipes and nothing else. No need to wade through endless blogs and stories just to find a recipe that works for you - just scroll through or search for something you like and get cooking right away!",
+			"skills": [
+				"HTML5",
+				"CSS3",
+				"JS",
+				"NodeJS",
+				"MongoDB"
+			],
+            "text": [
+				"This website is a passion project of mine that I wanted to develop to help me when I'm in the kitchen.",
+				"As someone who likes to cook but often struggles to remember the specific requirements of recipes (even ones I've cooked dozens of times before!), I rely quite heavily on written recipes to support the cooking process. For me, I really just want to know how much of each ingredient I require, and how long to cook different parts of the recipe.",
+				"Now, I could just use a written diary - which I do when coming up with my own recipes or when modifying existing recipes for my own twist - but for the rest of it I need to find recipes somewhere, and that somewhere is the internet.",
+				"One of my major pet peeves about this though is how difficult it is to find a recipe that I like without having to wade through neverending stories about sentimental experiences the author has with this particular recipe - I really just want to know how long to cook something, seriously!",
+				"Enter No BS Chef - it's my attempt to create an online cooking resource for myself and countless other like-minded individuals who just want to cook. This website prioritises the user experience above all else. This means that I will strive to keep this a free platform, devoid of instrusive advertisements and dodgy subscription services.",
+				"I've developed this using NodeJS to handle the server-side content delivery and a NoSQL database in the form of MongoDB to contain all of the recipes. This website is also using a collection of plugins like ExpressJS to handle dynamic page generation too.",
+				"Currently I am running this in my own scalable 'data center' of sorts which is running a collection of servers and softwares like Docker/Kubernetes, though my intention is to move this to AWS if it starts seeing more traffic than my network can handle.",
+				"This website is currently under-construction, though it is live with a limited set of recipes now if you wanted to give it a go. If you have any feedback, please feel free to contact me at contact@msrour.me and I would be happy to hear it!"
+			],
+			"clickable": true,
+            "wip": true,
+			"hidden": false
+		},
+		{
 			"id": "forlorn",
 			"title": "Forlorn Colonists",
             "type": "Game",

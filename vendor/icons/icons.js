@@ -1,9 +1,12 @@
 function GenerateIcon(element, iconType) {
     //Create the image element
     let img = document.createElement("img");
-    img.classList.add("icon")
-    img.classList.add("icon" + iconType)
+    img.classList.add("icon");
+    img.classList.add("icon" + iconType);
     element.appendChild(img)
+    let text = getComputedStyle(img).getPropertyValue("--iconText");
+    text = TruncateIconText(text);
+    //img.alt = text;
     return img
 }
 
@@ -35,4 +38,13 @@ function LoadIcons() {
             GenerateIcon(el, iconType);
         }
     });
+}
+
+function TruncateIconText(text) {
+    let truncateLeadSpace = text[0] === " ";
+    let leadChars = 1 + truncateLeadSpace ? 1 : 0;
+
+    text = text.substring(leadChars, text.length-1)
+
+    return text;
 }

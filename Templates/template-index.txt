@@ -89,44 +89,75 @@
                     <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
                         <div class="card card-body">
                             <h4>My Skillset</h4>
-                            <ul>
-                                <li>Games Development</li>
-                                <ul>
-                                    <li><span class="iconLong" data-icon="UE4"></li>
-                                    <li><span class="iconLong" data-icon="UE5"></li>
-                                    <li><span class="iconLong" data-icon="Unity"></li>
-                                </ul>
 
-                                <li>Programming</li>
-                                <ul>
-                                    <li><span class="iconLong" data-icon="C"></li>
-                                    <li><span class="iconLong" data-icon="CPP"></li>
-                                    <li><span class="iconLong" data-icon="CSharp"></li>
-                                    <li><span class="iconLong" data-icon="Python"></li>
-                                    <li><span class="iconLong" data-icon="R"></li>
-                                    <li><span class="iconLong" data-icon="Java"></li>
-                                    <li><span class="iconLong" data-icon="HTML5"></li>
-                                    <li><span class="iconLong" data-icon="CSS3"></li>
-                                    <li><span class="iconLong" data-icon="JS"></li>
-                                    <li><span class="iconLong" data-icon="VBA"></li>
-                                    <li><span class="iconLong" data-icon="Latex"></li>
-                                </ul>
-                                
-                                <li>3D Modelling</li>
-                                <ul>
-                                    <li><span class="iconLong" data-icon="Maya"></li>
-                                    <li><span class="iconLong" data-icon="Fusion360"></li>
-                                    <li><span class="iconLong" data-icon="SubstancePainter"></li>
-                                </ul>
-                                
-                                <li>Adobe Suite</li>
-                                <ul>
-                                    <li><span class="iconLong" data-icon="Photoshop"></li>
-                                    <li><span class="iconLong" data-icon="Illustrator"></li>
-                                    <li><span class="iconLong" data-icon="Premiere"></li>
-                                    <li><span class="iconLong" data-icon="Audition"></li>
-                                </ul>
-                            </ul>
+                            <div class="skillsGrid">
+                                <div class="skillCard">
+                                    <h5>Games Development</h5>
+                                    <ul>
+                                        <li><span class="iconLong" data-icon="UE4"></li>
+                                        <li><span class="iconLong" data-icon="UE5"></li>
+                                        <li><span class="iconLong" data-icon="Unity"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="skillCard">
+                                    <h5>Programming</h5>
+                                    <ul>
+                                        <li><span class="iconLong" data-icon="C"></li>
+                                        <li><span class="iconLong" data-icon="CPP"></li>
+                                        <li><span class="iconLong" data-icon="CSharp"></li>
+                                        <li><span class="iconLong" data-icon="Python"></li>
+                                        <li><span class="iconLong" data-icon="R"></li>
+                                        <li><span class="iconLong" data-icon="Java"></li>
+                                        <li><span class="iconLong" data-icon="VBA"></li>
+                                        <li><span class="iconLong" data-icon="Latex"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="skillCard">
+                                    <h5>Web Development</h5>
+                                    <ul>
+                                        <li><span class="iconLong" data-icon="HTML5"></li>
+                                        <li><span class="iconLong" data-icon="CSS3"></li>
+                                        <li><span class="iconLong" data-icon="JS"></li>
+                                        <li><span class="iconLong" data-icon="NodeJS"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="skillCard">
+                                    <h5>3D Modelling</h5>
+                                    <ul>
+                                        <li><span class="iconLong" data-icon="Maya"></li>
+                                        <li><span class="iconLong" data-icon="Fusion360"></li>
+                                        <li><span class="iconLong" data-icon="SubstancePainter"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="skillCard">
+                                    <h5>Databases</h5>
+                                    <ul>
+                                        <li><span class="iconLong" data-icon="MySQL"></li>
+                                        <li><span class="iconLong" data-icon="MongoDB"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="skillCard">
+                                    <h5>Adobe Suite</h5>
+                                    <ul>
+                                        <li><span class="iconLong" data-icon="Photoshop"></li>
+                                        <li><span class="iconLong" data-icon="Illustrator"></li>
+                                        <li><span class="iconLong" data-icon="Premiere"></li>
+                                        <li><span class="iconLong" data-icon="Audition"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="skillCard">
+                                    <h5>Miscellaneous</h5>
+                                    <ul>
+                                        <li><span class="iconLong" data-icon="Docker"></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,6 +190,16 @@
                 <h1 class="sectionHeader" style="text-align:center;">Additional Activities</h1>
                 <div id="additionalActivitiesContent" class="row">
                     <<ADDITIONALACTIVITIESCONTENT>>
+                </div>
+            </section>
+
+            <!-- Certifications section -->
+            <section id="sectionCertifications" class="sectionContainer">
+                <span id="sectionCertificationsLink" class="sectionLink"></span>
+
+                <h1 class="sectionHeader" style="text-align:center;">Certifications and Licences</h1>
+                <div id="certificationsContent" class="row">
+                    <<CERTIFICATIONSCONTENT>>
                 </div>
             </section>
 

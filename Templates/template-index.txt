@@ -201,7 +201,7 @@
                 <span id="sectionCertificationsLink" class="sectionLink"></span>
 
                 <h1 class="sectionHeader" style="text-align:center;">Certifications and Licences</h1>
-                <div id="certificationsContent" class="row">
+                <div id="certificationsContent" class="certificationsGrid">
                     <<CERTIFICATIONSCONTENT>>
                 </div>
             </section>

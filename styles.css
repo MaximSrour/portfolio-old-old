@@ -3,8 +3,8 @@
 
 body {
     padding-top: 0px;
-	background-color: rgb(25, 25, 25);
-	background-image: url(../assets/background/background1_Blur.jpg);
+	background-color: var(--themeBackground);
+	background-image: url(./assets/background/background1_Blur.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -22,6 +22,11 @@ body {
     body {
         padding-top: 56px;
     }
+}
+
+article {
+    margin-top: 0pt;
+    padding-top: 50px;
 }
 
 .container {
@@ -155,11 +160,6 @@ a:hover {
     margin-bottom: 0px;
 }
 
-.certificationImage {
-	width: inherit;
-	height: auto;
-}
-
 /** Project Cards */
 .projectItem {
   margin-bottom: 30px;
@@ -233,6 +233,24 @@ a:hover {
 .skillCard ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+.certificationsGrid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.certificationsCard {
+	border: 0px;
+	border-radius: 1rem;
+	position: relative;
+	width: inherit;
+}
+
+.certificationImage {
+	max-width:100%;
+	height: auto;
 }
 
 /** Project Pages */

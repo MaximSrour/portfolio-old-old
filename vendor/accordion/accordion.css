@@ -5,9 +5,13 @@
     cursor: pointer;
 }
 
+details {
+    padding-bottom: 2.5rem !important;
+}
+
 .detailArrow {
     margin: auto;
-    margin-top: -15pt;
+    margin-top: -2.5rem;
     font-size: 20pt;
 }
 

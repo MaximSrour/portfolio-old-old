@@ -74,7 +74,7 @@ class Accordion {
         
         //Compute the height end stops
         const startHeight = `${this.accordion.offsetHeight + this.paddingHeight*0}px`;
-        const endHeight = `${this.summary.offsetHeight + this.paddingHeight}px`;
+        const endHeight = `calc(${this.summary.offsetHeight + this.paddingHeight}px + 1.25rem)`;
 
         this.HaltAnimation()
         
@@ -114,7 +114,7 @@ class Accordion {
         // Get the current fixed height of the element
         const startHeight = `${this.accordion.offsetHeight}px`;
         // Calculate the open height of the element (summary height + content height)
-        const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight + this.paddingHeight}px`;
+        const endHeight = `calc(${this.summary.offsetHeight + this.content.offsetHeight + this.paddingHeight}px + 1.25rem)`;
         
         this.HaltAnimation()
         

@@ -38,7 +38,6 @@
 .iconCPP { content: url("/assets/icons/cpp.png"); --iconText: "C++"; }
 .iconCSharp { content: url("/assets/icons/csharp.png"); --iconText: "C#"; }
 .iconPython { content: url("/assets/icons/python.png"); --iconText: "Python"; }
-.iconR { content: url("/assets/icons/r.png"); --iconText: "R"; }
 .iconJava { content: url("/assets/icons/java.png"); --iconText: "Java"; }
 .iconVBA { content: url("/assets/icons/vba.png"); --iconText: "VBA"; }
 .iconLatex { content: url("/assets/icons/latex.png"); --iconText: "LaTeX"; }
@@ -50,4 +49,10 @@
 
 .iconMongoDB { content: url("/assets/icons/mongodb.png"); --iconText: "MongoDB"; }
 .iconMySQL { content: url("/assets/icons/mysql.png"); --iconText: "MySQL"; }
+
+.iconPowerBI { content: url("/assets/icons/powerbi.png"); --iconText: "Power BI"; }
+.iconTableau { content: url("/assets/icons/tableau.png"); --iconText: "Tableau"; }
+.iconGA { content: url("/assets/icons/ga.png"); --iconText: "Google Analytics"; }
+.iconR { content: url("/assets/icons/r.png"); --iconText: "R"; }
+
 .iconDocker { content: url("/assets/icons/docker.png"); --iconText: "Docker/Docker Compose"; }

@@ -86,6 +86,28 @@
 			"hidden": false
 		},
 		{
+			"id": "portfolio",
+			"title": "msrour.me Portfolio",
+            "type": "Web",
+            "description": "From a tiny html page to a full-stack application, my portfolio is the place to see everything about my professionally.",
+			"skills": [
+				"HTML5",
+				"CSS3",
+				"JS",
+				"NodeJS",
+				"MongoDB"
+			],
+            "text": [
+				"This is a bit of web-ception, isn't it?",
+				"This website started as a place for me to put up my various university assignments, and I was only making it to be eligible to apply to a particularly strict unit that I wanted to study. I required a website portfolio, so I made one. Now at the time, this website was honestly not great, especially since I threw it all together in the space of a weekend while working on other assignments, but since then it has slowly progressed into what it is today.",
+				"In mid-2022, I decided that I wanted to learn full-stack web development so that I could have a website that mirrored my resume so that it would be more accessible. I already had my resume in a LaTeX format, so I created some python scripts to convert raw content into HTML using a set of templates. From this, I now had a website that would mirror my resume, and a website I could genuinely be proud of.",
+				"Around this time, I also started developing NoBSChef.com which took everything a step further, and it's at this point that I took the plunge to making the website completely dynamically generated using NodeJS and MongoDB to store all of the project details."
+			],
+			"clickable": true,
+            "wip": false,
+			"hidden": false
+		},
+		{
 			"id": "adTrailer",
 			"title": "Afro Disco Trailer",
             "type": "AV",

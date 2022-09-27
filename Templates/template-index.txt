@@ -86,6 +86,8 @@
                             <p class="card-text">I am a software engineer by trade and an avid technology nerd that will find any excues to learn about what's new. I spend most of my time programming or designing new systems, primarily in C++ though I have begun to branch out to other languages like Python more frequently.</p>
                             <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbiest. My main focus is in games 3D modelling although I had my start using CAD for 3D printing when I was younger.</p>
                             <p class="card-text">My main focus now is on completing my Master of Data Science and finding more ways to visualise unique data sets to inform operational needs.</p>
+
+							<p class="card-text"><a href="Resume - Maxim Srour.pdf" download>Download a printable resume here.</a></p>
                         </div>
                     </div>
                 

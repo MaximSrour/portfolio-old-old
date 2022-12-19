@@ -83,8 +83,8 @@
                     <div class="col-lg-8 offset-md-2 col-sm-6 resumeItem">
                         <div class="card card-body">
                             <h4>Who I am</h4>
-                            <p class="card-text">I am a software engineer by trade and an avid technology nerd that will find any excues to learn about what's new. I spend most of my time programming or designing new systems, primarily in C++ though I have begun to branch out to other languages like Python more frequently.</p>
-                            <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbiest. My main focus is in games 3D modelling although I had my start using CAD for 3D printing when I was younger.</p>
+                            <p class="card-text">I am a software engineer and technical IT professional with experience across a wide variety of industries ranging from control systems to defence. I spend much of my time programming or designing systems primarily in C++, as well as working on new data visualisations using Python and R.</p>
+                            <p class="card-text">I also enjoy 3D modelling and have built up a sizable amount of knowledge and experience in my time as a hobbyist. My primary focus is in games 3D modelling although I had my start as a CAD engineer for 3D printing when I was younger.</p>
                             <p class="card-text">My main focus now is on completing my Master of Data Science and finding more ways to visualise unique data sets to inform operational needs.</p>
 
 							<p class="card-text"><a href="Resume - Maxim Srour.pdf" download>Download a printable resume here.</a></p>
@@ -221,7 +221,7 @@
             <section id="sectionProjects" class="sectionContainer">
                 <span id="sectionProjectsLink" class="sectionLink"></span>
 
-                <h1 class="sectionHeader" style="text-align:center;">Projects</h1>
+                <h1 class="sectionHeader" style="text-align:center;">Personal Projects</h1>
                 <div id="projectsContent" class="row">
                     <<PROJECTSCONTENT>>
                 </div>

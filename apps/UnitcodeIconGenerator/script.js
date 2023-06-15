@@ -68,6 +68,7 @@ class UnitcodeIconGenerator {
         this.CreateEventListeners();
         this.GenerateRandomColors();
         this.CalculateImageDimensions();
+        this.GenerateImageGradient();
         this.UpdateImage();
     };
 
@@ -79,22 +80,26 @@ class UnitcodeIconGenerator {
 
         this.htmlRef.gradientColorSwatch1.addEventListener("input", () => {
             this.configData.gradientColorSwatch1 = this.htmlRef.gradientColorSwatch1.value;
+            this.GenerateImageGradient();
             this.UpdateImage();
         });
 
         this.htmlRef.gradientColorSwatch2.addEventListener("input", () => {
             this.configData.gradientColorSwatch2 = this.htmlRef.gradientColorSwatch2.value;
+            this.GenerateImageGradient();
             this.UpdateImage();
         });
 
         this.htmlRef.colorRandomButton.addEventListener("click", () => {
             this.GenerateRandomColors();
+            this.GenerateImageGradient();
             this.UpdateImage();
         });
 
         this.htmlRef.gradientRotationSlider.addEventListener("input", () => {
             this.configData.gradientRotation = Number(this.htmlRef.gradientRotationSlider.value);
             this.htmlRef.gradientRotationSliderValue.innerHTML = this.configData.gradientRotation;
+            this.GenerateImageGradient();
             this.UpdateImage();
         });
 
@@ -168,7 +173,7 @@ class UnitcodeIconGenerator {
         this.htmlRef.outputImage4.src = this.image;
     };
 
-    UpdateImage() {
+    GenerateImageGradient() {
         const tempCtx = this.tempCanvas.getContext("2d");
         tempCtx.resetTransform();
         
@@ -183,7 +188,9 @@ class UnitcodeIconGenerator {
         grd.addColorStop(1, this.configData.gradientColorSwatch2);
         tempCtx.fillStyle = grd;
         tempCtx.fillRect(0, 0, this.tempCanvas.width, this.tempCanvas.height);
+    }
 
+    UpdateImage() {
         // Create the actual canvas and draw rotated gradient
         const ctx = this.canvas.getContext("2d");
         ctx.drawImage(

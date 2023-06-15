@@ -7,10 +7,12 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+
+    font-family: "Ubuntu Mono", "Consolas", monospace;
 }
 
 body {
-  font-family: "Ubuntu Mono", "Consolas", monospace;
+    font-family: "Ubuntu Mono", "Consolas", monospace;
 }
 
 article {
@@ -86,6 +88,7 @@ label {
 button {
     width: var(--fieldMaxWidth);
     margin-inline: auto;
+    font-family: inherit;
 }
 
 .fieldContainer {
@@ -93,6 +96,7 @@ button {
 }
 .fieldContainer input {
     text-align: center;
+    font: inherit;
 }
 
 .dropdownContainer {
@@ -100,6 +104,7 @@ button {
 }
 .dropdownContainer select {
     text-align: center;
+    font: inherit;
 }
 
 input[type="color"] {

@@ -7,6 +7,7 @@ class UnitcodeIconGenerator {
 
         this.configData = {
             unitcode: "1045",
+            fontColorSwatch: "#FFFFFF",
             gradientColorSwatch1: "#000000",
             gradientColorSwatch2: "#FFFFFF",
             gradientRotation: 0,
@@ -32,6 +33,7 @@ class UnitcodeIconGenerator {
 
         this.htmlRef = {
             unitcodeField: document.getElementById("unitcodeField"),
+            fontColorSwatch: document.getElementById("fontColorSwatch"),
             gradientColorSwatch1: document.getElementById("gradientColorSwatch1"),
             gradientColorSwatch2: document.getElementById("gradientColorSwatch2"),
             colorRandomButton: document.getElementById("gradientRanomizerButton"),
@@ -46,7 +48,9 @@ class UnitcodeIconGenerator {
             textPaddingHorizontalSliderValue: document.getElementById("textPaddingHorizontalSliderValue"),
             textPaddingVerticalSliderValue: document.getElementById("textPaddingVerticalSliderValue"),
 
-            saveButton: document.getElementById("saveButton"),
+            saveImageButton: document.getElementById("saveImageButton"),
+            saveConfigButton: document.getElementById("saveConfigButton"),
+            loadConfigButton: document.getElementById("loadConfigButton"),
 
             outputImage1: document.getElementById("image1"),
             outputImage2: document.getElementById("image2"),
@@ -78,6 +82,11 @@ class UnitcodeIconGenerator {
             this.UpdateImage();
         });
 
+        this.htmlRef.fontColorSwatch.addEventListener("input", () => {
+            this.configData.fontColorSwatch = this.htmlRef.fontColorSwatch.value;
+            this.UpdateImage();
+        });
+        
         this.htmlRef.gradientColorSwatch1.addEventListener("input", () => {
             this.configData.gradientColorSwatch1 = this.htmlRef.gradientColorSwatch1.value;
             this.GenerateImageGradient();
@@ -132,8 +141,16 @@ class UnitcodeIconGenerator {
             this.UpdateImage();
         });
 
-        this.htmlRef.saveButton.addEventListener("click", () => {
+        this.htmlRef.saveImageButton.addEventListener("click", () => {
             this.SaveImage();
+        });
+
+        this.htmlRef.saveConfigButton.addEventListener("click", () => {
+            this.SaveConfig();
+        });
+
+        this.htmlRef.loadConfigButton.addEventListener("click", () => {
+            this.LoadConfig();
         });
     };
 
@@ -206,7 +223,7 @@ class UnitcodeIconGenerator {
         );
 
         // Draw text
-        ctx.fillStyle = "white";
+        ctx.fillStyle = this.configData.fontColorSwatch;
         ctx.font = `bold ${this.configData.textSize}px ${this.configData.fontFamily}`;
 
         if (this.configData.unitcode.length > 0) ctx.fillText(this.configData.unitcode[0], this.text.padding.left, this.text.padding.top);
@@ -231,6 +248,10 @@ class UnitcodeIconGenerator {
         }));
         a.download = `FIT${this.configData.unitcode}_IconConfig.txt`;
         a.click();
+    };
+
+    LoadConfig() {
+        
     };
 };
 

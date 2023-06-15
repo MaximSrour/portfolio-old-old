@@ -51,6 +51,7 @@ class UnitcodeIconGenerator {
             saveImageButton: document.getElementById("saveImageButton"),
             saveConfigButton: document.getElementById("saveConfigButton"),
             loadConfigButton: document.getElementById("loadConfigButton"),
+            configFile: document.getElementById("configFile"),
 
             outputImage1: document.getElementById("image1"),
             outputImage2: document.getElementById("image2"),
@@ -152,6 +153,24 @@ class UnitcodeIconGenerator {
         this.htmlRef.loadConfigButton.addEventListener("click", () => {
             this.LoadConfig();
         });
+
+        this.htmlRef.configFile.addEventListener("change", (event) => {
+            let file = event.target.files[0];
+            let reader = new FileReader();
+
+            reader.onload = (event) => {
+                this.configData = JSON.parse(event.target.result);
+
+                this.InstallConfig();
+                this.CalculateImageDimensions();
+                this.GenerateImageGradient();
+                this.UpdateImage();
+            };
+
+            reader.readAsText(file);
+
+            this.htmlRef.configFile.value = "";
+        });
     };
 
     GenerateRandomColors() {
@@ -251,8 +270,20 @@ class UnitcodeIconGenerator {
     };
 
     LoadConfig() {
-        
+        this.htmlRef.configFile.click();
     };
+
+    InstallConfig() {
+        this.htmlRef.unitcodeField.value = this.configData.unitcode;
+        this.htmlRef.fontColorSwatch.value = this.configData.fontColorSwatch;
+        this.htmlRef.gradientColorSwatch1.value = this.configData.gradientColorSwatch1;
+        this.htmlRef.gradientColorSwatch2.value = this.configData.gradientColorSwatch2;
+        this.htmlRef.gradientRotationSlider.value = this.configData.gradientRotation;
+        this.htmlRef.textSizeSlider.value = this.configData.textSize;
+        this.htmlRef.textPaddingHorizontalSlider.value = this.configData.textPaddingHorizontal;
+        this.htmlRef.textPaddingVerticalSlider.value = this.configData.textPaddingVertical;
+        this.htmlRef.fontFamilyDropdown.value = this.configData.fontFamily;
+    }
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {

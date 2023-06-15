@@ -70,90 +70,142 @@ class UnitcodeIconGenerator {
         this.canvas.width = this.imageDimensions.width;
         this.canvas.height = this.imageDimensions.height;
 
+        this.Init();
+    };
+
+    /**
+     * Runs all necessary functions to initialise the state and functionality of the app
+     */
+    Init() {
         this.CreateEventListeners();
         this.GenerateRandomColors();
         this.CalculateImageDimensions();
         this.GenerateImageGradient();
-        this.UpdateImage();
-    };
+        this.RenderImage();
+    }
 
+    /**
+     * Generates all of the event listeners
+     */
     CreateEventListeners() {
+        /**
+         * Unitcode field event listener
+         */
         this.htmlRef.unitcodeField.addEventListener("keyup", () => {
             this.configData.unitcode = this.htmlRef.unitcodeField.value;
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Font color swatch event listener
+         */
         this.htmlRef.fontColorSwatch.addEventListener("input", () => {
             this.configData.fontColorSwatch = this.htmlRef.fontColorSwatch.value;
-            this.UpdateImage();
+            this.RenderImage();
         });
         
+        /**
+         * Gradient color swatch 1 event listener
+         */
         this.htmlRef.gradientColorSwatch1.addEventListener("input", () => {
             this.configData.gradientColorSwatch1 = this.htmlRef.gradientColorSwatch1.value;
             this.GenerateImageGradient();
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Gradient color swatch 2 event listener
+         */
         this.htmlRef.gradientColorSwatch2.addEventListener("input", () => {
             this.configData.gradientColorSwatch2 = this.htmlRef.gradientColorSwatch2.value;
             this.GenerateImageGradient();
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Random button event listener
+         */
         this.htmlRef.colorRandomButton.addEventListener("click", () => {
             this.GenerateRandomColors();
             this.GenerateImageGradient();
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Gradient rotation slider event listener
+         */
         this.htmlRef.gradientRotationSlider.addEventListener("input", () => {
             this.configData.gradientRotation = Number(this.htmlRef.gradientRotationSlider.value);
             this.htmlRef.gradientRotationSliderValue.innerHTML = this.configData.gradientRotation;
             this.GenerateImageGradient();
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Text size slider event listener
+         */
         this.htmlRef.textSizeSlider.addEventListener("input", () => {
             this.configData.textSize = Number(this.htmlRef.textSizeSlider.value);
             this.htmlRef.textSizeSliderValue.innerHTML = this.configData.textSize;
 
             this.CalculateImageDimensions();
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Text padding horizontal slider event listener
+         */
         this.htmlRef.textPaddingHorizontalSlider.addEventListener("input", () => {
             this.configData.textPaddingHorizontal = Number(this.htmlRef.textPaddingHorizontalSlider.value);
             this.htmlRef.textPaddingHorizontalSliderValue.innerHTML = this.configData.textPaddingHorizontal;
 
             this.CalculateImageDimensions();
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Text padding vertical slider event listener
+         */
         this.htmlRef.textPaddingVerticalSlider.addEventListener("input", () => {
             this.configData.textPaddingVertical = Number(this.htmlRef.textPaddingVerticalSlider.value);
             this.htmlRef.textPaddingVerticalSliderValue.innerHTML = this.configData.textPaddingVertical;
 
             this.CalculateImageDimensions();
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Font family dropdown event listener
+         */
         this.htmlRef.fontFamilyDropdown.addEventListener("change", () => {
             this.configData.fontFamily = this.htmlRef.fontFamilyDropdown.value;
-            this.UpdateImage();
+            this.RenderImage();
         });
 
+        /**
+         * Save image button event listener
+         */
         this.htmlRef.saveImageButton.addEventListener("click", () => {
             this.SaveImage();
         });
 
+        /**
+         * Save config button event listener
+         */
         this.htmlRef.saveConfigButton.addEventListener("click", () => {
             this.SaveConfig();
         });
 
+        /**
+         * Load config button event listener
+         */
         this.htmlRef.loadConfigButton.addEventListener("click", () => {
             this.LoadConfig();
         });
 
+        /**
+         * Config file event listener
+         */
         this.htmlRef.configFile.addEventListener("change", (event) => {
             let file = event.target.files[0];
             let reader = new FileReader();
@@ -164,7 +216,7 @@ class UnitcodeIconGenerator {
                 this.InstallConfig();
                 this.CalculateImageDimensions();
                 this.GenerateImageGradient();
-                this.UpdateImage();
+                this.RenderImage();
             };
 
             reader.readAsText(file);
@@ -173,6 +225,9 @@ class UnitcodeIconGenerator {
         });
     };
 
+    /**
+     * Generates random colors for the gradient
+     */
     GenerateRandomColors() {
         this.htmlRef.gradientColorSwatch1.value = this.GenerateRandomColor();
         this.htmlRef.gradientColorSwatch2.value = this.GenerateRandomColor();
@@ -180,11 +235,19 @@ class UnitcodeIconGenerator {
         this.configData.gradientColorSwatch2 = this.htmlRef.gradientColorSwatch2.value;
     };
 
+    /**
+     * Generates a random color
+     * @returns a HEX formatted string
+     */
     GenerateRandomColor() {
         let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
         return randomColor;
     };
 
+    /**
+     * Computes the dimensions of the image and text
+     * This exists to remove excess computations when nothing relevant has changed
+     */
     CalculateImageDimensions() {
         const ctx = this.tempCanvas.getContext("2d");
         ctx.resetTransform();
@@ -200,15 +263,10 @@ class UnitcodeIconGenerator {
         this.text.padding.right = this.imageDimensions.width - this.configData.textPaddingHorizontal - this.text.dimensions.width;
     };
 
-    SetImage() {
-        this.image = this.canvas.toDataURL();
-
-        this.htmlRef.outputImage1.src = this.image;
-        this.htmlRef.outputImage2.src = this.image;
-        this.htmlRef.outputImage3.src = this.image;
-        this.htmlRef.outputImage4.src = this.image;
-    };
-
+    /**
+     * Generates a gradient image background
+     * This exists to remove excess background draws when nothing relevant has changed
+     */
     GenerateImageGradient() {
         const tempCtx = this.tempCanvas.getContext("2d");
         tempCtx.resetTransform();
@@ -226,9 +284,12 @@ class UnitcodeIconGenerator {
         tempCtx.fillRect(0, 0, this.tempCanvas.width, this.tempCanvas.height);
     }
 
-    UpdateImage() {
-        // Create the actual canvas and draw rotated gradient
+    /**
+     * Renders the image using the configured data
+     */
+    RenderImage() {
         const ctx = this.canvas.getContext("2d");
+
         ctx.drawImage(
             this.tempCanvas,
             (this.diagonal - this.imageDimensions.width) / 2,
@@ -241,7 +302,6 @@ class UnitcodeIconGenerator {
             this.imageDimensions.height
         );
 
-        // Draw text
         ctx.fillStyle = this.configData.fontColorSwatch;
         ctx.font = `bold ${this.configData.textSize}px ${this.configData.fontFamily}`;
 
@@ -250,9 +310,12 @@ class UnitcodeIconGenerator {
         if (this.configData.unitcode.length > 2) ctx.fillText(this.configData.unitcode[2], this.text.padding.left, this.text.padding.bottom);
         if (this.configData.unitcode.length > 3) ctx.fillText(this.configData.unitcode[3], this.text.padding.right, this.text.padding.bottom);
 
-        this.SetImage();
+        this.InstallImage();
     };
 
+    /**
+     * Saves the image file using a browser download
+     */
     SaveImage() {
         let a = document.createElement("a");
         a.href = this.image;
@@ -260,19 +323,40 @@ class UnitcodeIconGenerator {
         a.click();
     };
 
+    /**
+     * Saves the config file using a browser download
+     */
     SaveConfig() {
         let a = document.createElement("a");
         a.href = URL.createObjectURL(new Blob([JSON.stringify(this.configData, null, 2)], {
             type: "text/plain"
         }));
-        a.download = `FIT${this.configData.unitcode}_IconConfig.txt`;
+        a.download = `FIT${this.configData.unitcode}_IconConfig.uig`;
         a.click();
     };
 
+    /**
+     * Opens the file selection dialog
+     */
     LoadConfig() {
         this.htmlRef.configFile.click();
     };
 
+    /**
+     * Installs the image data stored in the app into the frontend
+     */
+    InstallImage() {
+        this.image = this.canvas.toDataURL();
+
+        this.htmlRef.outputImage1.src = this.image;
+        this.htmlRef.outputImage2.src = this.image;
+        this.htmlRef.outputImage3.src = this.image;
+        this.htmlRef.outputImage4.src = this.image;
+    };
+
+    /**
+     * Installs the config data stored in the app into the frontend
+     */
     InstallConfig() {
         this.htmlRef.unitcodeField.value = this.configData.unitcode;
         this.htmlRef.fontColorSwatch.value = this.configData.fontColorSwatch;

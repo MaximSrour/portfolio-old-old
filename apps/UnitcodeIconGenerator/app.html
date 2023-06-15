@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unitcode Icon Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <article>
+        <h1>Unitcode Icon Generator</h1>
+
+        <div class="formContainer fieldContainer">
+            <label for="unitcode-field">Enter the four digits of a Unit Code (FIT1045 -> 1045)</label>
+            <input type="text" id="unitcode-field" maxlength="4" value="1045">
+        </div>
+
+        <br />
+
+        <div class="colorContainerGroup">
+            <div class="formContainer colorContainer">
+                <label for="color-button-1">Gradient color 1</label>
+                <input type="color" id="color-button-1">
+            </div>
+
+            <div class="formContainer colorContainer">
+                <label for="color-button-2">Gradient color 2</label>
+                <input type="color" id="color-button-2">
+            </div>
+        </div>
+
+        <div class="formContainer buttonContainer">
+            <button id="color-random-button">Randomise colors</button>
+        </div>
+
+        <br />
+
+        <div class="formContainer dropdownContainer">
+            <label for="fontFamilyDropdown">Font family</label>
+            <select id="fontFamilyDropdown">
+                <option value="Consolas" selected="selected">Consolas</option>
+                <option value="Arial">Arial</option>
+            </select>
+        </div>
+
+        <br />
+
+        <div class="formContainer sliderContainer">
+            <label for="gradientRotationSlider">Gradient rotation</label>
+            <span class="sliderValue" id="gradientRotationSliderValue">0</span>
+            <input type="range" min="0" max="360" value="0" class="slider" id="gradientRotationSlider">
+        </div>
+
+        <div class="formContainer sliderContainer">
+            <label for="textSizeSlider">Text size</label>
+            <span class="sliderValue" id="textSizeSliderValue">300</span>
+            <input type="range" min="10" max="512" value="300" class="slider" id="textSizeSlider">
+        </div>
+
+        <div class="formContainer sliderContainer">
+            <label for="textPaddingHorizontalSlider">Text padding horizontal</label>
+            <span class="sliderValue" id="textPaddingHorizontalSliderValue">100</span>
+            <input type="range" min="0" max="256" value="100" class="slider" id="textPaddingHorizontalSlider">
+        </div>
+
+        <div class="formContainer sliderContainer">
+            <label for="textPaddingVerticalSlider">Text padding vertical</label>
+            <span class="sliderValue" id="textPaddingVerticalSliderValue">50</span>
+            <input type="range" min="0" max="256" value="50" class="slider" id="textPaddingVerticalSlider">
+        </div>
+
+        <!-- Add more sliders as needed -->
+        <div class="imageContainer">
+            <img id="image1" class="large square">
+            <img id="image2" class="large round">
+            <img id="image3" class="small square">
+            <img id="image4" class="small round">
+        </div>
+
+        <div class="formContainer buttonContainer">
+            <button id="saveButton">Save</button>
+        </div>
+
+        <div class="formContainer buttonContainer">
+            <button id="loadButton">Load config</button>
+        </div>
+
+        <script src="script.js"></script>
+    </article>
+</body>
+
+</html>

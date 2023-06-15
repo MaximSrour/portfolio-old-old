@@ -1,0 +1,145 @@
+:root {
+    --fieldMaxWidth: 200px;
+    --colorWidth: 90px;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+body {
+  font-family: "Ubuntu Mono", "Consolas", monospace;
+}
+
+article {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.large {
+    width: 512px;
+    height: 512px;
+}
+
+.small {
+    width: 64px;
+    height: 64px;
+}
+
+.square {
+    border-radius: 0px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.imageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.imageContainer img {
+    margin-inline: auto;
+}
+
+.colorContainerGroup {
+    max-width: var(--fieldMaxWidth);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: auto;
+}
+
+.formContainer {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin-inline: auto;
+    margin-block: 0.5rem;
+}
+
+label {
+    margin-inline: auto;
+    text-align: center;
+}
+
+button {
+    width: var(--fieldMaxWidth);
+    margin-inline: auto;
+}
+
+.fieldContainer {
+    max-width: var(--fieldMaxWidth);
+}
+.fieldContainer input {
+    text-align: center;
+}
+
+.dropdownContainer {
+    max-width: var(--fieldMaxWidth);
+}
+.dropdownContainer select {
+    text-align: center;
+}
+
+input[type="color"] {
+    padding: 0px;
+    width: var(--colorWidth);
+    margin-inline: auto;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: none;
+    width: var(--colorWidth);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 0;
+    width: var(--colorWidth);
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    width: var(--colorWidth);
+}
+
+.sliderContainer .sliderValue {
+    margin-inline: auto;
+}
+
+.sliderContainer input {
+    width: 100%;
+    height: 25px;
+
+    margin: auto;
+
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.sliderContainer input::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #686868; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.sliderContainer input::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #686868; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}

@@ -1,3 +1,13 @@
+class Logger {
+    static isLoggingEnabled = true;
+
+    static Log(message) {
+        if (Logger.isLoggingEnabled) {
+            console.log(message);
+        }
+    };
+}
+
 class UnitcodeIconGenerator {
     constructor() {
         this.imageDimensions = {
@@ -5,9 +15,10 @@ class UnitcodeIconGenerator {
             height: 512,
         };
 
-        this.configData = {
+        this.defaultConfigData = {
             unitcode: "1045",
             fontColorSwatch: "#FFFFFF",
+            dropshadowColowSwatch: "#000000",
             gradientColorSwatch1: "#000000",
             gradientColorSwatch2: "#FFFFFF",
             gradientRotation: 0,
@@ -17,6 +28,8 @@ class UnitcodeIconGenerator {
             fontFamily: "Consolas",
             gradientType: "Linear",
         };
+
+        this.configData = this.defaultConfigData;
 
         this.text = {
             dimensions: {
@@ -35,6 +48,7 @@ class UnitcodeIconGenerator {
         this.htmlRef = {
             unitcodeField: document.getElementById("unitcodeField"),
             fontColorSwatch: document.getElementById("fontColorSwatch"),
+            dropshadowColowSwatch: document.getElementById("dropshadowColowSwatch"),
             gradientColorSwatch1: document.getElementById("gradientColorSwatch1"),
             gradientColorSwatch2: document.getElementById("gradientColorSwatch2"),
             colorRandomButton: document.getElementById("gradientRanomizerButton"),
@@ -94,6 +108,7 @@ class UnitcodeIconGenerator {
          * Unitcode field event listener
          */
         this.htmlRef.unitcodeField.addEventListener("keyup", () => {
+            Logger.Log("Unitcode field has updated");
             this.configData.unitcode = this.htmlRef.unitcodeField.value;
             this.RenderImage();
         });
@@ -102,7 +117,14 @@ class UnitcodeIconGenerator {
          * Font color swatch event listener
          */
         this.htmlRef.fontColorSwatch.addEventListener("input", () => {
+            Logger.Log("Font color swatch has updated");
             this.configData.fontColorSwatch = this.htmlRef.fontColorSwatch.value;
+            this.RenderImage();
+        });
+
+        this.htmlRef.dropshadowColowSwatch.addEventListener("input", () => {
+            Logger.Log("Dropshadow color swatch has updated");
+            this.configData.dropshadowColowSwatch = this.htmlRef.dropshadowColowSwatch.value;
             this.RenderImage();
         });
         
@@ -110,6 +132,7 @@ class UnitcodeIconGenerator {
          * Gradient color swatch 1 event listener
          */
         this.htmlRef.gradientColorSwatch1.addEventListener("input", () => {
+            Logger.Log("Gradient color swatch 1 has updated");
             this.configData.gradientColorSwatch1 = this.htmlRef.gradientColorSwatch1.value;
             this.GenerateImageGradient();
             this.RenderImage();
@@ -119,6 +142,7 @@ class UnitcodeIconGenerator {
          * Gradient color swatch 2 event listener
          */
         this.htmlRef.gradientColorSwatch2.addEventListener("input", () => {
+            Logger.Log("Gradient color swatch 2 has updated");
             this.configData.gradientColorSwatch2 = this.htmlRef.gradientColorSwatch2.value;
             this.GenerateImageGradient();
             this.RenderImage();
@@ -128,6 +152,7 @@ class UnitcodeIconGenerator {
          * Random button event listener
          */
         this.htmlRef.colorRandomButton.addEventListener("click", () => {
+            Logger.Log("Random color button has been pressed");
             this.GenerateRandomColors();
             this.GenerateImageGradient();
             this.RenderImage();
@@ -137,6 +162,7 @@ class UnitcodeIconGenerator {
          * Gradient rotation slider event listener
          */
         this.htmlRef.gradientRotationSlider.addEventListener("input", () => {
+            Logger.Log("Gradient rotation slider has updated");
             this.configData.gradientRotation = Number(this.htmlRef.gradientRotationSlider.value);
             this.htmlRef.gradientRotationSliderValue.innerHTML = this.configData.gradientRotation;
             this.GenerateImageGradient();
@@ -147,6 +173,7 @@ class UnitcodeIconGenerator {
          * Text size slider event listener
          */
         this.htmlRef.textSizeSlider.addEventListener("input", () => {
+            Logger.Log("Text size slider has updated");
             this.configData.textSize = Number(this.htmlRef.textSizeSlider.value);
             this.htmlRef.textSizeSliderValue.innerHTML = this.configData.textSize;
 
@@ -158,6 +185,7 @@ class UnitcodeIconGenerator {
          * Text padding horizontal slider event listener
          */
         this.htmlRef.textPaddingHorizontalSlider.addEventListener("input", () => {
+            Logger.Log("Text horizontal padding slider has updated");
             this.configData.textPaddingHorizontal = Number(this.htmlRef.textPaddingHorizontalSlider.value);
             this.htmlRef.textPaddingHorizontalSliderValue.innerHTML = this.configData.textPaddingHorizontal;
 
@@ -169,6 +197,7 @@ class UnitcodeIconGenerator {
          * Text padding vertical slider event listener
          */
         this.htmlRef.textPaddingVerticalSlider.addEventListener("input", () => {
+            Logger.Log("Text vertical padding slider has updated");
             this.configData.textPaddingVertical = Number(this.htmlRef.textPaddingVerticalSlider.value);
             this.htmlRef.textPaddingVerticalSliderValue.innerHTML = this.configData.textPaddingVertical;
 
@@ -180,6 +209,7 @@ class UnitcodeIconGenerator {
          * Font family dropdown event listener
          */
         this.htmlRef.fontFamilyDropdown.addEventListener("change", () => {
+            Logger.Log("Font family dropdown has updated");
             this.configData.fontFamily = this.htmlRef.fontFamilyDropdown.value;
             this.RenderImage();
         });
@@ -188,6 +218,7 @@ class UnitcodeIconGenerator {
          * Font family dropdown event listener
          */
         this.htmlRef.gradientTypeDropdown.addEventListener("change", () => {
+            Logger.Log("Gradient type dropdown has updated");
             this.configData.gradientType = this.htmlRef.gradientTypeDropdown.value;
             this.GenerateImageGradient();
             this.RenderImage();
@@ -197,6 +228,7 @@ class UnitcodeIconGenerator {
          * Save image button event listener
          */
         this.htmlRef.saveImageButton.addEventListener("click", () => {
+            Logger.Log("Save image button has been pressed");
             this.SaveImage();
         });
 
@@ -204,6 +236,7 @@ class UnitcodeIconGenerator {
          * Save config button event listener
          */
         this.htmlRef.saveConfigButton.addEventListener("click", () => {
+            Logger.Log("Save config button has been pressed");
             this.SaveConfig();
         });
 
@@ -211,6 +244,7 @@ class UnitcodeIconGenerator {
          * Load config button event listener
          */
         this.htmlRef.loadConfigButton.addEventListener("click", () => {
+            Logger.Log("Load config button has been pressed");
             this.LoadConfig();
         });
 
@@ -222,6 +256,7 @@ class UnitcodeIconGenerator {
             let reader = new FileReader();
 
             reader.onload = (event) => {
+                Logger.Log("Config file has been selected");
                 this.configData = JSON.parse(event.target.result);
 
                 this.InstallConfig();
@@ -307,6 +342,8 @@ class UnitcodeIconGenerator {
      * Renders the image using the configured data
      */
     RenderImage() {
+        Logger.Log("Rendering image");
+
         const ctx = this.canvas.getContext("2d");
 
         ctx.drawImage(
@@ -321,13 +358,25 @@ class UnitcodeIconGenerator {
             this.imageDimensions.height
         );
 
+        console.log(this.configData);
+
         ctx.fillStyle = this.configData.fontColorSwatch;
         ctx.font = `bold ${this.configData.textSize}px ${this.configData.fontFamily}`;
+
+        ctx.shadowColor = this.configData.dropshadowColowSwatch;
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+        ctx.shadowBlur = 10;
 
         if (this.configData.unitcode.length > 0) ctx.fillText(this.configData.unitcode[0], this.text.padding.left, this.text.padding.top);
         if (this.configData.unitcode.length > 1) ctx.fillText(this.configData.unitcode[1], this.text.padding.right, this.text.padding.top);
         if (this.configData.unitcode.length > 2) ctx.fillText(this.configData.unitcode[2], this.text.padding.left, this.text.padding.bottom);
         if (this.configData.unitcode.length > 3) ctx.fillText(this.configData.unitcode[3], this.text.padding.right, this.text.padding.bottom);
+
+        ctx.shadowColor = 'transparent';
+        ctx.shadowOffsetX = 0;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowBlur = 0;
 
         this.InstallImage();
     };
@@ -377,16 +426,27 @@ class UnitcodeIconGenerator {
      * Installs the config data stored in the app into the frontend
      */
     InstallConfig() {
-        this.htmlRef.unitcodeField.value = this.configData.unitcode;
-        this.htmlRef.fontColorSwatch.value = this.configData.fontColorSwatch;
-        this.htmlRef.gradientColorSwatch1.value = this.configData.gradientColorSwatch1;
-        this.htmlRef.gradientColorSwatch2.value = this.configData.gradientColorSwatch2;
-        this.htmlRef.gradientRotationSlider.value = this.configData.gradientRotation;
-        this.htmlRef.textSizeSlider.value = this.configData.textSize;
-        this.htmlRef.textPaddingHorizontalSlider.value = this.configData.textPaddingHorizontal;
-        this.htmlRef.textPaddingVerticalSlider.value = this.configData.textPaddingVertical;
-        this.htmlRef.fontFamilyDropdown.value = this.configData.fontFamily;
-        this.htmlRef.gradientTypeDropdown.value = this.configData.gradientTypeDropdown;
+        const getValue = (value, defaultValue) => {
+            console.log(value, defaultValue);
+            return (typeof value === undefined) ? defaultValue : value;
+        }
+
+        this.htmlRef.unitcodeField.value = getValue(this.configData.unitcode, this.defaultConfigData.unitcode);
+        this.htmlRef.fontColorSwatch.value = getValue(this.configData.fontColorSwatch, this.defaultConfigData.fontColorSwatch);
+        this.htmlRef.dropshadowColowSwatch.value = getValue(this.configData.dropshadowColowSwatch, this.defaultConfigData.dropshadowColowSwatch);
+        this.htmlRef.gradientColorSwatch1.value = getValue(this.configData.gradientColorSwatch1, this.defaultConfigData.gradientColorSwatch1);
+        this.htmlRef.gradientColorSwatch2.value = getValue(this.configData.gradientColorSwatch2, this.defaultConfigData.gradientColorSwatch2);
+        this.htmlRef.gradientRotationSlider.value = getValue(this.configData.gradientRotation, this.defaultConfigData.gradientRotation);
+        this.htmlRef.textSizeSlider.value = getValue(this.configData.textSize, this.defaultConfigData.textSize);
+        this.htmlRef.textPaddingHorizontalSlider.value = getValue(this.configData.textPaddingHorizontal, this.defaultConfigData.textPaddingHorizontal);
+        this.htmlRef.textPaddingVerticalSlider.value = getValue(this.configData.textPaddingVertical, this.defaultConfigData.textPaddingVertical);
+        this.htmlRef.fontFamilyDropdown.value = getValue(this.configData.fontFamily, this.defaultConfigData.fontFamily);
+        this.htmlRef.gradientTypeDropdown.value = getValue(this.configData.gradientType, this.defaultConfigData.gradientType);
+
+        this.htmlRef.gradientRotationSliderValue.innerHTML = gradientRotationSlider.value;
+        this.htmlRef.textSizeSliderValue.innerHTML = textSizeSlider.value;
+        this.htmlRef.textPaddingHorizontalSliderValue.innerHTML = textPaddingHorizontalSlider.value;
+        this.htmlRef.textPaddingVerticalSliderValue.innerHTML = textPaddingVerticalSlider.value;
     }
 };
 

@@ -15,6 +15,7 @@ class UnitcodeIconGenerator {
             textPaddingHorizontal: 100,
             textPaddingVertical: 50,
             fontFamily: "Consolas",
+            gradientType: "Linear",
         };
 
         this.text = {
@@ -42,6 +43,7 @@ class UnitcodeIconGenerator {
             textPaddingHorizontalSlider: document.getElementById("textPaddingHorizontalSlider"),
             textPaddingVerticalSlider: document.getElementById("textPaddingVerticalSlider"),
             fontFamilyDropdown: document.getElementById("fontFamilyDropdown"),
+            gradientTypeDropdown: document.getElementById("gradientTypeDropdown"),
 
             gradientRotationSliderValue: document.getElementById("gradientRotationSliderValue"),
             textSizeSliderValue: document.getElementById("textSizeSliderValue"),
@@ -183,6 +185,15 @@ class UnitcodeIconGenerator {
         });
 
         /**
+         * Font family dropdown event listener
+         */
+        this.htmlRef.gradientTypeDropdown.addEventListener("change", () => {
+            this.configData.gradientType = this.htmlRef.gradientTypeDropdown.value;
+            this.GenerateImageGradient();
+            this.RenderImage();
+        });
+
+        /**
          * Save image button event listener
          */
         this.htmlRef.saveImageButton.addEventListener("click", () => {
@@ -270,17 +281,25 @@ class UnitcodeIconGenerator {
     GenerateImageGradient() {
         const tempCtx = this.tempCanvas.getContext("2d");
         tempCtx.resetTransform();
+        let gradient;
+
+        if (this.configData.gradientType == "Linear") {
+            // Rotate the context of temporary canvas
+            tempCtx.translate(this.diagonal / 2, this.diagonal / 2);
+            tempCtx.rotate(this.configData.gradientRotation * Math.PI / 180 - 45);
+            tempCtx.translate(-this.diagonal / 2, -this.diagonal / 2);
+
+            gradient = tempCtx.createLinearGradient(0, 0, this.diagonal, this.diagonal);
+
+        } else if (this.configData.gradientType == "Radial") {
+            const centerX = this.diagonal / 2;
+            const centerY = this.diagonal / 2;
+            gradient = tempCtx.createRadialGradient(centerX, centerY, 0, centerX, centerY, this.diagonal / 2);
+        }
         
-        // Rotate the context of temporary canvas
-        tempCtx.translate(this.diagonal / 2, this.diagonal / 2);
-        tempCtx.rotate(this.configData.gradientRotation * Math.PI / 180 - 45);
-        tempCtx.translate(-this.diagonal / 2, -this.diagonal / 2);
-        
-        // Draw gradient on temporary canvas
-        const grd = tempCtx.createLinearGradient(0, 0, this.diagonal, this.diagonal);
-        grd.addColorStop(0, this.configData.gradientColorSwatch1);
-        grd.addColorStop(1, this.configData.gradientColorSwatch2);
-        tempCtx.fillStyle = grd;
+        gradient.addColorStop(0, this.configData.gradientColorSwatch1);
+        gradient.addColorStop(1, this.configData.gradientColorSwatch2);
+        tempCtx.fillStyle = gradient;
         tempCtx.fillRect(0, 0, this.tempCanvas.width, this.tempCanvas.height);
     }
 
@@ -367,6 +386,7 @@ class UnitcodeIconGenerator {
         this.htmlRef.textPaddingHorizontalSlider.value = this.configData.textPaddingHorizontal;
         this.htmlRef.textPaddingVerticalSlider.value = this.configData.textPaddingVertical;
         this.htmlRef.fontFamilyDropdown.value = this.configData.fontFamily;
+        this.htmlRef.gradientTypeDropdown.value = this.configData.gradientTypeDropdown;
     }
 };
 
